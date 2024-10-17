@@ -474,7 +474,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: db1ca9275ab7ae04ba65394bb72d4110, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f9fef2ae013f7774bba1f825e3de2d30, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -608,7 +608,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputField: {fileID: 2116537826}
-  nextSceneName: 2
+  escena: 6
 --- !u!1 &1734601549
 GameObject:
   m_ObjectHideFlags: 0
