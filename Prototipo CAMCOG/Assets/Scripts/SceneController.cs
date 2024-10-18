@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using TMPro;
+using System.IO;  
 
 public class SceneController : MonoBehaviour
 {
@@ -16,20 +17,21 @@ public class SceneController : MonoBehaviour
     public static List<float> tiempos = new List<float>();
 
     void Start()
-    {       
-        startTime = Time.time;    
+    {
+        startTime = Time.time;
         inputField.onEndEdit.AddListener(OnInputEnd);
     }
 
     void OnInputEnd(string input)
     {
-        if (Input.GetKeyDown(KeyCode.Return)) 
+        if (Input.GetKeyDown(KeyCode.Return))
         {
             userInput = input;
-            float responseTime = Time.time - startTime;       
+            float responseTime = Time.time - startTime;
             respuestas.Add(userInput);
             tiempos.Add(responseTime);
             ShowResults();
+            SaveResultsToFile();  
             nextSceneName = escena.ToString();
             escena++;
             SceneManager.LoadScene(nextSceneName);
@@ -44,4 +46,20 @@ public class SceneController : MonoBehaviour
         }
     }
 
+    void SaveResultsToFile()
+    {
+        string filePath = Application.dataPath + "/Resultados.txt"; 
+
+        using (StreamWriter writer = new StreamWriter(filePath, true)) 
+        {
+            writer.WriteLine("Resultados de la escena " + (escena - 1) + ":");
+            for (int i = 0; i < respuestas.Count; i++)
+            {
+                writer.WriteLine("Respuesta " + (i + 1) + ": " + respuestas[i] + ", Tiempo: " + tiempos[i] + " segundos.");
+            }
+            writer.WriteLine();  
+        }
+
+        Debug.Log("Resultados guardados en: " + filePath);
+    }
 }
