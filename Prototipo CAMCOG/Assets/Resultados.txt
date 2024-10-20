@@ -1,0 +1,8 @@
+Resultados:
+Respuesta 1: bascula, Tiempo: 2,811018 segundos.
+Respuesta 2: lampara, Tiempo: 2,616049 segundos.
+Respuesta 3: maleta, Tiempo: 2,121457 segundos.
+Respuesta 4: ordenadr, Tiempo: 3,473495 segundos.
+Respuesta 5: ter, Tiempo: 1,84772 segundos.
+Respuesta 6: z, Tiempo: 1,52228 segundos.
+

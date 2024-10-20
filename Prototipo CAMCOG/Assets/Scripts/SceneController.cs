@@ -9,7 +9,7 @@ public class SceneController : MonoBehaviour
 {
     public TMP_InputField inputField;
     private string nextSceneName;
-    public int escena = 2;
+    public int escena;
     private float startTime;
     private string userInput;
 
@@ -48,18 +48,17 @@ public class SceneController : MonoBehaviour
 
     void SaveResultsToFile()
     {
-        string filePath = Application.dataPath + "/Resultados.txt"; 
+        string filePath = Application.dataPath + "/Resultados.txt";
 
-        using (StreamWriter writer = new StreamWriter(filePath, true)) 
+        using (StreamWriter writer = new StreamWriter(filePath, false))
         {
-            writer.WriteLine("Resultados de la escena " + (escena - 1) + ":");
+            writer.WriteLine("Resultados:");
             for (int i = 0; i < respuestas.Count; i++)
             {
                 writer.WriteLine("Respuesta " + (i + 1) + ": " + respuestas[i] + ", Tiempo: " + tiempos[i] + " segundos.");
             }
-            writer.WriteLine();  
+            writer.WriteLine();
         }
-
-        Debug.Log("Resultados guardados en: " + filePath);
     }
+
 }

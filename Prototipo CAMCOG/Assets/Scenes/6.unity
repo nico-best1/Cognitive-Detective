@@ -608,7 +608,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputField: {fileID: 2116537826}
-  escena: 1
+  escena: 7
 --- !u!1 &1734601549
 GameObject:
   m_ObjectHideFlags: 0
