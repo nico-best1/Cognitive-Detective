@@ -1,41 +1,49 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using System.Collections.Generic;
 using TMPro;
-using System.IO;  
+using System.Collections.Generic;
+using System.IO;
 
-public class SceneController : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
-    public TMP_InputField inputField;
-    private string nextSceneName;
-    public int escena;
-    private float startTime;
-    private string userInput;
+    public TMP_InputField inputField; 
+    private string userInput; 
+    private float startTime; 
 
     public static List<string> respuestas = new List<string>();
     public static List<float> tiempos = new List<float>();
+
+    private ImageLoader imageLoader;
 
     void Start()
     {
         startTime = Time.time;
         inputField.onEndEdit.AddListener(OnInputEnd);
+
+        imageLoader = FindObjectOfType<ImageLoader>();
     }
 
     void OnInputEnd(string input)
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        userInput = input;
+        float responseTime = Time.time - startTime;
+
+        respuestas.Add(userInput);
+        tiempos.Add(responseTime);
+
+        ShowResults();
+        SaveResultsToFile();
+
+        if (imageLoader != null)
         {
-            userInput = input;
-            float responseTime = Time.time - startTime;
-            respuestas.Add(userInput);
-            tiempos.Add(responseTime);
-            ShowResults();
-            SaveResultsToFile();  
-            nextSceneName = escena.ToString();
-            escena++;
-            SceneManager.LoadScene(nextSceneName);
+            imageLoader.LoadNextImage();
         }
+        else
+        {
+            Debug.LogError("No se encontró el script ImageLoader en la escena.");
+        }
+
+        inputField.text = "";
     }
 
     void ShowResults()
@@ -60,5 +68,4 @@ public class SceneController : MonoBehaviour
             writer.WriteLine();
         }
     }
-
 }

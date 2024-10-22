@@ -1,8 +1,9 @@
 Resultados:
-Respuesta 1: bascula, Tiempo: 2,811018 segundos.
-Respuesta 2: lampara, Tiempo: 2,616049 segundos.
-Respuesta 3: maleta, Tiempo: 2,121457 segundos.
-Respuesta 4: ordenadr, Tiempo: 3,473495 segundos.
-Respuesta 5: ter, Tiempo: 1,84772 segundos.
-Respuesta 6: z, Tiempo: 1,52228 segundos.
+Respuesta 1: bascula, Tiempo: 2,575208 segundos.
+Respuesta 2: termometro, Tiempo: 6,077662 segundos.
+Respuesta 3: zapato, Tiempo: 8,621146 segundos.
+Respuesta 4: maleta, Tiempo: 10,74334 segundos.
+Respuesta 5: lampara, Tiempo: 16,076 segundos.
+Respuesta 6: ordenador, Tiempo: 20,32692 segundos.
+Respuesta 7: , Tiempo: 0 segundos.
 
