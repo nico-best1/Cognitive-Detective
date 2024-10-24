@@ -24,7 +24,7 @@ public class ImageLoader : MonoBehaviour
 
     void LoadJson()
     {
-        TextAsset jsonFile = Resources.Load<TextAsset>("ConfigEntrada");
+        TextAsset jsonFile = Resources.Load<TextAsset>("ConfigEntradaReconocimiento");
 
         if (jsonFile != null)
         {

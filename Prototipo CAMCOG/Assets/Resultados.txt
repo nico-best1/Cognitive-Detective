@@ -1,3 +1,3 @@
 Resultados:
-Respuesta 1: g, Tiempo total: 6,364583 segundos, Tiempo de escritura: 5,062775 segundos.
+Respuesta 1: ggsfsg, Tiempo total: 16,70319 segundos, Tiempo de escritura: 3,630057 segundos.
 
