@@ -1,10 +1,22 @@
 {
-  "images": [
+  "basculas": [
     "Images/bascula",
-    "Images/termometro",
-    "Images/zapato",
-    "Images/maleta",
-    "Images/lampara",
+    "Images/bascula2",
+    "Images/bascula3"
+  ],
+  "termometros":[
+    "Images/termometro"
+  ],
+  "zapatos":[
+    "Images/zapato"
+  ],
+  "maletas":[
+    "Images/maleta"
+  ],
+  "lamparas":[
+    "Images/lampara"
+  ],
+  "portatiles":[
     "Images/portatil"
   ]
 }
