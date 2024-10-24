@@ -6,12 +6,15 @@ using System.IO;
 
 public class UIManager : MonoBehaviour
 {
-    public TMP_InputField inputField; 
-    private string userInput; 
-    private float startTime; 
+    public TMP_InputField inputField;
+    private string userInput;
+    private float startTime;
+    private float writingStartTime; // Tiempo de inicio de escritura
+    private bool isWriting = false; // Para controlar si ya ha empezado a escribir
 
     public static List<string> respuestas = new List<string>();
     public static List<float> tiempos = new List<float>();
+    public static List<float> tiemposEscritura = new List<float>(); // Tiempo de escritura de cada respuesta
 
     private ImageLoader imageLoader;
 
@@ -19,17 +22,31 @@ public class UIManager : MonoBehaviour
     {
         startTime = Time.time;
         inputField.onEndEdit.AddListener(OnInputEnd);
+        inputField.onValueChanged.AddListener(OnInputChanged); // Detectar cambios en el texto
 
         imageLoader = FindObjectOfType<ImageLoader>();
     }
 
+    // Método que se ejecuta cada vez que el inputField cambia (cuando el usuario empieza a escribir)
+    void OnInputChanged(string input)
+    {
+        if (!isWriting)
+        {
+            writingStartTime = Time.time; // Inicia el temporizador cuando el usuario empieza a escribir
+            isWriting = true; // Indica que el usuario ha empezado a escribir
+        }
+    }
+
+    // Método que se ejecuta cuando el usuario presiona "Enter"
     void OnInputEnd(string input)
     {
         userInput = input;
         float responseTime = Time.time - startTime;
+        float writingTime = Time.time - writingStartTime; 
 
         respuestas.Add(userInput);
         tiempos.Add(responseTime);
+        tiemposEscritura.Add(writingTime); 
 
         ShowResults();
         SaveResultsToFile();
@@ -44,13 +61,14 @@ public class UIManager : MonoBehaviour
         }
 
         inputField.text = "";
+        isWriting = false; 
     }
 
     void ShowResults()
     {
         for (int i = 0; i < respuestas.Count; i++)
         {
-            Debug.Log("Respuesta " + (i + 1) + ": " + respuestas[i] + ", Tiempo: " + tiempos[i] + " segundos.");
+            Debug.Log("Respuesta " + (i + 1) + ": " + respuestas[i] + ", Tiempo total: " + tiempos[i] + " segundos, Tiempo de escritura: " + tiemposEscritura[i] + " segundos.");
         }
     }
 
@@ -63,7 +81,7 @@ public class UIManager : MonoBehaviour
             writer.WriteLine("Resultados:");
             for (int i = 0; i < respuestas.Count; i++)
             {
-                writer.WriteLine("Respuesta " + (i + 1) + ": " + respuestas[i] + ", Tiempo: " + tiempos[i] + " segundos.");
+                writer.WriteLine("Respuesta " + (i + 1) + ": " + respuestas[i] + ", Tiempo total: " + tiempos[i] + " segundos, Tiempo de escritura: " + tiemposEscritura[i] + " segundos.");
             }
             writer.WriteLine();
         }
