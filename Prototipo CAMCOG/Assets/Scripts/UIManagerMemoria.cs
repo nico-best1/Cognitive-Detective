@@ -9,13 +9,18 @@ public class UIManagerMemoria : MonoBehaviour
     public Image imageUI;
     public Image imageUI2;
     public Image imageUI3;
-    private List<string> imagePaths;
+    private List<List<string>> imagePaths;
     private int currentIndex = 0;
 
     [System.Serializable]
     public class ImageData
     {
-        public List<string> images;
+        public List<string> basculas;
+        public List<string> termometros;
+        public List<string> zapatos;
+        public List<string> maletas;
+        public List<string> lamparas;
+        public List<string> portatiles;
     }
 
     void Start()
@@ -27,11 +32,16 @@ public class UIManagerMemoria : MonoBehaviour
     void LoadJson()
     {
         TextAsset jsonFile = Resources.Load<TextAsset>("ConfigEntradaMemoria");
-
+        imagePaths = new List<List<string>>();
         if (jsonFile != null)
         {
             ImageData jsonData = JsonUtility.FromJson<ImageData>(jsonFile.text);
-            imagePaths = jsonData.images;
+            imagePaths.Add(jsonData.basculas);
+            imagePaths.Add(jsonData.termometros);
+            imagePaths.Add(jsonData.zapatos);
+            imagePaths.Add(jsonData.maletas);
+            imagePaths.Add(jsonData.lamparas);
+            imagePaths.Add(jsonData.portatiles);
             Debug.Log("LoadJson");
         }
         else
@@ -47,9 +57,9 @@ public class UIManagerMemoria : MonoBehaviour
         if (imagePaths != null && imagePaths.Count > 0)
         {
             Debug.Log("LoadNextImage2");
-            string imagePath = imagePaths[currentIndex];
-            string imagePath2 = imagePaths[currentIndex];
-            string imagePath3 = imagePaths[currentIndex];
+            string imagePath = imagePaths[currentIndex][0];
+            string imagePath2 = imagePaths[currentIndex][1];
+            string imagePath3 = imagePaths[currentIndex][2];
             Sprite sprite = Resources.Load<Sprite>(imagePath);
             Sprite sprite2 = Resources.Load<Sprite>(imagePath2);
             Sprite sprite3 = Resources.Load<Sprite>(imagePath3);
