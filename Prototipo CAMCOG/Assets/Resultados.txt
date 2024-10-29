@@ -1,3 +1,14 @@
 Resultados:
-Respuesta 1: ggsfsg, Tiempo total: 16,70319 segundos, Tiempo de escritura: 3,630057 segundos.
+Respuesta 1: , Tiempo total: 2,575095 segundos, Tiempo de escritura: 2,575095 segundos.
+Respuesta 2: , Tiempo total: 2,982931 segundos, Tiempo de escritura: 2,982931 segundos.
+Respuesta 3: , Tiempo total: 3,373353 segundos, Tiempo de escritura: 3,373353 segundos.
+Respuesta 4: , Tiempo total: 3,966439 segundos, Tiempo de escritura: 3,966439 segundos.
+Respuesta 5: , Tiempo total: 4,61386 segundos, Tiempo de escritura: 4,61386 segundos.
+Respuesta 6: , Tiempo total: 5,265213 segundos, Tiempo de escritura: 5,265213 segundos.
+Respuesta 7: , Tiempo total: 5,976535 segundos, Tiempo de escritura: 5,976535 segundos.
+Respuesta 8: , Tiempo total: 6,73821 segundos, Tiempo de escritura: 6,73821 segundos.
+Respuesta 9: , Tiempo total: 7,386351 segundos, Tiempo de escritura: 7,386351 segundos.
+Respuesta 10: , Tiempo total: 7,903953 segundos, Tiempo de escritura: 7,903953 segundos.
+Respuesta 11: , Tiempo total: 8,559331 segundos, Tiempo de escritura: 8,559331 segundos.
+Respuesta 12: , Tiempo total: 9,22846 segundos, Tiempo de escritura: 9,22846 segundos.
 

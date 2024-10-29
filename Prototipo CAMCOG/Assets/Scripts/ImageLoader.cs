@@ -42,7 +42,9 @@ public class ImageLoader : MonoBehaviour
         if (imagePaths != null && imagePaths.Count > 0)
         {
             string imagePath = imagePaths[currentIndex];
+            Debug.Log("Cargando imagen: " + imagePath); // Verificar la ruta
             Sprite sprite = Resources.Load<Sprite>(imagePath);
+
             if (sprite != null)
             {
                 imageUI.sprite = sprite;
@@ -55,4 +57,5 @@ public class ImageLoader : MonoBehaviour
             currentIndex = (currentIndex + 1) % imagePaths.Count;
         }
     }
+
 }

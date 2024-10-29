@@ -1,10 +1,12 @@
 {
-  "images": [
-    "Images/bascula",
-    "Images/termometro",
-    "Images/zapato",
-    "Images/maleta",
-    "Images/lampara",
-    "Images/portatil"
-  ]
+    "images": [
+        "Images/bascula",
+        "Images/lampara",
+        "Images/maleta",
+        "Images/mesa",
+        "Images/portatil",
+        "Images/silla",
+        "Images/termometro",
+        "Images/zapato"
+    ]
 }
