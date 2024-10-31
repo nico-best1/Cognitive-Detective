@@ -8,7 +8,8 @@ public class ImageLoader : MonoBehaviour
 {
     public Image imageUI; 
     private List<string> imagePaths;
-    private int currentIndex = 0; 
+    private int currentIndex = 0;
+    public string carpetaDeImages = "Assets/Resources/Images";
 
     [System.Serializable]
     public class ImageData
@@ -18,7 +19,7 @@ public class ImageLoader : MonoBehaviour
 
     void Start()
     {
-        LoadJson(); 
+        ObtenerRutasImagenes(carpetaDeImages);
         LoadNextImage(); 
     }
 
@@ -55,6 +56,34 @@ public class ImageLoader : MonoBehaviour
             }
 
             currentIndex = (currentIndex + 1) % imagePaths.Count;
+        }
+    }
+
+    void ObtenerRutasImagenes(string directorio)
+    {
+        imagePaths = new List<string>();
+
+        if (Directory.Exists(directorio))
+        {
+            // Extensiones de archivo que queremos buscar
+            string[] extensiones = new[] { "*.png", "*.jpg", "*.jpeg" };
+
+            foreach (string extension in extensiones)
+            {
+                // Obtener los archivos para cada tipo de extensión
+                string[] archivos = Directory.GetFiles(directorio, extension, SearchOption.AllDirectories);
+
+                foreach (string archivo in archivos)
+                {
+                    // Convertimos la ruta en un formato que sea relativo a Resources y sin la extensión del archivo
+                    string rutaRelativa = "Images/" + Path.GetFileNameWithoutExtension(archivo);
+                    imagePaths.Add(rutaRelativa);
+                }
+            }
+        }
+        else
+        {
+            Debug.LogError("El directorio especificado no existe: " + directorio);
         }
     }
 
