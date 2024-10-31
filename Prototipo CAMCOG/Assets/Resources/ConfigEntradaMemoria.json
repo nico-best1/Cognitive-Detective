@@ -5,18 +5,28 @@
     "Images/bascula3"
   ],
   "termometros":[
-    "Images/termometro"
+    "Images/termometro",
+    "Images/termometro2",
+    "Images/termometro3"
   ],
   "zapatos":[
-    "Images/zapato"
+    "Images/zapato",
+    "Images/zapato2",
+    "Images/zapato3"
   ],
   "maletas":[
-    "Images/maleta"
+    "Images/maleta",
+    "Images/maleta2",
+    "Images/maleta3"
   ],
   "lamparas":[
-    "Images/lampara"
+    "Images/lampara",
+    "Images/lampara2",
+    "Images/lampara3"
   ],
   "portatiles":[
-    "Images/portatil"
+    "Images/portatil",
+    "Images/portatil2",
+    "Images/portatil3"
   ]
 }

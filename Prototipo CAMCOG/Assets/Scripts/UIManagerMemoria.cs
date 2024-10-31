@@ -6,11 +6,15 @@ using System.IO;
 
 public class UIManagerMemoria : MonoBehaviour
 {
-    public Image imageUI;
-    public Image imageUI2;
-    public Image imageUI3;
+    public Button imageUI;
+    public Button imageUI2;
+    public Button imageUI3;
     private List<List<string>> imagePaths;
     private int currentIndex = 0;
+
+    private float startTime;
+    public static List<int> respuestas = new List<int>();
+    public static List<float> tiempos = new List<float>();
 
     [System.Serializable]
     public class ImageData
@@ -25,8 +29,10 @@ public class UIManagerMemoria : MonoBehaviour
 
     void Start()
     {
+        startTime = Time.time;
         LoadJson();
         LoadNextImage();
+        
     }
 
     void LoadJson()
@@ -50,7 +56,7 @@ public class UIManagerMemoria : MonoBehaviour
         }
     }
 
-    public void LoadNextImage()
+    void LoadNextImage()
     {
         Debug.Log("LoadNextImage");
         Debug.Log(imagePaths.Count);
@@ -66,7 +72,7 @@ public class UIManagerMemoria : MonoBehaviour
             Debug.Log("LoadNextImage3");
             if (sprite != null)
             {
-                imageUI.sprite = sprite;
+                imageUI.image.sprite = sprite;
                 Debug.Log("image1");
             }
             else
@@ -75,7 +81,7 @@ public class UIManagerMemoria : MonoBehaviour
             }
             if (sprite2 != null)
             {
-                imageUI2.sprite = sprite2;
+                imageUI2.image.sprite = sprite2;
                 Debug.Log("image2");
             }
             else
@@ -84,7 +90,7 @@ public class UIManagerMemoria : MonoBehaviour
             }
             if (sprite3 != null)
             {
-                imageUI3.sprite = sprite3;
+                imageUI3.image.sprite = sprite3;
                 Debug.Log("image3");
             }
             else
@@ -94,6 +100,28 @@ public class UIManagerMemoria : MonoBehaviour
 
             currentIndex = (currentIndex + 1) % imagePaths.Count;
         }
+    }
+
+    public void SaveResultsToFile(int r)
+    {
+        float responseTime = Time.time - startTime;
+
+        tiempos.Add(responseTime);
+        respuestas.Add(r);
+
+        string filePath = Application.dataPath + "/ResultadosMemoria.txt";
+
+        using (StreamWriter writer = new StreamWriter(filePath, false))
+        {
+            writer.WriteLine("Resultados:");
+            for (int i = 0; i < respuestas.Count; i++)
+            {
+                writer.WriteLine("Respuesta " + (i + 1) + ": " + respuestas[i] + ", Tiempo total: " + tiempos[i] + " segundos.");
+            }
+            writer.WriteLine();
+        }
+
+        LoadNextImage();
     }
     // Start is called before the first frame update
 }

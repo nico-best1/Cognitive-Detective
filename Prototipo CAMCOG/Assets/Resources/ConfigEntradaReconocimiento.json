@@ -2,11 +2,23 @@
     "images": [
         "Images/bascula",
         "Images/lampara",
+        "Images/lampara2",
+        "Images/lampara3",
         "Images/maleta",
+        "Images/maleta2",
+        "Images/maleta3",
         "Images/mesa",
         "Images/portatil",
+        "Images/portatil2",
+        "Images/portatil3",
         "Images/silla",
         "Images/termometro",
-        "Images/zapato"
+        "Images/termometro2",
+        "Images/termometro3",
+        "Images/zapato",
+        "Images/zapato2",
+        "Images/zapato3",
+        "Images/bascula2",
+        "Images/bascula3"
     ]
 }
