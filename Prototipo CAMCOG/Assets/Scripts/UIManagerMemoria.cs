@@ -147,7 +147,7 @@ public class UIManagerMemoria : MonoBehaviour
                     foreach (string archivo in archivos)
                     {
                         // Convertimos la ruta en un formato que sea relativo a Resources y sin la extensión del archivo
-                        string rutaRelativa = "Images/Prueba2/" + direc + "/" + Path.GetFileNameWithoutExtension(archivo);
+                        string rutaRelativa = "Images/Prueba2/" + Path.GetRelativePath(directorio,direc) + "/" + Path.GetFileNameWithoutExtension(archivo);
                         aux.Add(rutaRelativa);
                     }
                 }
