@@ -9,7 +9,7 @@ public class ImageLoader : MonoBehaviour
     public Image imageUI; 
     private List<string> imagePaths;
     private int currentIndex = 0;
-    public string carpetaDeImages = "Assets/Resources/Images";
+    public string carpetaDeImages = "Assets/Resources/Images/Prueba1";
 
     [System.Serializable]
     public class ImageData
@@ -72,11 +72,10 @@ public class ImageLoader : MonoBehaviour
             {
                 // Obtener los archivos para cada tipo de extensión
                 string[] archivos = Directory.GetFiles(directorio, extension, SearchOption.AllDirectories);
-
                 foreach (string archivo in archivos)
                 {
                     // Convertimos la ruta en un formato que sea relativo a Resources y sin la extensión del archivo
-                    string rutaRelativa = "Images/" + Path.GetFileNameWithoutExtension(archivo);
+                    string rutaRelativa = "Images/Prueba1/" + Path.GetFileNameWithoutExtension(archivo);
                     imagePaths.Add(rutaRelativa);
                 }
             }

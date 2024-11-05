@@ -1,32 +1,32 @@
 {
   "basculas": [
-    "Images/bascula",
-    "Images/bascula2",
-    "Images/bascula3"
+    "Images/Prueba2/bascula",
+    "Images/Prueba2/bascula2",
+    "Images/Prueba2/bascula3"
   ],
   "termometros":[
-    "Images/termometro",
-    "Images/termometro2",
-    "Images/termometro3"
+    "Images/Prueba2/termometro",
+    "Images/Prueba2/termometro2",
+    "Images/Prueba2/termometro3"
   ],
   "zapatos":[
-    "Images/zapato",
-    "Images/zapato2",
-    "Images/zapato3"
+    "Images/Prueba2/zapato",
+    "Images/Prueba2/zapato2",
+    "Images/Prueba2/zapato3"
   ],
   "maletas":[
-    "Images/maleta",
-    "Images/maleta2",
-    "Images/maleta3"
+    "Images/Prueba2/maleta",
+    "Images/Prueba2/maleta2",
+    "Images/Prueba2/maleta3"
   ],
   "lamparas":[
-    "Images/lampara",
-    "Images/lampara2",
-    "Images/lampara3"
+    "Images/Prueba2/lampara",
+    "Images/Prueba2/lampara2",
+    "Images/Prueba2/lampara3"
   ],
   "portatiles":[
-    "Images/portatil",
-    "Images/portatil2",
-    "Images/portatil3"
+    "Images/Prueba2/portatil",
+    "Images/Prueba2/portatil2",
+    "Images/Prueba2/portatil3"
   ]
 }

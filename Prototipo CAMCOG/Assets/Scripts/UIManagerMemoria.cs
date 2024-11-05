@@ -16,45 +16,48 @@ public class UIManagerMemoria : MonoBehaviour
     public static List<int> respuestas = new List<int>();
     public static List<float> tiempos = new List<float>();
 
-    [System.Serializable]
-    public class ImageData
-    {
-        public List<string> basculas;
-        public List<string> termometros;
-        public List<string> zapatos;
-        public List<string> maletas;
-        public List<string> lamparas;
-        public List<string> portatiles;
-    }
+    public string carpetaDeImages = "Assets/Resources/Images/Prueba2";
+
+    //[System.Serializable]
+    //public class ImageData
+    //{
+    //    public List<string> basculas;
+    //    public List<string> termometros;
+    //    public List<string> zapatos;
+    //    public List<string> maletas;
+    //    public List<string> lamparas;
+    //    public List<string> portatiles;
+    //}
 
     void Start()
     {
         startTime = Time.time;
-        LoadJson();
+
+        ObtenerRutasImagenes(carpetaDeImages);
         LoadNextImage();
         
     }
 
-    void LoadJson()
-    {
-        TextAsset jsonFile = Resources.Load<TextAsset>("ConfigEntradaMemoria");
-        imagePaths = new List<List<string>>();
-        if (jsonFile != null)
-        {
-            ImageData jsonData = JsonUtility.FromJson<ImageData>(jsonFile.text);
-            imagePaths.Add(jsonData.basculas);
-            imagePaths.Add(jsonData.termometros);
-            imagePaths.Add(jsonData.zapatos);
-            imagePaths.Add(jsonData.maletas);
-            imagePaths.Add(jsonData.lamparas);
-            imagePaths.Add(jsonData.portatiles);
-            Debug.Log("LoadJson");
-        }
-        else
-        {
-            Debug.LogError("No se pudo encontrar el archivo JSON.");
-        }
-    }
+    //void LoadJson()
+    //{
+    //    TextAsset jsonFile = Resources.Load<TextAsset>("ConfigEntradaMemoria");
+    //    imagePaths = new List<List<string>>();
+    //    if (jsonFile != null)
+    //    {
+    //        ImageData jsonData = JsonUtility.FromJson<ImageData>(jsonFile.text);
+    //        imagePaths.Add(jsonData.basculas);
+    //        imagePaths.Add(jsonData.termometros);
+    //        imagePaths.Add(jsonData.zapatos);
+    //        imagePaths.Add(jsonData.maletas);
+    //        imagePaths.Add(jsonData.lamparas);
+    //        imagePaths.Add(jsonData.portatiles);
+    //        Debug.Log("LoadJson");
+    //    }
+    //    else
+    //    {
+    //        Debug.LogError("No se pudo encontrar el archivo JSON.");
+    //    }
+    //}
 
     void LoadNextImage()
     {
@@ -123,5 +126,38 @@ public class UIManagerMemoria : MonoBehaviour
 
         LoadNextImage();
     }
-    // Start is called before the first frame update
+
+    void ObtenerRutasImagenes(string directorio)
+    {
+        imagePaths = new List<List<string>>();
+
+        if (Directory.Exists(directorio))
+        {
+            // Extensiones de archivo que queremos buscar
+            string[] extensiones = new[] { "*.png", "*.jpg", "*.jpeg" };
+            string[] directorios = Directory.GetDirectories(directorio);
+
+            foreach(string direc in directorios)
+            {
+                List<string> aux = new List<string>();
+                foreach (string extension in extensiones)
+                {
+                    // Obtener los archivos para cada tipo de extensión
+                    string[] archivos = Directory.GetFiles(direc, extension, SearchOption.AllDirectories);
+                    foreach (string archivo in archivos)
+                    {
+                        // Convertimos la ruta en un formato que sea relativo a Resources y sin la extensión del archivo
+                        string rutaRelativa = "Images/Prueba2/" + direc + "/" + Path.GetFileNameWithoutExtension(archivo);
+                        aux.Add(rutaRelativa);
+                    }
+                }
+                imagePaths.Add(aux);
+            }
+            
+        }
+        else
+        {
+            Debug.LogError("El directorio especificado no existe: " + directorio);
+        }
+    }
 }
