@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/7.unity
     guid: ba62743bece142647ae4a10f50a18475
+  - enabled: 1
+    path: Assets/Scenes/Memoria.unity
+    guid: f699d136cc816394d8c71411837117c9
   m_configObjects: {}
