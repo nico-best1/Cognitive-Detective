@@ -622,7 +622,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageUI: {fileID: 1098413267}
-  carpetaDeImages: Assets/Resources/Images
 --- !u!1 &1734601549
 GameObject:
   m_ObjectHideFlags: 0

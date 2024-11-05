@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; // Para trabajar con la UI
-using System.IO;      // Para leer archivos
+using System.IO;
+using UnityEngine.SceneManagement;      // Para leer archivos
 
 public class ImageLoader : MonoBehaviour
 {
     public Image imageUI; 
     private List<string> imagePaths;
     private int currentIndex = 0;
-    public string carpetaDeImages = "Assets/Resources/Images/Prueba1";
+    private string carpetaDeImages = "Assets/Resources/Images/Prueba1";
 
     [System.Serializable]
     public class ImageData
@@ -40,22 +41,29 @@ public class ImageLoader : MonoBehaviour
 
     public void LoadNextImage()
     {
-        if (imagePaths != null && imagePaths.Count > 0)
+        if (currentIndex == imagePaths.Count)
         {
-            string imagePath = imagePaths[currentIndex];
-            Debug.Log("Cargando imagen: " + imagePath); // Verificar la ruta
-            Sprite sprite = Resources.Load<Sprite>(imagePath);
-
-            if (sprite != null)
+            SceneManager.LoadScene(1);
+        }
+        else { 
+            Debug.Log(imagePaths.Count);
+            if (imagePaths != null && imagePaths.Count > 0)
             {
-                imageUI.sprite = sprite;
-            }
-            else
-            {
-                Debug.LogError("No se pudo cargar la imagen: " + imagePath);
-            }
+                string imagePath = imagePaths[currentIndex];
+                Debug.Log("Cargando imagen: " + imagePath); // Verificar la ruta
+                Sprite sprite = Resources.Load<Sprite>(imagePath);
 
-            currentIndex = (currentIndex + 1) % imagePaths.Count;
+                if (sprite != null)
+                {
+                    imageUI.sprite = sprite;
+                }
+                else
+                {
+                    Debug.LogError("No se pudo cargar la imagen: " + imagePath);
+                }
+
+                currentIndex = (currentIndex + 1);
+            }
         }
     }
 

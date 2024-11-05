@@ -1,10 +1,8 @@
 Resultados:
-Respuesta 1: , Tiempo total: 1,672096 segundos, Tiempo de escritura: 1,672096 segundos.
-Respuesta 2: , Tiempo total: 2,153093 segundos, Tiempo de escritura: 2,153093 segundos.
-Respuesta 3: , Tiempo total: 6,151116 segundos, Tiempo de escritura: 6,151116 segundos.
-Respuesta 4: , Tiempo total: 7,728395 segundos, Tiempo de escritura: 7,728395 segundos.
-Respuesta 5: , Tiempo total: 8,986362 segundos, Tiempo de escritura: 8,986362 segundos.
-Respuesta 6: , Tiempo total: 9,573789 segundos, Tiempo de escritura: 9,573789 segundos.
-Respuesta 7: , Tiempo total: 10,40772 segundos, Tiempo de escritura: 10,40772 segundos.
-Respuesta 8: , Tiempo total: 10,91471 segundos, Tiempo de escritura: 10,91471 segundos.
+Respuesta 1: , Tiempo total: 4,829854 segundos, Tiempo de escritura: 4,829854 segundos.
+Respuesta 2: , Tiempo total: 5,492973 segundos, Tiempo de escritura: 5,492973 segundos.
+Respuesta 3: , Tiempo total: 6,095325 segundos, Tiempo de escritura: 6,095325 segundos.
+Respuesta 4: , Tiempo total: 6,739665 segundos, Tiempo de escritura: 6,739665 segundos.
+Respuesta 5: , Tiempo total: 7,39348 segundos, Tiempo de escritura: 7,39348 segundos.
+Respuesta 6: , Tiempo total: 8,138446 segundos, Tiempo de escritura: 8,138446 segundos.
 
