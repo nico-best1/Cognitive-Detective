@@ -43,7 +43,7 @@ public class ImageLoader : MonoBehaviour
     {
         if (currentIndex == imagePaths.Count)
         {
-            SceneManager.LoadScene(1);
+            GameManager.Instance.ChangeScene(1);
         }
         else { 
             Debug.Log(imagePaths.Count);

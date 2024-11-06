@@ -6,6 +6,7 @@ using System.IO;
 
 public class UIManager : MonoBehaviour
 {
+    #region Reconocimiento
     public TMP_InputField inputField;
     private string userInput;
     private float startTime;
@@ -15,8 +16,22 @@ public class UIManager : MonoBehaviour
     public static List<string> respuestas = new List<string>();
     public static List<float> tiempos = new List<float>();
     public static List<float> tiemposEscritura = new List<float>(); // Tiempo de escritura de cada respuesta
+    #endregion
+
+    #region Memoria
+
+    #endregion
 
     private ImageLoader imageLoader;
+
+    [SerializeField] private GameObject _levelUI;
+    [SerializeField] private GameObject _tutorialUI;
+
+    public void LevelActive()
+    {
+        _tutorialUI.SetActive(false);
+        _levelUI.SetActive(true);
+    }
 
     void Start()
     {
