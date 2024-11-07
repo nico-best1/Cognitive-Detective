@@ -16,7 +16,7 @@ public class UIManagerMemoria : MonoBehaviour
     public static List<int> respuestas = new List<int>();
     public static List<float> tiempos = new List<float>();
 
-    public string carpetaDeImages = "Assets/Resources/Images/Prueba2";
+    private string carpetaDeImages = "Assets/Resources/Images/Prueba2";
 
     //[System.Serializable]
     //public class ImageData
@@ -61,48 +61,57 @@ public class UIManagerMemoria : MonoBehaviour
 
     void LoadNextImage()
     {
-        Debug.Log("LoadNextImage");
-        Debug.Log(imagePaths.Count);
-        if (imagePaths != null && imagePaths.Count > 0)
-        {
-            Debug.Log("LoadNextImage2");
-            string imagePath = imagePaths[currentIndex][0];
-            string imagePath2 = imagePaths[currentIndex][1];
-            string imagePath3 = imagePaths[currentIndex][2];
-            Sprite sprite = Resources.Load<Sprite>(imagePath);
-            Sprite sprite2 = Resources.Load<Sprite>(imagePath2);
-            Sprite sprite3 = Resources.Load<Sprite>(imagePath3);
-            Debug.Log("LoadNextImage3");
-            if (sprite != null)
-            {
-                imageUI.image.sprite = sprite;
-                Debug.Log("image1");
-            }
-            else
-            {
-                Debug.LogError("No se pudo cargar la imagen: " + imagePath);
-            }
-            if (sprite2 != null)
-            {
-                imageUI2.image.sprite = sprite2;
-                Debug.Log("image2");
-            }
-            else
-            {
-                Debug.LogError("No se pudo cargar la imagen: " + imagePath2);
-            }
-            if (sprite3 != null)
-            {
-                imageUI3.image.sprite = sprite3;
-                Debug.Log("image3");
-            }
-            else
-            {
-                Debug.LogError("No se pudo cargar la imagen: " + imagePath3);
-            }
-
-            currentIndex = (currentIndex + 1) % imagePaths.Count;
+        Debug.Log(currentIndex);
+        if(currentIndex == imagePaths.Count) {
+            Application.Quit();
         }
+        else
+        {
+            Debug.Log("LoadNextImage");
+            Debug.Log(imagePaths.Count);
+            Debug.Log(imagePaths[currentIndex].Count);
+            if (imagePaths != null && imagePaths.Count > 0)
+            {
+                Debug.Log("LoadNextImage2");
+                string imagePath = imagePaths[currentIndex][0];
+                string imagePath2 = imagePaths[currentIndex][1];
+                string imagePath3 = imagePaths[currentIndex][2];
+                Sprite sprite = Resources.Load<Sprite>(imagePath);
+                Sprite sprite2 = Resources.Load<Sprite>(imagePath2);
+                Sprite sprite3 = Resources.Load<Sprite>(imagePath3);
+                Debug.Log("LoadNextImage3");
+                if (sprite != null)
+                {
+                    imageUI.image.sprite = sprite;
+                    Debug.Log("image1");
+                }
+                else
+                {
+                    Debug.LogError("No se pudo cargar la imagen: " + imagePath);
+                }
+                if (sprite2 != null)
+                {
+                    imageUI2.image.sprite = sprite2;
+                    Debug.Log("image2");
+                }
+                else
+                {
+                    Debug.LogError("No se pudo cargar la imagen: " + imagePath2);
+                }
+                if (sprite3 != null)
+                {
+                    imageUI3.image.sprite = sprite3;
+                    Debug.Log("image3");
+                }
+                else
+                {
+                    Debug.LogError("No se pudo cargar la imagen: " + imagePath3);
+                }
+
+                currentIndex = currentIndex + 1;
+            }
+        }
+        
     }
 
     public void SaveResultsToFile(int r)
