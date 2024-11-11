@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public enum GameStates { START, TUTORIAL, LEVEL } //estado pause por contemplar
     private static GameManager _instance;
+    public UIManagerGame UI;
     public static GameManager Instance { get { return _instance; } }
 
     private GameStates _currentState;
@@ -40,5 +41,10 @@ public class GameManager : MonoBehaviour
     {
 
         SceneManager.LoadScene(scene);
+    }
+
+    public void setBackground(int nNext, int nActual)
+    {
+        UI.setBackgrounds(nNext, nActual);
     }
 }

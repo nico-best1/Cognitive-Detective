@@ -24,14 +24,6 @@ public class UIManager : MonoBehaviour
 
     private ImageLoader imageLoader;
 
-    [SerializeField] private GameObject _levelUI;
-    [SerializeField] private GameObject _tutorialUI;
-
-    public void LevelActive()
-    {
-        _tutorialUI.SetActive(false);
-        _levelUI.SetActive(true);
-    }
 
     void Start()
     {
@@ -101,4 +93,6 @@ public class UIManager : MonoBehaviour
             writer.WriteLine();
         }
     }
+
+
 }
