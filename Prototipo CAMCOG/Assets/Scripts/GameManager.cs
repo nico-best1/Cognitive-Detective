@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
 
     public GameStates getCurrentState() { return _currentState; }
 
+    public bool isGame;
+
     private void Awake()
     {
         if (_instance == null) _instance = this;

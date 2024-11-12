@@ -10,7 +10,7 @@ public class ImageLoader : MonoBehaviour
     public Image imageUI; 
     private List<string> imagePaths;
     private int currentIndex = 0;
-    private string carpetaDeImages = "Assets/Resources/Images/Prueba1";
+    private string carpetaDeImages;
 
     [System.Serializable]
     public class ImageData
@@ -20,8 +20,16 @@ public class ImageLoader : MonoBehaviour
 
     void Start()
     {
+        if (!GameManager.Instance.isGame)
+        {
+            carpetaDeImages = "Assets/Resources/Images/Prueba1";
+        }
+        else {
+            carpetaDeImages = "Assets/Resources/Images/Prompt";
+        }
         ObtenerRutasImagenes(carpetaDeImages);
-        LoadNextImage(); 
+        if (!GameManager.Instance.isGame)
+            LoadNextImage(); 
     }
 
     void LoadJson()
@@ -43,7 +51,8 @@ public class ImageLoader : MonoBehaviour
     {
         if (currentIndex == imagePaths.Count)
         {
-            GameManager.Instance.ChangeScene(1);
+            if(!GameManager.Instance.isGame)
+                GameManager.Instance.ChangeScene(1);
         }
         else { 
             Debug.Log(imagePaths.Count);
@@ -52,7 +61,7 @@ public class ImageLoader : MonoBehaviour
                 string imagePath = imagePaths[currentIndex];
                 Debug.Log("Cargando imagen: " + imagePath); // Verificar la ruta
                 Sprite sprite = Resources.Load<Sprite>(imagePath);
-
+                Debug.Log(sprite);
                 if (sprite != null)
                 {
                     imageUI.sprite = sprite;
@@ -82,8 +91,17 @@ public class ImageLoader : MonoBehaviour
                 string[] archivos = Directory.GetFiles(directorio, extension, SearchOption.AllDirectories);
                 foreach (string archivo in archivos)
                 {
-                    // Convertimos la ruta en un formato que sea relativo a Resources y sin la extensión del archivo
-                    string rutaRelativa = "Images/Prueba1/" + Path.GetFileNameWithoutExtension(archivo);
+                    string rutaRelativa = "";
+                    if (!GameManager.Instance.isGame)
+                    {
+                        // Convertimos la ruta en un formato que sea relativo a Resources y sin la extensión del archivo
+                        rutaRelativa = "Images/Prueba1/" + Path.GetFileNameWithoutExtension(archivo);
+                        imagePaths.Add(rutaRelativa);
+                    }
+                    else
+                    {
+                        rutaRelativa = "Images/Prompt/" + Path.GetFileNameWithoutExtension(archivo);
+                    }
                     imagePaths.Add(rutaRelativa);
                 }
             }
