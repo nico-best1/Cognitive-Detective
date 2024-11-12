@@ -1,8 +1,8 @@
 Resultados:
-Respuesta 1: , Tiempo total: 3,040976 segundos, Tiempo de escritura: 3,040976 segundos.
-Respuesta 2: , Tiempo total: 4,538829 segundos, Tiempo de escritura: 4,538829 segundos.
-Respuesta 3: , Tiempo total: 5,710006 segundos, Tiempo de escritura: 5,710006 segundos.
-Respuesta 4: , Tiempo total: 6,61702 segundos, Tiempo de escritura: 6,61702 segundos.
-Respuesta 5: , Tiempo total: 7,481126 segundos, Tiempo de escritura: 7,481126 segundos.
-Respuesta 6: , Tiempo total: 8,53199 segundos, Tiempo de escritura: 8,53199 segundos.
+Respuesta 1: fdngh, Tiempo total: 4,745357 segundos, Tiempo de escritura: 1,097871 segundos.
+Respuesta 2: vgkvg, Tiempo total: 6,552885 segundos, Tiempo de escritura: 1,020053 segundos.
+Respuesta 3: hvkgjk, Tiempo total: 8,279505 segundos, Tiempo de escritura: 1,130044 segundos.
+Respuesta 4: hjkg, Tiempo total: 9,827498 segundos, Tiempo de escritura: 0,9229527 segundos.
+Respuesta 5: kghkhg, Tiempo total: 11,35958 segundos, Tiempo de escritura: 0,9175329 segundos.
+Respuesta 6: fgh, Tiempo total: 12,97536 segundos, Tiempo de escritura: 1,029808 segundos.
 

@@ -9,6 +9,9 @@ public class UIManagerMemoria : MonoBehaviour
     public Button imageUI;
     public Button imageUI2;
     public Button imageUI3;
+    //private GameObject imageUI4;
+    //public Image menu;
+    //public GameObject buttonPrefab;
     private List<List<string>> imagePaths;
     private int currentIndex = 0;
 
@@ -33,30 +36,19 @@ public class UIManagerMemoria : MonoBehaviour
     {
         startTime = Time.time;
 
+        //CreateButtons();
         ObtenerRutasImagenes(carpetaDeImages);
         LoadNextImage();
         
     }
 
-    //void LoadJson()
+    //void CreateButtons()
     //{
-    //    TextAsset jsonFile = Resources.Load<TextAsset>("ConfigEntradaMemoria");
-    //    imagePaths = new List<List<string>>();
-    //    if (jsonFile != null)
-    //    {
-    //        ImageData jsonData = JsonUtility.FromJson<ImageData>(jsonFile.text);
-    //        imagePaths.Add(jsonData.basculas);
-    //        imagePaths.Add(jsonData.termometros);
-    //        imagePaths.Add(jsonData.zapatos);
-    //        imagePaths.Add(jsonData.maletas);
-    //        imagePaths.Add(jsonData.lamparas);
-    //        imagePaths.Add(jsonData.portatiles);
-    //        Debug.Log("LoadJson");
-    //    }
-    //    else
-    //    {
-    //        Debug.LogError("No se pudo encontrar el archivo JSON.");
-    //    }
+    //    imageUI4 = Instantiate(buttonPrefab, menu.transform);
+
+    //    imageUI4.GetComponent<Button>().onClick.AddListener(() => SaveResultsToFile(4));
+
+    //    imageUI4.GetComponent<Transform>().SetLocalPositionAndRotation(new Vector3(500,100,0), Quaternion.identity);
     //}
 
     void LoadNextImage()
