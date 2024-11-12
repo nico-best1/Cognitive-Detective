@@ -1057,8 +1057,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.032000005, y: 0.04100001, z: 0}
-    m_Extent: {x: 1.0218999, y: 2.5324998, z: 0}
+    m_Center: {x: -0.03735, y: 0.050800085, z: 0}
+    m_Extent: {x: 1.0199499, y: 2.5316, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1292,8 +1292,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.16925001, y: 0.25035, z: 0}
-    m_Extent: {x: 0.84725, y: 1.92435, z: 0}
+    m_Center: {x: -0.16714996, y: 0.23975003, z: 0}
+    m_Extent: {x: 0.84255, y: 1.9225501, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1930,11 +1930,11 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1002429299}
           m_TargetAssemblyTypeName: ClickManager, Assembly-CSharp
-          m_MethodName: ClickReaction
-          m_Mode: 2
+          m_MethodName: GoToAlmacenPruebas
+          m_Mode: 1
           m_Arguments:
-            m_ObjectArgument: {fileID: 1259699906}
-            m_ObjectArgumentAssemblyTypeName: ObjectData, Assembly-CSharp
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
