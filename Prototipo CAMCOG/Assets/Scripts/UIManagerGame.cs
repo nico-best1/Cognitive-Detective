@@ -9,7 +9,9 @@ public class UIManagerGame : MonoBehaviour
 
     [SerializeField] private GameObject _levelUI;
     [SerializeField] private GameObject _tutorialUI;
+    [SerializeField] private List<GameObject> _roomsUI;
     [SerializeField] private List<GameObject> _rooms;
+
 
     //public void LevelActive()
     //{
@@ -19,8 +21,13 @@ public class UIManagerGame : MonoBehaviour
 
     public void setBackgrounds(int nNext, int nActual)
     {
-        _rooms[nActual].SetActive(false);
-        _rooms[nNext].SetActive(true);
+        _roomsUI[nActual].SetActive(false);
+        _roomsUI[nNext].SetActive(true);
+        if (nActual < _rooms.Count)
+            _rooms[nActual].SetActive(false);
+        
+        if (nNext < _rooms.Count)
+            _rooms[nNext].SetActive(true);
     }
 
     void Start()
