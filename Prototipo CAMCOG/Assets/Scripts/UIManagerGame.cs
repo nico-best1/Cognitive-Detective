@@ -82,6 +82,7 @@ public class UIManagerGame : MonoBehaviour
 
         if (imageLoader != null)
         {
+
             setBackgrounds(auxAct, auxNext);
         }
         else
