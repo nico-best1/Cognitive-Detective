@@ -470,10 +470,10 @@ MonoBehaviour:
         - m_Target: {fileID: 1002429299}
           m_TargetAssemblyTypeName: ClickManager, Assembly-CSharp
           m_MethodName: ClickReaction
-          m_Mode: 1
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 975852544}
+            m_ObjectArgumentAssemblyTypeName: ObjectData, Assembly-CSharp
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -807,10 +807,10 @@ MonoBehaviour:
         - m_Target: {fileID: 1002429299}
           m_TargetAssemblyTypeName: ClickManager, Assembly-CSharp
           m_MethodName: ClickReaction
-          m_Mode: 1
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 1329816510}
+            m_ObjectArgumentAssemblyTypeName: ObjectData, Assembly-CSharp
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -988,8 +988,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.02879998, y: 0.04614997, z: 0}
-    m_Extent: {x: 1.0133, y: 2.53465, z: 0}
+    m_Center: {x: -0.03424999, y: 0.046499968, z: 0}
+    m_Extent: {x: 1.01515, y: 2.5312, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1111,7 +1111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b58acb03c4ef2c34a8392b1808b65469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puerta: {fileID: 975852544}
 --- !u!114 &1002429300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1224,8 +1223,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.16315001, y: 0.24115002, z: 0}
-    m_Extent: {x: 0.84415, y: 1.92955, z: 0}
+    m_Center: {x: -0.17289999, y: 0.24515003, z: 0}
+    m_Extent: {x: 0.8463, y: 1.92295, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1859,10 +1858,10 @@ MonoBehaviour:
         - m_Target: {fileID: 1002429299}
           m_TargetAssemblyTypeName: ClickManager, Assembly-CSharp
           m_MethodName: ClickReaction
-          m_Mode: 1
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 1259699906}
+            m_ObjectArgumentAssemblyTypeName: ObjectData, Assembly-CSharp
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
