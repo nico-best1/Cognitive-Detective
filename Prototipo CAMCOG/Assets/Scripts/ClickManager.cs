@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class ClickManager : MonoBehaviour
 {
-    [SerializeField] private ObjectData puerta;
-    public void ClickReaction()
+    
+    public void ClickReaction(ObjectData obj)
     {
-        GameManager.Instance.setBackground(puerta.nNext, puerta.nActual);
+        Debug.Log("entra");
+        GameManager.Instance.setBackground(obj.nNext, obj.nActual);
     }
 }
