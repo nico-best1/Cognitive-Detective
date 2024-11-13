@@ -96,7 +96,6 @@ public class ImageLoader : MonoBehaviour
                     {
                         // Convertimos la ruta en un formato que sea relativo a Resources y sin la extensión del archivo
                         rutaRelativa = "Images/Prueba1/" + Path.GetFileNameWithoutExtension(archivo);
-                        imagePaths.Add(rutaRelativa);
                     }
                     else
                     {
