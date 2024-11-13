@@ -38,7 +38,7 @@ public class ImageLoader : MonoBehaviour
                 carpetaDeImages = "Assets/Resources/Images/Prueba1";
                 ObtenerRutasImagenesReconocimiento(carpetaDeImages);
             }
-            if (SceneManager.GetActiveScene().buildIndex == 1)
+            else if (SceneManager.GetActiveScene().buildIndex == 1)
             {
                 carpetaDeImages = "Assets/Resources/Images/Prueba2";
                 ObtenerRutasImagenesMemoria(carpetaDeImages);
@@ -52,7 +52,7 @@ public class ImageLoader : MonoBehaviour
                 carpetaDeImages = "Assets/Resources/Images/Prompt";
                 ObtenerRutasImagenesReconocimiento(carpetaDeImages);
             }
-            if (SceneManager.GetActiveScene().buildIndex == 1)
+            else if (SceneManager.GetActiveScene().buildIndex == 1)
             {
                 carpetaDeImages = "Assets/Resources/Images/Prompt2";
                 ObtenerRutasImagenesMemoria(carpetaDeImages);
@@ -118,7 +118,7 @@ public class ImageLoader : MonoBehaviour
             Debug.Log("LoadNextImage");
             Debug.Log(imagePathsMemoria.Count);
             Debug.Log(imagePathsMemoria[currentIndex].Count);
-            if (imagePaths != null && imagePaths.Count > 0)
+            if (imagePathsMemoria != null && imagePathsMemoria.Count > 0)
             {
                 Debug.Log("LoadNextImage2");
                 string imagePath = imagePathsMemoria[currentIndex][0];

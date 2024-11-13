@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class UIManagerGame : MonoBehaviour
 {
@@ -54,15 +55,28 @@ public class UIManagerGame : MonoBehaviour
 
         if(nNext == 2)
         {
-            imageLoader.LoadNextImageReconocimiento();
+            if (SceneManager.GetActiveScene().buildIndex == 0)
+            {
+                imageLoader.LoadNextImageReconocimiento();
+
+            }
+            else if (SceneManager.GetActiveScene().buildIndex == 1)
+            {
+                imageLoader.LoadNextImageMemoria();
+
+            }
+
         }
         
     }
 
     void Start()
     {
-        inputField.onEndEdit.AddListener(OnInputEnd);
-        inputField.onValueChanged.AddListener(OnInputChanged); // Detectar cambios en el texto
+        if (inputField != null)
+        {
+            inputField.onEndEdit.AddListener(OnInputEnd);
+            inputField.onValueChanged.AddListener(OnInputChanged); // Detectar cambios en el texto
+        }
 
         imageLoader = FindObjectOfType<ImageLoader>();
     }
@@ -101,6 +115,10 @@ public class UIManagerGame : MonoBehaviour
         isWriting = false;
     }
 
+    public void QuitApp()
+    {
+        GameManager.Instance.CloseApp();
+    }
     void ShowResults()
     {
         for (int i = 0; i < respuestas.Count; i++)
