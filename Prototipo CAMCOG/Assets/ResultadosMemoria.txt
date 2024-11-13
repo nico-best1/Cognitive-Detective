@@ -1,21 +1,11 @@
 Resultados:
-Respuesta 1: 4, Tiempo total: 1,354631 segundos.
-Respuesta 2: 4, Tiempo total: 1,971796 segundos.
-Respuesta 3: 4, Tiempo total: 2,369479 segundos.
-Respuesta 4: 4, Tiempo total: 2,7259 segundos.
-Respuesta 5: 4, Tiempo total: 3,137047 segundos.
-Respuesta 6: 4, Tiempo total: 3,555693 segundos.
-Respuesta 7: 4, Tiempo total: 3,756755 segundos.
-Respuesta 8: 4, Tiempo total: 3,939073 segundos.
-Respuesta 9: 4, Tiempo total: 4,117064 segundos.
-Respuesta 10: 4, Tiempo total: 4,327977 segundos.
-Respuesta 11: 4, Tiempo total: 4,505805 segundos.
-Respuesta 12: 4, Tiempo total: 4,754627 segundos.
-Respuesta 13: 4, Tiempo total: 4,965427 segundos.
-Respuesta 14: 4, Tiempo total: 5,188322 segundos.
-Respuesta 15: 4, Tiempo total: 5,363752 segundos.
-Respuesta 16: 4, Tiempo total: 5,518652 segundos.
-Respuesta 17: 4, Tiempo total: 5,698213 segundos.
-Respuesta 18: 4, Tiempo total: 5,865142 segundos.
-Respuesta 19: 4, Tiempo total: 6,028374 segundos.
+Respuesta 1: 2, Tiempo total: 1,624848 segundos.
+Respuesta 2: 2, Tiempo total: 2,562092 segundos.
+Respuesta 3: 2, Tiempo total: 3,63078 segundos.
+Respuesta 4: 2, Tiempo total: 5,234519 segundos.
+Respuesta 5: 2, Tiempo total: 6,634818 segundos.
+Respuesta 6: 2, Tiempo total: 8,087687 segundos.
+Respuesta 7: 2, Tiempo total: 9,030064 segundos.
+Respuesta 8: 2, Tiempo total: 10,2283 segundos.
+Respuesta 9: 2, Tiempo total: 10,56118 segundos.
 
