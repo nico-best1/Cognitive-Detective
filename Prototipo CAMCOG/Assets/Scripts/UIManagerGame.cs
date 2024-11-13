@@ -27,6 +27,11 @@ public class UIManagerGame : MonoBehaviour
     public static List<float> tiemposEscritura = new List<float>(); // Tiempo de escritura de cada respuesta
     private ImageLoader imageLoader;
     #endregion
+
+    #region Memoria
+    public static List<int> respuestasMem = new List<int>();
+    public static List<float> tiemposMem = new List<float>();
+    #endregion
     //public void LevelActive()
     //{
     //    _tutorialUI.SetActive(false);
@@ -35,6 +40,7 @@ public class UIManagerGame : MonoBehaviour
 
     public void setBackgrounds(int nNext, int nActual)
     {
+        startTime = Time.time;
         auxAct = nActual;
         auxNext = nNext;
 
@@ -48,8 +54,9 @@ public class UIManagerGame : MonoBehaviour
 
         if(nNext == 2)
         {
-            imageLoader.LoadNextImage();
+            imageLoader.LoadNextImageReconocimiento();
         }
+        
     }
 
     void Start()
@@ -116,7 +123,27 @@ public class UIManagerGame : MonoBehaviour
             writer.WriteLine();
         }
     }
+    public void SaveResultsToFile(int r)
+    {
+        float responseTime = Time.time - startTime;
 
+        tiemposMem.Add(responseTime);
+        respuestasMem.Add(r);
+
+        string filePath = Application.dataPath + "/ResultadosMemoria.txt";
+
+        using (StreamWriter writer = new StreamWriter(filePath, false))
+        {
+            writer.WriteLine("Resultados:");
+            for (int i = 0; i < respuestasMem.Count; i++)
+            {
+                writer.WriteLine("Respuesta " + (i + 1) + ": " + respuestasMem[i] + ", Tiempo total: " + tiemposMem[i] + " segundos.");
+            }
+            writer.WriteLine();
+        }
+
+        imageLoader.LoadNextImageMemoria();
+    }
 
 
 }
