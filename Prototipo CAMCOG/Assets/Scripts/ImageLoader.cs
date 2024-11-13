@@ -25,6 +25,7 @@ public class ImageLoader : MonoBehaviour
     public Button imageUI1;
     public Button imageUI2;
     public Button imageUI3;
+    public int numSubcarpetas;
     #endregion
 
     void Start()
@@ -35,12 +36,12 @@ public class ImageLoader : MonoBehaviour
             if (SceneManager.GetActiveScene().buildIndex == 0)
             {
                 Debug.Log("entra");
-                carpetaDeImages = "Assets/Resources/Images/Prueba1";
+                carpetaDeImages = "Images/Prueba1";
                 ObtenerRutasImagenesReconocimiento(carpetaDeImages);
             }
             else if (SceneManager.GetActiveScene().buildIndex == 1)
             {
-                carpetaDeImages = "Assets/Resources/Images/Prueba2";
+                carpetaDeImages = "Images/Prueba2";
                 ObtenerRutasImagenesMemoria(carpetaDeImages);
             }
             LoadNextImageReconocimiento();
@@ -49,12 +50,12 @@ public class ImageLoader : MonoBehaviour
             Debug.Log(SceneManager.GetActiveScene().buildIndex);
             if (SceneManager.GetActiveScene().buildIndex == 0)
             {
-                carpetaDeImages = "Assets/Resources/Images/Prompt";
+                carpetaDeImages = "Images/Prompt";
                 ObtenerRutasImagenesReconocimiento(carpetaDeImages);
             }
             else if (SceneManager.GetActiveScene().buildIndex == 1)
             {
-                carpetaDeImages = "Assets/Resources/Images/Prompt2";
+                carpetaDeImages = "Images/Prompt2";
                 ObtenerRutasImagenesMemoria(carpetaDeImages);
             }
 
@@ -79,13 +80,14 @@ public class ImageLoader : MonoBehaviour
 
     public void LoadNextImageReconocimiento()
     {
+        Debug.Log(imagePaths.Count);
         if (currentIndex == imagePaths.Count)
         {
             if(!GameManager.Instance.isGame)
                 GameManager.Instance.ChangeScene(1);
         }
         else { 
-            Debug.Log(imagePaths.Count);
+           
             if (imagePaths != null && imagePaths.Count > 0)
             {
                 string imagePath = imagePaths[currentIndex];
@@ -161,81 +163,56 @@ public class ImageLoader : MonoBehaviour
         }
 
     }
+    
     void ObtenerRutasImagenesReconocimiento(string directorio)
     {
         imagePaths = new List<string>();
 
-        if (Directory.Exists(directorio))
-        {
-            // Extensiones de archivo que queremos buscar
-            string[] extensiones = new[] { "*.png", "*.jpg", "*.jpeg" };
+        // Cargar todas las imágenes dentro del directorio especificado en Resources
+        Sprite[] imagenes = Resources.LoadAll<Sprite>(directorio);
 
-            foreach (string extension in extensiones)
+        if (imagenes.Length > 0)
+        {
+            foreach (Sprite imagen in imagenes)
             {
-                // Obtener los archivos para cada tipo de extensión
-                string[] archivos = Directory.GetFiles(directorio, extension, SearchOption.AllDirectories);
-                foreach (string archivo in archivos)
-                {
-                    string rutaRelativa = "";
-                    if (!GameManager.Instance.isGame)
-                    {
-                        // Convertimos la ruta en un formato que sea relativo a Resources y sin la extensión del archivo
-                        rutaRelativa = "Images/Prueba1/" + Path.GetFileNameWithoutExtension(archivo);
-                    }
-                    else
-                    {
-                        rutaRelativa = "Images/Prompt/" + Path.GetFileNameWithoutExtension(archivo);
-                    }
-                    imagePaths.Add(rutaRelativa);
-                }
+                // Convertimos el nombre del archivo en una ruta relativa
+                string rutaRelativa = directorio + "/" + imagen.name;
+                imagePaths.Add(rutaRelativa);
             }
         }
         else
         {
-            Debug.LogError("El directorio especificado no existe: " + directorio);
+            Debug.LogError("No se encontraron imágenes en el directorio especificado: " + directorio);
         }
     }
+
+    
     void ObtenerRutasImagenesMemoria(string directorio)
     {
         imagePathsMemoria = new List<List<string>>();
-
-        if (Directory.Exists(directorio))
+        // Aquí asumimos que los subdirectorios están estructurados de manera conocida, 
+        // como "Prueba2/SubCarpeta1", "Prueba2/SubCarpeta2", etc.
+        for (int i = 0; i < numSubcarpetas; i++) // Por ejemplo, si esperas 3 subcarpetas
         {
-            // Extensiones de archivo que queremos buscar
-            string[] extensiones = new[] { "*.png", "*.jpg", "*.jpeg" };
-            string[] directorios = Directory.GetDirectories(directorio);
+            string subdirectorio = directorio + "/" + (i + 1);
+            Sprite[] imagenes = Resources.LoadAll<Sprite>(subdirectorio);
 
-            foreach (string direc in directorios)
+            if (imagenes.Length > 0)
             {
                 List<string> aux = new List<string>();
-                foreach (string extension in extensiones)
+                foreach (Sprite imagen in imagenes)
                 {
-                    // Obtener los archivos para cada tipo de extensión
-                    string[] archivos = Directory.GetFiles(direc, extension, SearchOption.AllDirectories);
-                    foreach (string archivo in archivos)
-                    {
-                        string rutaRelativa = "";
-                        if (!GameManager.Instance.isGame)
-                        {
-                            // Convertimos la ruta en un formato que sea relativo a Resources y sin la extensión del archivo
-                            rutaRelativa = "Images/Prueba2/" + Path.GetRelativePath(directorio, direc) + "/" + Path.GetFileNameWithoutExtension(archivo);
-                        }
-                        else
-                        {
-                            rutaRelativa = "Images/Prompt2/" + Path.GetRelativePath(directorio, direc) + "/" + Path.GetFileNameWithoutExtension(archivo);
-                        }
-                        // Convertimos la ruta en un formato que sea relativo a Resources y sin la extensión del archivo
-                        aux.Add(rutaRelativa);
-                    }
+                    string rutaRelativa = subdirectorio + "/" + imagen.name;
+                    aux.Add(rutaRelativa);
                 }
                 imagePathsMemoria.Add(aux);
             }
-
-        }
-        else
-        {
-            Debug.LogError("El directorio especificado no existe: " + directorio);
+            else
+            {
+                Debug.LogError("No se encontraron imágenes en el subdirectorio: " + subdirectorio);
+            }
         }
     }
+
 }
 

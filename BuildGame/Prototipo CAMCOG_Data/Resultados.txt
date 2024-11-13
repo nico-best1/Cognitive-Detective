@@ -1,0 +1,3 @@
+Resultados:
+Respuesta 1: cuchillo, Tiempo total: 4,466632 segundos, Tiempo de escritura: 2,283321 segundos.
+

@@ -1511,6 +1511,7 @@ MonoBehaviour:
   imageUI3: {fileID: 85200695}
   finTestText: {fileID: 898072557}
   quitButton: {fileID: 102113424}
+  numSubcarpetas: 6
 --- !u!1 &1801279197
 GameObject:
   m_ObjectHideFlags: 0

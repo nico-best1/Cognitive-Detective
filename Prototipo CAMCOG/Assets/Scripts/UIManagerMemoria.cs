@@ -19,8 +19,8 @@ public class UIManagerMemoria : MonoBehaviour
     public static List<int> respuestas = new List<int>();
     public static List<float> tiempos = new List<float>();
 
-    private string carpetaDeImages = "Assets/Resources/Images/Prueba2";
-
+    private string carpetaDeImages = "Images/Prueba2";
+    public int numSubcarpetas;
     void Start()
     {
         startTime = Time.time;
@@ -97,33 +97,60 @@ public class UIManagerMemoria : MonoBehaviour
         quitButton.gameObject.SetActive(true);
     }
 
+    //void ObtenerRutasImagenes(string directorio)
+    //{
+    //    imagePaths = new List<List<string>>();
+
+    //    if (Directory.Exists(directorio))
+    //    {
+    //        string[] extensiones = new[] { "*.png", "*.jpg", "*.jpeg" };
+    //        string[] directorios = Directory.GetDirectories(directorio);
+
+    //        foreach (string direc in directorios)
+    //        {
+    //            List<string> aux = new List<string>();
+    //            foreach (string extension in extensiones)
+    //            {
+    //                string[] archivos = Directory.GetFiles(direc, extension, SearchOption.AllDirectories);
+    //                foreach (string archivo in archivos)
+    //                {
+    //                    string rutaRelativa = "Images/Prueba2/" + Path.GetRelativePath(directorio, direc) + "/" + Path.GetFileNameWithoutExtension(archivo);
+    //                    aux.Add(rutaRelativa);
+    //                }
+    //            }
+    //            imagePaths.Add(aux);
+    //        }
+    //    }
+    //    else
+    //    {
+    //        Debug.LogError("El directorio especificado no existe: " + directorio);
+    //    }
+    //}
     void ObtenerRutasImagenes(string directorio)
     {
         imagePaths = new List<List<string>>();
-
-        if (Directory.Exists(directorio))
+        
+        // Aquí asumimos que los subdirectorios están estructurados de manera conocida, 
+        // como "Prueba2/SubCarpeta1", "Prueba2/SubCarpeta2", etc.
+        for (int i = 0; i < numSubcarpetas; i++) // Por ejemplo, si esperas 3 subcarpetas
         {
-            string[] extensiones = new[] { "*.png", "*.jpg", "*.jpeg" };
-            string[] directorios = Directory.GetDirectories(directorio);
-
-            foreach (string direc in directorios)
+            string subdirectorio = directorio + "/" + (i + 1);
+            Sprite[] imagenes = Resources.LoadAll<Sprite>(subdirectorio);
+            Debug.Log(imagenes.Length);
+            if (imagenes.Length > 0)
             {
                 List<string> aux = new List<string>();
-                foreach (string extension in extensiones)
+                foreach (Sprite imagen in imagenes)
                 {
-                    string[] archivos = Directory.GetFiles(direc, extension, SearchOption.AllDirectories);
-                    foreach (string archivo in archivos)
-                    {
-                        string rutaRelativa = "Images/Prueba2/" + Path.GetRelativePath(directorio, direc) + "/" + Path.GetFileNameWithoutExtension(archivo);
-                        aux.Add(rutaRelativa);
-                    }
+                    string rutaRelativa = subdirectorio + "/" + imagen.name;
+                    aux.Add(rutaRelativa);
                 }
                 imagePaths.Add(aux);
             }
-        }
-        else
-        {
-            Debug.LogError("El directorio especificado no existe: " + directorio);
+            else
+            {
+                Debug.LogError("No se encontraron imágenes en el subdirectorio: " + subdirectorio);
+            }
         }
     }
 

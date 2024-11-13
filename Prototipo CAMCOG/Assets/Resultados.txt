@@ -1,8 +1,3 @@
 Resultados:
-Respuesta 1: jhgcfhg, Tiempo total: 2,490107 segundos, Tiempo de escritura: 0,8842398 segundos.
-Respuesta 2: , Tiempo total: 4,195592 segundos, Tiempo de escritura: 2,589725 segundos.
-Respuesta 3: , Tiempo total: 5,031764 segundos, Tiempo de escritura: 3,425897 segundos.
-Respuesta 4: , Tiempo total: 5,835563 segundos, Tiempo de escritura: 4,229696 segundos.
-Respuesta 5: , Tiempo total: 6,686217 segundos, Tiempo de escritura: 5,08035 segundos.
-Respuesta 6: , Tiempo total: 7,72149 segundos, Tiempo de escritura: 6,115623 segundos.
+Respuesta 1: , Tiempo total: 1,746969 segundos, Tiempo de escritura: 3,62662 segundos.
 

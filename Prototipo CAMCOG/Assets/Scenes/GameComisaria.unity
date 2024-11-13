@@ -325,8 +325,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.044350028, y: 2.6227002, z: 0}
-    m_Extent: {x: 1.52765, y: 5.6232, z: 0}
+    m_Center: {x: 0.037400007, y: 2.6132, z: 0}
+    m_Extent: {x: 1.5263, y: 5.6211996, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1615,6 +1615,7 @@ MonoBehaviour:
   imageUI1: {fileID: 905586528}
   imageUI2: {fileID: 1542098035}
   imageUI3: {fileID: 1934474721}
+  numSubcarpetas: 1
 --- !u!1 &1801279197
 GameObject:
   m_ObjectHideFlags: 0
