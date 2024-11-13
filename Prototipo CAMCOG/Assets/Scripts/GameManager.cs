@@ -49,4 +49,9 @@ public class GameManager : MonoBehaviour
     {
         UI.setBackgrounds(nNext, nActual);
     }
+
+    public void CloseApp()
+    {
+        Application.Quit();
+    }
 }
