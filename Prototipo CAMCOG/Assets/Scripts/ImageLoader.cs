@@ -46,6 +46,7 @@ public class ImageLoader : MonoBehaviour
             LoadNextImageReconocimiento();
         }
         else {
+            Debug.Log(SceneManager.GetActiveScene().buildIndex);
             if (SceneManager.GetActiveScene().buildIndex == 0)
             {
                 carpetaDeImages = "Assets/Resources/Images/Prompt";
