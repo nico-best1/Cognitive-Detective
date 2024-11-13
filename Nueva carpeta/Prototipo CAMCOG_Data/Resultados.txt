@@ -1,0 +1,8 @@
+Resultados:
+Respuesta 1: bascula, Tiempo total: 6,253118 segundos, Tiempo de escritura: 1,333204 segundos.
+Respuesta 2: lampara, Tiempo total: 9,303058 segundos, Tiempo de escritura: 0,9833136 segundos.
+Respuesta 3: maleta, Tiempo total: 12,16968 segundos, Tiempo de escritura: 0,983304 segundos.
+Respuesta 4: portatil, Tiempo total: 15,86964 segundos, Tiempo de escritura: 2,266664 segundos.
+Respuesta 5: termometro, Tiempo total: 19,95292 segundos, Tiempo de escritura: 2,483206 segundos.
+Respuesta 6: zapato, Tiempo total: 23,68619 segundos, Tiempo de escritura: 1,183352 segundos.
+
