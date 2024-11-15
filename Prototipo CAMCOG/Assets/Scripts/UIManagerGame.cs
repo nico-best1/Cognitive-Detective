@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class UIManagerGame : MonoBehaviour
 {
@@ -27,6 +28,11 @@ public class UIManagerGame : MonoBehaviour
     public static List<float> tiemposEscritura = new List<float>(); // Tiempo de escritura de cada respuesta
     private ImageLoader imageLoader;
     #endregion
+
+    #region Memoria
+    public static List<int> respuestasMem = new List<int>();
+    public static List<float> tiemposMem = new List<float>();
+    #endregion
     //public void LevelActive()
     //{
     //    _tutorialUI.SetActive(false);
@@ -35,6 +41,7 @@ public class UIManagerGame : MonoBehaviour
 
     public void setBackgrounds(int nNext, int nActual)
     {
+        startTime = Time.time;
         auxAct = nActual;
         auxNext = nNext;
 
@@ -48,14 +55,28 @@ public class UIManagerGame : MonoBehaviour
 
         if(nNext == 2)
         {
-            imageLoader.LoadNextImage();
+            if (SceneManager.GetActiveScene().buildIndex == 0)
+            {
+                imageLoader.LoadNextImageReconocimiento();
+
+            }
+            else if (SceneManager.GetActiveScene().buildIndex == 1)
+            {
+                imageLoader.LoadNextImageMemoria();
+
+            }
+
         }
+        
     }
 
     void Start()
     {
-        inputField.onEndEdit.AddListener(OnInputEnd);
-        inputField.onValueChanged.AddListener(OnInputChanged); // Detectar cambios en el texto
+        if (inputField != null)
+        {
+            inputField.onEndEdit.AddListener(OnInputEnd);
+            inputField.onValueChanged.AddListener(OnInputChanged); // Detectar cambios en el texto
+        }
 
         imageLoader = FindObjectOfType<ImageLoader>();
     }
@@ -94,6 +115,10 @@ public class UIManagerGame : MonoBehaviour
         isWriting = false;
     }
 
+    public void QuitApp()
+    {
+        GameManager.Instance.CloseApp();
+    }
     void ShowResults()
     {
         for (int i = 0; i < respuestas.Count; i++)
@@ -116,7 +141,27 @@ public class UIManagerGame : MonoBehaviour
             writer.WriteLine();
         }
     }
+    public void SaveResultsToFile(int r)
+    {
+        float responseTime = Time.time - startTime;
 
+        tiemposMem.Add(responseTime);
+        respuestasMem.Add(r);
+
+        string filePath = Application.dataPath + "/ResultadosMemoria.txt";
+
+        using (StreamWriter writer = new StreamWriter(filePath, false))
+        {
+            writer.WriteLine("Resultados:");
+            for (int i = 0; i < respuestasMem.Count; i++)
+            {
+                writer.WriteLine("Respuesta " + (i + 1) + ": " + respuestasMem[i] + ", Tiempo total: " + tiemposMem[i] + " segundos.");
+            }
+            writer.WriteLine();
+        }
+
+        imageLoader.LoadNextImageMemoria();
+    }
 
 
 }

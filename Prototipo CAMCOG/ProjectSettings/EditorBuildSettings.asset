@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Reconocimiento.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 0
     path: Assets/Scenes/2.unity
     guid: a1a689b2098d03d49a8e3d87c80a632d
@@ -26,9 +23,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/7.unity
     guid: ba62743bece142647ae4a10f50a18475
-  - enabled: 1
+  - enabled: 0
+    path: Assets/Scenes/Reconocimiento.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
     path: Assets/Scenes/Memoria.unity
     guid: f699d136cc816394d8c71411837117c9
+  - enabled: 1
+    path: Assets/Scenes/GameCrimen.unity
+    guid: ffc20f26808f3724c8b24042acdd5275
   - enabled: 1
     path: Assets/Scenes/GameComisaria.unity
     guid: 11f0a2e702133614088ed33a10a27bfd
