@@ -45,9 +45,9 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(scene);
     }
 
-    public void setBackground(int nNext, int nActual)
+    public void setBackground(int nNext, int nActual, string name)
     {
-        UI.setBackgrounds(nNext, nActual);
+        UI.setBackgrounds(nNext, nActual, name);
     }
 
     public void CloseApp()

@@ -14,7 +14,7 @@ public class UIManagerGame : MonoBehaviour
     [SerializeField] private List<GameObject> _rooms;
     private int auxNext = 0;
     private int auxAct = 0;
-
+    private string auxname;
 
     #region Reconocimiento
     public TMP_InputField inputField;
@@ -39,11 +39,12 @@ public class UIManagerGame : MonoBehaviour
     //    _levelUI.SetActive(true);
     //}
 
-    public void setBackgrounds(int nNext, int nActual)
+    public void setBackgrounds(int nNext, int nActual, string name)
     {
         startTime = Time.time;
         auxAct = nActual;
         auxNext = nNext;
+        auxname = name;
 
         _roomsUI[nActual].SetActive(false);
         _roomsUI[nNext].SetActive(true);
@@ -57,7 +58,7 @@ public class UIManagerGame : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().buildIndex == 0)
             {
-                imageLoader.LoadNextImageReconocimiento();
+                imageLoader.LoadNextImageReconocimiento(name);
 
             }
             else if (SceneManager.GetActiveScene().buildIndex == 1)
@@ -104,7 +105,7 @@ public class UIManagerGame : MonoBehaviour
         if (imageLoader != null)
         {
 
-            setBackgrounds(auxAct, auxNext);
+            setBackgrounds(auxAct, auxNext, auxname);
         }
         else
         {

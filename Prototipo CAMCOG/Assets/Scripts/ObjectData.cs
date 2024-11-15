@@ -6,4 +6,5 @@ public class ObjectData : MonoBehaviour
 {
     public int nNext;
     public int nActual;
+    public string name;
 }

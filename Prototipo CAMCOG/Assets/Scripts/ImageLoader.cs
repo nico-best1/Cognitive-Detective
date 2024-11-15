@@ -9,10 +9,14 @@ public class ImageLoader : MonoBehaviour
 {
     #region Reconocimiento
     public Image imageUI; 
-    private List<string> imagePaths;
+    private List<ImagesLeer> imagePaths;
     private int currentIndex = 0;
     private string carpetaDeImages;
 
+    struct ImagesLeer
+    {
+        public string ruta, name;
+    }
     [System.Serializable]
     public class ImageData
     {
@@ -44,7 +48,7 @@ public class ImageLoader : MonoBehaviour
                 carpetaDeImages = "Images/Prueba2";
                 ObtenerRutasImagenesMemoria(carpetaDeImages);
             }
-            LoadNextImageReconocimiento();
+            LoadNextImageReconocimiento("");
         }
         else {
             Debug.Log(SceneManager.GetActiveScene().buildIndex);
@@ -63,22 +67,35 @@ public class ImageLoader : MonoBehaviour
         
     }
 
-    void LoadJson()
+    //void LoadJson()
+    //{
+    //    TextAsset jsonFile = Resources.Load<TextAsset>("ConfigEntradaReconocimiento");
+
+    //    if (jsonFile != null)
+    //    {
+    //        ImageData jsonData = JsonUtility.FromJson<ImageData>(jsonFile.text);
+    //        imagePaths = jsonData.images;
+    //    }
+    //    else
+    //    {
+    //        Debug.LogError("No se pudo encontrar el archivo JSON.");
+    //    }
+    //}
+    int getIndexImagesPaths(string imageName)
     {
-        TextAsset jsonFile = Resources.Load<TextAsset>("ConfigEntradaReconocimiento");
+        int i = 0;
+        while(i < imagePaths.Count)
+        {
+            if(imagePaths[i].name == imageName)
+            {
+                return i;
+            }
+            i++;
+        }
 
-        if (jsonFile != null)
-        {
-            ImageData jsonData = JsonUtility.FromJson<ImageData>(jsonFile.text);
-            imagePaths = jsonData.images;
-        }
-        else
-        {
-            Debug.LogError("No se pudo encontrar el archivo JSON.");
-        }
+        return -1;
     }
-
-    public void LoadNextImageReconocimiento()
+    public void LoadNextImageReconocimiento(string name)
     {
         Debug.Log(imagePaths.Count);
         if (currentIndex == imagePaths.Count)
@@ -90,20 +107,26 @@ public class ImageLoader : MonoBehaviour
            
             if (imagePaths != null && imagePaths.Count > 0)
             {
-                string imagePath = imagePaths[currentIndex];
-                Debug.Log("Cargando imagen: " + imagePath); // Verificar la ruta
-                Sprite sprite = Resources.Load<Sprite>(imagePath);
-                Debug.Log(sprite);
-                if (sprite != null)
-                {
-                    imageUI.sprite = sprite;
-                }
-                else
-                {
-                    Debug.LogError("No se pudo cargar la imagen: " + imagePath);
-                }
+                if (GameManager.Instance.isGame)
+                    currentIndex = getIndexImagesPaths(name);
 
-                currentIndex = (currentIndex + 1);
+                if (currentIndex > -1)
+                {
+                    string imagePath = imagePaths[currentIndex].ruta;
+                    Debug.Log("Cargando imagen: " + imagePath); // Verificar la ruta
+                    Sprite sprite = Resources.Load<Sprite>(imagePath);
+                    Debug.Log(sprite);
+                    if (sprite != null)
+                    {
+                        imageUI.sprite = sprite;
+                    }
+                    else
+                    {
+                        Debug.LogError("No se pudo cargar la imagen: " + imagePath);
+                    }
+                }
+                if(!GameManager.Instance.isGame)
+                    currentIndex = (currentIndex + 1);
             }
         }
     }
@@ -166,7 +189,7 @@ public class ImageLoader : MonoBehaviour
     
     void ObtenerRutasImagenesReconocimiento(string directorio)
     {
-        imagePaths = new List<string>();
+        imagePaths = new List<ImagesLeer>();
 
         // Cargar todas las imágenes dentro del directorio especificado en Resources
         Sprite[] imagenes = Resources.LoadAll<Sprite>(directorio);
@@ -176,8 +199,11 @@ public class ImageLoader : MonoBehaviour
             foreach (Sprite imagen in imagenes)
             {
                 // Convertimos el nombre del archivo en una ruta relativa
-                string rutaRelativa = directorio + "/" + imagen.name;
-                imagePaths.Add(rutaRelativa);
+                ImagesLeer images = new ImagesLeer();
+                 images.ruta = directorio + "/" + imagen.name;
+                 images.name = imagen.name;
+                Debug.Log(images.name);
+                imagePaths.Add(images);
             }
         }
         else

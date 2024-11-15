@@ -9,7 +9,7 @@ public class ClickManager : MonoBehaviour
     public void ClickReaction(ObjectData obj)
     {
         Debug.Log("entra");
-        GameManager.Instance.setBackground(obj.nNext, obj.nActual);
+        GameManager.Instance.setBackground(obj.nNext, obj.nActual, obj.name);
     }
     public void GoToAlmacenPruebas()
     {

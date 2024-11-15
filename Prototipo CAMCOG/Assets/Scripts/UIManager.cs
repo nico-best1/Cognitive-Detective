@@ -60,7 +60,7 @@ public class UIManager : MonoBehaviour
 
         if (imageLoader != null)
         {
-            imageLoader.LoadNextImageReconocimiento();
+            imageLoader.LoadNextImageReconocimiento("");
         }
         else
         {
