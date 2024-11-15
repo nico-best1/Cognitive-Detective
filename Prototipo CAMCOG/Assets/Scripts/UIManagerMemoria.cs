@@ -21,17 +21,6 @@ public class UIManagerMemoria : MonoBehaviour
 
     private string carpetaDeImages = "Assets/Resources/Images/Prueba2";
 
-    //[System.Serializable]
-    //public class ImageData
-    //{
-    //    public List<string> basculas;
-    //    public List<string> termometros;
-    //    public List<string> zapatos;
-    //    public List<string> maletas;
-    //    public List<string> lamparas;
-    //    public List<string> portatiles;
-    //}
-
     void Start()
     {
         startTime = Time.time;
