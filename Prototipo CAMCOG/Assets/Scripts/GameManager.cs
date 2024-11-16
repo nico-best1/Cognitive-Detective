@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     public bool isGame;
 
+    public int numPruebas = 0;
+    public int pruebasConseguidas = 0;
     private void Awake()
     {
         if (_instance == null) _instance = this;
@@ -41,8 +43,13 @@ public class GameManager : MonoBehaviour
 
     public void ChangeScene(int scene)
     {
-
-        SceneManager.LoadScene(scene);
+        
+        if(pruebasConseguidas == numPruebas)
+            SceneManager.LoadScene(scene);
+        else
+        {
+            Debug.Log("No tienes las pruebas suficientes");
+        }
     }
 
     public void setBackground(int nNext, int nActual, string name)

@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; // Para trabajar con la UI
 using System.IO;
-using UnityEngine.SceneManagement;      // Para leer archivos
+using UnityEngine.SceneManagement;
+using System.Numerics;
+using UnityEditor.Build;      // Para leer archivos
 
 public class ImageLoader : MonoBehaviour
 {
@@ -12,11 +14,13 @@ public class ImageLoader : MonoBehaviour
     private List<ImagesLeer> imagePaths;
     private int currentIndex = 0;
     private string carpetaDeImages;
-
+    private int numImages = 0;
+    
     struct ImagesLeer
     {
         public string ruta, name;
     }
+    private List<bool> mostrados;
     [System.Serializable]
     public class ImageData
     {
@@ -34,11 +38,13 @@ public class ImageLoader : MonoBehaviour
 
     void Start()
     {
+        mostrados = new List<bool>();
         if (!GameManager.Instance.isGame)
         {
             Debug.Log(SceneManager.GetActiveScene().buildIndex);
             if (SceneManager.GetActiveScene().buildIndex == 0)
             {
+                
                 Debug.Log("entra");
                 carpetaDeImages = "Images/Prueba1";
                 ObtenerRutasImagenesReconocimiento(carpetaDeImages);
@@ -95,10 +101,22 @@ public class ImageLoader : MonoBehaviour
 
         return -1;
     }
+    int getRandomIndex()
+    {
+        int rand = Random.Range(0, mostrados.Count);
+        if (!mostrados[rand])
+        {
+            mostrados[rand] = true;
+            return rand;
+        }
+        else
+        {
+           return getRandomIndex();
+        }
+    }
     public void LoadNextImageReconocimiento(string name)
     {
-        Debug.Log(imagePaths.Count);
-        if (currentIndex == imagePaths.Count)
+        if (GameManager.Instance.pruebasConseguidas == imagePaths.Count)
         {
             if(!GameManager.Instance.isGame)
                 GameManager.Instance.ChangeScene(1);
@@ -109,7 +127,10 @@ public class ImageLoader : MonoBehaviour
             {
                 if (GameManager.Instance.isGame)
                     currentIndex = getIndexImagesPaths(name);
-
+                else
+                {
+                    currentIndex = getRandomIndex();   
+                }
                 if (currentIndex > -1)
                 {
                     string imagePath = imagePaths[currentIndex].ruta;
@@ -124,9 +145,8 @@ public class ImageLoader : MonoBehaviour
                     {
                         Debug.LogError("No se pudo cargar la imagen: " + imagePath);
                     }
+                    GameManager.Instance.pruebasConseguidas++;
                 }
-                if(!GameManager.Instance.isGame)
-                    currentIndex = (currentIndex + 1);
             }
         }
     }
@@ -134,12 +154,13 @@ public class ImageLoader : MonoBehaviour
     public void LoadNextImageMemoria()
     {
         Debug.Log(currentIndex);
-        if (currentIndex == imagePathsMemoria.Count)
+        if (numImages == imagePathsMemoria.Count)
         {
             Application.Quit();
         }
         else
         {
+            currentIndex = getRandomIndex();
             Debug.Log("LoadNextImage");
             Debug.Log(imagePathsMemoria.Count);
             Debug.Log(imagePathsMemoria[currentIndex].Count);
@@ -181,7 +202,7 @@ public class ImageLoader : MonoBehaviour
                     Debug.LogError("No se pudo cargar la imagen: " + imagePath3);
                 }
 
-                currentIndex = currentIndex + 1;
+                numImages++;
             }
         }
 
@@ -203,6 +224,7 @@ public class ImageLoader : MonoBehaviour
                  images.ruta = directorio + "/" + imagen.name;
                  images.name = imagen.name;
                 Debug.Log(images.name);
+                mostrados.Add(false);
                 imagePaths.Add(images);
             }
         }
@@ -210,6 +232,8 @@ public class ImageLoader : MonoBehaviour
         {
             Debug.LogError("No se encontraron imágenes en el directorio especificado: " + directorio);
         }
+        GameManager.Instance.numPruebas = imagePaths.Count;
+        Debug.Log("Pruebas: "+ GameManager.Instance.numPruebas);
     }
 
     
@@ -231,6 +255,7 @@ public class ImageLoader : MonoBehaviour
                     string rutaRelativa = subdirectorio + "/" + imagen.name;
                     aux.Add(rutaRelativa);
                 }
+                mostrados.Add(false);
                 imagePathsMemoria.Add(aux);
             }
             else

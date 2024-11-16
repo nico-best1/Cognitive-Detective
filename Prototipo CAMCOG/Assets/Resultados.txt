@@ -1,4 +1,4 @@
 Resultados:
-Respuesta 1: cuch, Tiempo total: 3,566249 segundos, Tiempo de escritura: 1,872107 segundos.
-Respuesta 2: , Tiempo total: 1,766665 segundos, Tiempo de escritura: 4,944597 segundos.
+Respuesta 1: , Tiempo total: 1,626746 segundos, Tiempo de escritura: 4,014901 segundos.
+Respuesta 2: , Tiempo total: 1,826485 segundos, Tiempo de escritura: 6,837102 segundos.
 

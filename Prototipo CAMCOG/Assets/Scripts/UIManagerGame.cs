@@ -104,8 +104,10 @@ public class UIManagerGame : MonoBehaviour
 
         if (imageLoader != null)
         {
-
-            setBackgrounds(auxAct, auxNext, auxname);
+            if(!GameManager.Instance.isGame)
+                imageLoader.LoadNextImageReconocimiento("");
+            else
+                setBackgrounds(auxAct, auxNext, auxname);
         }
         else
         {

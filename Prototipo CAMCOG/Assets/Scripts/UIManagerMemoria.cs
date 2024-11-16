@@ -14,6 +14,7 @@ public class UIManagerMemoria : MonoBehaviour
 
     private List<List<string>> imagePaths;
     private int currentIndex = 0;
+    private int numImages = 0;
 
     private float startTime;
     public static List<int> respuestas = new List<int>();
@@ -21,8 +22,10 @@ public class UIManagerMemoria : MonoBehaviour
 
     private string carpetaDeImages = "Images/Prueba2";
     public int numSubcarpetas;
+    private List<bool> mostrados;
     void Start()
     {
+        mostrados = new List<bool>();
         startTime = Time.time;
         ObtenerRutasImagenes(carpetaDeImages);
         LoadNextImage();
@@ -35,15 +38,28 @@ public class UIManagerMemoria : MonoBehaviour
     {
         GameManager.Instance.CloseApp();
     }
+    int getRandomIndex()
+    {
+        int rand = Random.Range(0, mostrados.Count);
+        if (!mostrados[rand])
+        {
+            mostrados[rand] = true;
+            return rand;
+        }
+        else
+        {
+            return getRandomIndex();
+        }
+    }
     void LoadNextImage()
     {
         // Si estamos en el �ltimo grupo de im�genes, mostrar el mensaje "Fin Test"
-        if (currentIndex >= imagePaths.Count)
+        if (numImages >= imagePaths.Count)
         {
             ShowEndMessage();
             return;
         }
-
+        currentIndex = getRandomIndex();
         if (imagePaths != null && imagePaths.Count > 0)
         {
             // Cargar el grupo de tres im�genes
@@ -77,7 +93,7 @@ public class UIManagerMemoria : MonoBehaviour
             }
 
             // Avanzar al siguiente grupo de im�genes
-            currentIndex++;
+            numImages++;
         }
         else
         {
@@ -97,35 +113,6 @@ public class UIManagerMemoria : MonoBehaviour
         quitButton.gameObject.SetActive(true);
     }
 
-    //void ObtenerRutasImagenes(string directorio)
-    //{
-    //    imagePaths = new List<List<string>>();
-
-    //    if (Directory.Exists(directorio))
-    //    {
-    //        string[] extensiones = new[] { "*.png", "*.jpg", "*.jpeg" };
-    //        string[] directorios = Directory.GetDirectories(directorio);
-
-    //        foreach (string direc in directorios)
-    //        {
-    //            List<string> aux = new List<string>();
-    //            foreach (string extension in extensiones)
-    //            {
-    //                string[] archivos = Directory.GetFiles(direc, extension, SearchOption.AllDirectories);
-    //                foreach (string archivo in archivos)
-    //                {
-    //                    string rutaRelativa = "Images/Prueba2/" + Path.GetRelativePath(directorio, direc) + "/" + Path.GetFileNameWithoutExtension(archivo);
-    //                    aux.Add(rutaRelativa);
-    //                }
-    //            }
-    //            imagePaths.Add(aux);
-    //        }
-    //    }
-    //    else
-    //    {
-    //        Debug.LogError("El directorio especificado no existe: " + directorio);
-    //    }
-    //}
     void ObtenerRutasImagenes(string directorio)
     {
         imagePaths = new List<List<string>>();
@@ -145,6 +132,7 @@ public class UIManagerMemoria : MonoBehaviour
                     string rutaRelativa = subdirectorio + "/" + imagen.name;
                     aux.Add(rutaRelativa);
                 }
+                mostrados.Add(false);
                 imagePaths.Add(aux);
             }
             else

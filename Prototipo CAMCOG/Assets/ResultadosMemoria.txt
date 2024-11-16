@@ -1,8 +1,8 @@
 Resultados:
-Respuesta 1: 3, Tiempo total: 1,23224 segundos.
-Respuesta 2: 3, Tiempo total: 2,162163 segundos.
-Respuesta 3: 2, Tiempo total: 3,037447 segundos.
-Respuesta 4: 2, Tiempo total: 3,898281 segundos.
-Respuesta 5: 3, Tiempo total: 4,975152 segundos.
-Respuesta 6: 2, Tiempo total: 5,746841 segundos.
+Respuesta 1: 2, Tiempo total: 1,600817 segundos.
+Respuesta 2: 2, Tiempo total: 2,535771 segundos.
+Respuesta 3: 2, Tiempo total: 3,149394 segundos.
+Respuesta 4: 2, Tiempo total: 4,169569 segundos.
+Respuesta 5: 3, Tiempo total: 4,968946 segundos.
+Respuesta 6: 3, Tiempo total: 6,455274 segundos.
 
