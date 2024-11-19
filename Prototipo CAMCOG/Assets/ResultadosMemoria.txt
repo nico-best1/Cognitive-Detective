@@ -1,4 +1,5 @@
 Resultados:
-Respuesta 1: 3, Tiempo total: 3,707912 segundos.
-Respuesta 2: 3, Tiempo total: 4,934792 segundos.
+Respuesta 1: 3, Tiempo total: 1,932105 segundos.
+Respuesta 2: 3, Tiempo total: 2,954275 segundos.
+Respuesta 3: 3, Tiempo total: 3,775977 segundos.
 
