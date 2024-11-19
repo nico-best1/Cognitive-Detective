@@ -325,8 +325,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.04610002, y: 2.61575, z: 0}
-    m_Extent: {x: 1.5252, y: 5.6209497, z: 0}
+    m_Center: {x: 0.043249965, y: 2.6132002, z: 0}
+    m_Extent: {x: 1.52845, y: 5.6287003, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -408,6 +408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nNext: 2
   nActual: 1
+  name: 
 --- !u!1 &712238360
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,12 +631,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1770760601}
         m_TargetAssemblyTypeName: UIManagerGame, Assembly-CSharp
-        m_MethodName: QuitApp
-        m_Mode: 1
+        m_MethodName: SaveResultsToFile
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1309,8 +1310,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1770760601}
         m_TargetAssemblyTypeName: UIManagerGame, Assembly-CSharp
-        m_MethodName: QuitApp
-        m_Mode: 1
+        m_MethodName: SaveResultsToFile
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1602,7 +1603,7 @@ MonoBehaviour:
   imageUI1: {fileID: 905586528}
   imageUI2: {fileID: 1542098035}
   imageUI3: {fileID: 1934474721}
-  numSubcarpetas: 1
+  numSubcarpetas: 2
 --- !u!1 &1801279197
 GameObject:
   m_ObjectHideFlags: 0
@@ -1752,12 +1753,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1770760601}
         m_TargetAssemblyTypeName: UIManagerGame, Assembly-CSharp
-        m_MethodName: QuitApp
-        m_Mode: 1
+        m_MethodName: SaveResultsToFile
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

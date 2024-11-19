@@ -1,4 +1,4 @@
 Resultados:
-Respuesta 1: , Tiempo total: 1,626746 segundos, Tiempo de escritura: 4,014901 segundos.
-Respuesta 2: , Tiempo total: 1,826485 segundos, Tiempo de escritura: 6,837102 segundos.
+Respuesta 1: c, Tiempo total: 2,31587 segundos, Tiempo de escritura: 0,4999332 segundos.
+Respuesta 2: c, Tiempo total: 3,066778 segundos, Tiempo de escritura: 0,73283 segundos.
 

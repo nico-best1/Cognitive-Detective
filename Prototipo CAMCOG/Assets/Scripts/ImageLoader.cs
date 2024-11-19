@@ -153,9 +153,10 @@ public class ImageLoader : MonoBehaviour
 
     public void LoadNextImageMemoria()
     {
-        Debug.Log(currentIndex);
+        
         if (numImages == imagePathsMemoria.Count)
         {
+            Debug.Log("Salir");
             Application.Quit();
         }
         else
