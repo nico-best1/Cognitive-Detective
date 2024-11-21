@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &85200694
 RectTransform:
   m_ObjectHideFlags: 0
@@ -407,7 +407,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &778270203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -900,7 +900,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1036293809
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1052,7 +1052,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0049744, y: 0.0025024}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1297505138
@@ -1506,14 +1506,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaadcbf9c9c75e242bbb98177a0b42d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageUI: {fileID: 778270203}
-  imageUI2: {fileID: 1036293810}
-  imageUI3: {fileID: 85200695}
   finTestText: {fileID: 898072557}
   quitButton: {fileID: 102113424}
   numSubcarpetas: 6
   menu: {fileID: 1297505138}
   buttonPrefab: {fileID: 7304635636078085134, guid: 6b6fa026e3b008a4d89f904a6e7fd4bb, type: 3}
+  numBotones: 3
 --- !u!1 &1801279197
 GameObject:
   m_ObjectHideFlags: 0

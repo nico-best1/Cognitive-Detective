@@ -7,9 +7,9 @@ using UnityEditor;
 
 public class UIManagerMemoria : MonoBehaviour
 {
-    public Button imageUI;
-    public Button imageUI2;
-    public Button imageUI3;
+    //public Button imageUI;
+    //public Button imageUI2;
+    //public Button imageUI3;
     public TextMeshProUGUI finTestText;
     public Button quitButton;
 
@@ -89,32 +89,37 @@ public class UIManagerMemoria : MonoBehaviour
         if (imagePaths != null && imagePaths.Count > 0)
         {
             // Cargar el grupo de tres im�genes
-            string imagePath1 = imagePaths[currentIndex][0];
-            string imagePath2 = imagePaths[currentIndex][1];
-            string imagePath3 = imagePaths[currentIndex][2];
 
-            Sprite sprite1 = Resources.Load<Sprite>(imagePath1);
-            Sprite sprite2 = Resources.Load<Sprite>(imagePath2);
-            Sprite sprite3 = Resources.Load<Sprite>(imagePath3);
+            List<Sprite> sprites = new List<Sprite>();
+            for (int i = 0; i < numBotones; i++)
+            {
+                sprites.Add(Resources.Load<Sprite>(imagePaths[currentIndex][i]));
+            }
 
             // Verificar que los sprites se hayan cargado correctamente
-            if (sprite1 == null || sprite2 == null || sprite3 == null)
+            for (int i = 0; i < numBotones; i++)
             {
-                Debug.LogError("No se pudo cargar una o m�s im�genes en el grupo.");
-                return;
+                if (sprites[i] == null)
+                {
+                    Debug.LogError("No se pudo cargar una o m�s im�genes en el grupo.");
+                    return;
+                }
             }
 
             // Crear una lista de los botones
-            Button[] buttons = { imageUI, imageUI2, imageUI3 };
-            // Crear una lista de los sprites cargados
-            Sprite[] sprites = { sprite1, sprite2, sprite3 };
 
             // Asignar los sprites a los botones de forma aleatoria
-            List<int> indices = new List<int> { 0, 1, 2 };
-            for (int i = 0; i < buttons.Length; i++)
+            List<int> indices = new List<int>();
+
+            for (int i = 0; i < numBotones; i++)
+            {
+                indices.Add(i);
+            }
+
+            for (int i = 0; i < numBotones; i++)
             {
                 int randomIndex = Random.Range(0, indices.Count);
-                buttons[i].image.sprite = sprites[indices[randomIndex]];
+                botones[i].GetComponent<Button>().image.sprite = sprites[indices[randomIndex]];
                 indices.RemoveAt(randomIndex);  // Remover el �ndice para no repetirlo
             }
 
@@ -130,9 +135,10 @@ public class UIManagerMemoria : MonoBehaviour
     void ShowEndMessage()
     {
         // Ocultar los botones
-        imageUI.gameObject.SetActive(false);
-        imageUI2.gameObject.SetActive(false);
-        imageUI3.gameObject.SetActive(false);
+        for (int i = 0; i < numBotones; i++)
+        {
+            botones[i].gameObject.SetActive(false);
+        }
 
         // Mostrar el texto "Fin Test"
         finTestText.gameObject.SetActive(true);
