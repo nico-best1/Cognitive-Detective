@@ -1,6 +1,6 @@
 Resultados:
-Respuesta 1: +, Tiempo total: 4,621821 segundos, Tiempo de escritura: 0,7743421 segundos.
-Respuesta 2: , Tiempo total: 1,208384 segundos, Tiempo de escritura: 4,263936 segundos.
-Respuesta 3: , Tiempo total: 1,079762 segundos, Tiempo de escritura: 6,06228 segundos.
-Respuesta 4: , Tiempo total: 0,9450588 segundos, Tiempo de escritura: 10,07502 segundos.
+Respuesta 1: zapato, Tiempo total: 7,765883 segundos, Tiempo de escritura: 4,430234 segundos.
+Respuesta 2: copa, Tiempo total: 2,319915 segundos, Tiempo de escritura: 0,6094265 segundos.
+Respuesta 3: cuchillo, Tiempo total: 5,96628 segundos, Tiempo de escritura: 1,83325 segundos.
+Respuesta 4: reloj, Tiempo total: 2,630157 segundos, Tiempo de escritura: 0,99897 segundos.
 

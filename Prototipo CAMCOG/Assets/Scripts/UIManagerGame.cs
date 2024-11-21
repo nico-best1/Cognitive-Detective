@@ -48,10 +48,10 @@ public class UIManagerGame : MonoBehaviour
 
         _roomsUI[nActual].SetActive(false);
         _roomsUI[nNext].SetActive(true);
-        if (nActual < _rooms.Count)
+        if (_rooms[nActual] != null)
             _rooms[nActual].SetActive(false);
         
-        if (nNext < _rooms.Count)
+        if (_rooms[nNext] != null)
             _rooms[nNext].SetActive(true);
 
         if(nNext == 2)
