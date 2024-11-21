@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using System.IO;
 using TMPro;
+using UnityEditor;
 
 public class UIManagerMemoria : MonoBehaviour
 {
@@ -23,15 +24,40 @@ public class UIManagerMemoria : MonoBehaviour
     private string carpetaDeImages = "Images/Prueba2";
     public int numSubcarpetas;
     private List<bool> mostrados;
+
+    private List<GameObject> botones;
+    public Image menu;
+    public GameObject buttonPrefab;
+    public int numBotones;
     void Start()
     {
         mostrados = new List<bool>();
         startTime = Time.time;
+        CreateButtons();
         ObtenerRutasImagenes(carpetaDeImages);
         LoadNextImage();
 
         // Asegurarnos de que el texto "Fin Test" est� inicialmente oculto
         finTestText.gameObject.SetActive(false);
+    }
+
+    void CreateButtons()
+    {
+        botones = new List<GameObject>();
+
+        int y = 250;
+        int x = (1920-500)/(numBotones-1);
+        int arrab = 1;
+
+        for (int i = 0; i < numBotones; i++)
+        {
+            GameObject aux = Instantiate(buttonPrefab, menu.transform);
+            aux.GetComponent<Button>().onClick.AddListener(() => SaveResultsToFile(i+1));
+            aux.GetComponent<Transform>().SetLocalPositionAndRotation(new Vector3(((1920-500)/2-x*i), y*arrab, 0), Quaternion.identity);
+            //aux.GetComponent<Transform>().set
+            botones.Add(aux);
+            arrab *= -1;
+        }
     }
 
     public void QuitApp()
