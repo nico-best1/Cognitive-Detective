@@ -1,5 +1,6 @@
 Resultados:
-Respuesta 1: , Tiempo total: 2,102145 segundos, Tiempo de escritura: 4,40867 segundos.
-Respuesta 2: , Tiempo total: 2,646623 segundos, Tiempo de escritura: 8,294585 segundos.
-Respuesta 3: , Tiempo total: 1,423992 segundos, Tiempo de escritura: 15,88752 segundos.
+Respuesta 1: +, Tiempo total: 4,621821 segundos, Tiempo de escritura: 0,7743421 segundos.
+Respuesta 2: , Tiempo total: 1,208384 segundos, Tiempo de escritura: 4,263936 segundos.
+Respuesta 3: , Tiempo total: 1,079762 segundos, Tiempo de escritura: 6,06228 segundos.
+Respuesta 4: , Tiempo total: 0,9450588 segundos, Tiempo de escritura: 10,07502 segundos.
 
