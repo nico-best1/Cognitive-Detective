@@ -2713,7 +2713,7 @@ MonoBehaviour:
   imageUI1: {fileID: 905586528}
   imageUI2: {fileID: 1542098035}
   imageUI3: {fileID: 1934474721}
-  numSubcarpetas: 3
+  numSubcarpetas: 5
   roomAct: 0
   roomNext: 0
 --- !u!1 &1801279197
@@ -3640,8 +3640,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.054799974, y: 0.29625, z: 0}
-    m_Extent: {x: 1.1884999, y: 2.2325501, z: 0}
+    m_Center: {x: -0.04735005, y: 0.28515005, z: 0}
+    m_Extent: {x: 1.18935, y: 2.22455, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
