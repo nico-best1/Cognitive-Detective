@@ -12,6 +12,7 @@ public class UIManagerGame : MonoBehaviour
     [SerializeField] private GameObject _tutorialUI;
     [SerializeField] private List<GameObject> _roomsUI;
     [SerializeField] private List<GameObject> _rooms;
+    [SerializeField] private List<GameObject> _excepcions;
     private int auxNext = 0;
     private int auxAct = 0;
     private string auxname;
@@ -63,10 +64,20 @@ public class UIManagerGame : MonoBehaviour
             }
             else if (SceneManager.GetActiveScene().buildIndex == 1)
             {
+                imageLoader.roomAct = nActual;
+                imageLoader.roomNext = nNext;
                 imageLoader.LoadNextImageMemoria();
+                
 
             }
 
+        }
+        if (GameManager.Instance.prueba2)
+        {
+            for (int i = 0; i < _excepcions.Count; i++) {
+                _excepcions[i].SetActive(true);
+            }
+            GameManager.Instance.prueba2 = false;
         }
         
     }

@@ -36,6 +36,9 @@ public class ImageLoader : MonoBehaviour
     public int numSubcarpetas;
     #endregion
 
+    public int roomAct;
+    public int roomNext;
+
     void Start()
     {
         mostrados = new List<bool>();
@@ -156,8 +159,11 @@ public class ImageLoader : MonoBehaviour
         
         if (numImages == imagePathsMemoria.Count)
         {
-            Debug.Log("Salir");
-            Application.Quit();
+            //Debug.Log("Salir");
+            //Application.Quit();
+            GameManager.Instance.prueba2 = true;
+            GameManager.Instance.setBackground(roomAct, roomNext, "");
+            
         }
         else
         {
