@@ -1,6 +1,7 @@
 Resultados:
-Respuesta 1: , Tiempo total: 2,072303 segundos, Tiempo de escritura: 2,945314 segundos.
-Respuesta 2: , Tiempo total: 1,497068 segundos, Tiempo de escritura: 7,133938 segundos.
-Respuesta 3: cuchillo, Tiempo total: 5,271354 segundos, Tiempo de escritura: 2,87052 segundos.
-Respuesta 4: reloj, Tiempo total: 3,141438 segundos, Tiempo de escritura: 1,794287 segundos.
+Respuesta 1: j, Tiempo total: 2,540487 segundos, Tiempo de escritura: 0,5128608 segundos.
+Respuesta 2: f, Tiempo total: 1,65582 segundos, Tiempo de escritura: 0,619844 segundos.
+Respuesta 3: g, Tiempo total: 1,97128 segundos, Tiempo de escritura: 0,5295277 segundos.
+Respuesta 4: g, Tiempo total: 1,253244 segundos, Tiempo de escritura: 0,1885405 segundos.
+Respuesta 5: h, Tiempo total: 1,317076 segundos, Tiempo de escritura: 0,1355934 segundos.
 
