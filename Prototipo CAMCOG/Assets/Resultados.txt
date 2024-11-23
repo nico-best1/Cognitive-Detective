@@ -1,7 +1,7 @@
 Resultados:
-Respuesta 1: j, Tiempo total: 2,540487 segundos, Tiempo de escritura: 0,5128608 segundos.
-Respuesta 2: f, Tiempo total: 1,65582 segundos, Tiempo de escritura: 0,619844 segundos.
-Respuesta 3: g, Tiempo total: 1,97128 segundos, Tiempo de escritura: 0,5295277 segundos.
-Respuesta 4: g, Tiempo total: 1,253244 segundos, Tiempo de escritura: 0,1885405 segundos.
-Respuesta 5: h, Tiempo total: 1,317076 segundos, Tiempo de escritura: 0,1355934 segundos.
+Respuesta 1: zapato, Tiempo total: 3,949522 segundos, Tiempo de escritura: 1,779457 segundos.
+Respuesta 2: copa, Tiempo total: 4,691399 segundos, Tiempo de escritura: 0,9064808 segundos.
+Respuesta 3: cuchillo, Tiempo total: 2,891726 segundos, Tiempo de escritura: 1,524967 segundos.
+Respuesta 4: cartera, Tiempo total: 3,024139 segundos, Tiempo de escritura: 1,943115 segundos.
+Respuesta 5: relog, Tiempo total: 2,529419 segundos, Tiempo de escritura: 0,9479866 segundos.
 
