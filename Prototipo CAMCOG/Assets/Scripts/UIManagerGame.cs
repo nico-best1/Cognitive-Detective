@@ -13,6 +13,7 @@ public class UIManagerGame : MonoBehaviour
     [SerializeField] private List<GameObject> _roomsUI;
     [SerializeField] private List<GameObject> _rooms;
     [SerializeField] private List<GameObject> _excepcions;
+    
     private int auxNext = 0;
     private int auxAct = 0;
     private string auxname;
@@ -34,12 +35,38 @@ public class UIManagerGame : MonoBehaviour
     public static List<int> respuestasMem = new List<int>();
     public static List<float> tiemposMem = new List<float>();
     #endregion
+
+    [Header("Animacion")]
+    [SerializeField] private GameObject libro;
+    [SerializeField] private Animator _animatorLibro;
+    [SerializeField] private GameObject contenidoLibro;
+    Button passPagina;
     //public void LevelActive()
     //{
     //    _tutorialUI.SetActive(false);
     //    _levelUI.SetActive(true);
     //}
+    public static UIManagerGame Instance { get; private set; }
 
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
+    void Start()
+    {
+        if (inputField != null)
+        {
+            inputField.onEndEdit.AddListener(OnInputEnd);
+            inputField.onValueChanged.AddListener(OnInputChanged); // Detectar cambios en el texto
+        }
+
+        imageLoader = FindObjectOfType<ImageLoader>();
+        _animatorLibro = libro.GetComponent<Animator>();
+        passPagina = contenidoLibro.GetComponentInChildren<Button>();
+    }
     public void setBackgrounds(int nNext, int nActual, string name)
     {
         startTime = Time.time;
@@ -82,16 +109,7 @@ public class UIManagerGame : MonoBehaviour
         
     }
 
-    void Start()
-    {
-        if (inputField != null)
-        {
-            inputField.onEndEdit.AddListener(OnInputEnd);
-            inputField.onValueChanged.AddListener(OnInputChanged); // Detectar cambios en el texto
-        }
-
-        imageLoader = FindObjectOfType<ImageLoader>();
-    }
+    
     void OnInputChanged(string input)
     {
         if (!isWriting)
@@ -177,5 +195,19 @@ public class UIManagerGame : MonoBehaviour
         imageLoader.LoadNextImageMemoria();
     }
 
+    public void PasarPagina()
+    {
+        Debug.Log(_animatorLibro);
+        contenidoLibro.SetActive(false);
+        _animatorLibro.SetBool("pass",true);
 
+    }
+    public void OnAnimationEnd()
+    {
+        _animatorLibro.SetBool("pass", false);
+        contenidoLibro.SetActive(true);
+        Debug.Log(passPagina);
+        passPagina.interactable = true;
+        Debug.Log("La animación del libro terminó. Parámetro 'pass' establecido en false.");
+    }
 }
