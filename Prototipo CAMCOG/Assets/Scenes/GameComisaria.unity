@@ -2457,6 +2457,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1246440008}
   m_CullTransparentMesh: 1
+--- !u!1 &1373826502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1373826503}
+  m_Layer: 0
+  m_Name: Textos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1373826503
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373826502}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.2818327, y: 0.1483674, z: 0.0032978388}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1518496436}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1378971853
 GameObject:
   m_ObjectHideFlags: 0
@@ -2691,6 +2723,53 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &1518496435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1518496436}
+  - component: {fileID: 1518496437}
+  m_Layer: 0
+  m_Name: Texto1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1518496436
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518496435}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1373826503}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1518496437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518496435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b227d5835c9b10d4b8d73fd07dad8a80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialogueControl: {fileID: 940612874949393337}
+  _message: {fileID: 0}
+  numText: 0
 --- !u!1 &1542098033
 GameObject:
   m_ObjectHideFlags: 0
@@ -3069,6 +3148,7 @@ MonoBehaviour:
   libro: {fileID: 291710972}
   _animatorLibro: {fileID: 291710976}
   contenidoLibro: {fileID: 427866269}
+  texto1: {fileID: 1518496435}
 --- !u!114 &1770760602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3582,7 +3662,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501307857867359254, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2541495012440056966, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2541495012440056966, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -8.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2541495012440056966, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2541495012440056966, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -3.9
       objectReference: {fileID: 0}
     - target: {fileID: 5917202251543710127, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
       propertyPath: m_Pivot.x
@@ -3610,11 +3706,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5917202251543710127, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5917202251543710127, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -8.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5917202251543710127, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3650,7 +3746,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5917202251543710127, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -3.9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5917202251543710127, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3674,6 +3770,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5917202251543710127, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
   m_PrefabInstance: {fileID: 940612874949393330}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &940612874949393337 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1459155449848200609, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
+  m_PrefabInstance: {fileID: 940612874949393330}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c2126058b684e4590fb89d0eba674d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1118465048491383107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4118,8 +4225,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.050600052, y: 0.2891, z: 0}
-    m_Extent: {x: 1.1868, y: 2.2323, z: 0}
+    m_Center: {x: -0.05305004, y: 0.28275, z: 0}
+    m_Extent: {x: 1.18865, y: 2.2346501, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4216,3 +4323,4 @@ SceneRoots:
   - {fileID: 1722086799}
   - {fileID: 1858324570}
   - {fileID: 951026289}
+  - {fileID: 1373826503}

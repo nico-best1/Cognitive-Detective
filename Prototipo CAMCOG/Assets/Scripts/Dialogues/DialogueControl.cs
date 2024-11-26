@@ -13,7 +13,13 @@ public class DialogueControl : MonoBehaviour
     private Animator _animator;
     private GameObject _player;
     [SerializeField] private Button _button;
-    
+
+    [System.Serializable]
+    public class ImageData
+    {
+        public List<string> images;
+    }
+    private List<Textos> imagePaths;
     public void MessageActive(Textos ObjectText)
     {
         //animacion cartel
@@ -21,6 +27,10 @@ public class DialogueControl : MonoBehaviour
         _animator.SetBool("Activado", true);
         _text = ObjectText;
 
+    }
+    public Textos selectText(int i)
+    {
+        return imagePaths[i];
     }
     public void TextActive()
     {
@@ -68,9 +78,30 @@ public class DialogueControl : MonoBehaviour
     {
         _animator.SetTrigger("Empezar");
     }
+    void LoadJson()
+    {
+        TextAsset jsonFile = Resources.Load<TextAsset>("ConfigEntradaReconocimiento");
+        imagePaths = new List<Textos>();
+        if (jsonFile != null)
+        {
+            ImageData jsonData = JsonUtility.FromJson<ImageData>(jsonFile.text);
+            Textos text = new Textos();
+            text._arrayText = jsonData.images;
+            imagePaths.Add(text);
+            for (int i = 0; i < imagePaths.Count; i++)
+            {
+                Debug.Log(imagePaths[i] + " " + i); 
+            }
+        }
+        else
+        {
+            Debug.LogError("No se pudo encontrar el archivo JSON.");
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
+        LoadJson();
         _animator = GetComponent<Animator>();
         _colaDialogos = new Queue<string>();
         //_player = GameManager.Instance.SetPlayer();

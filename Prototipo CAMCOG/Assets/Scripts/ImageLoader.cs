@@ -21,11 +21,7 @@ public class ImageLoader : MonoBehaviour
         public string ruta, name;
     }
     private List<bool> mostrados;
-    [System.Serializable]
-    public class ImageData
-    {
-        public List<string> images;
-    }
+    
     #endregion
 
     #region Memoria

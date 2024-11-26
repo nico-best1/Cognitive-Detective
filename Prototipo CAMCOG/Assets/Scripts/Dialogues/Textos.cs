@@ -7,7 +7,7 @@ using UnityEngine;
 public class Textos
 {
     [TextArea(2, 6)] //Indicamos entre parentesis el minimo y maximo de lineas
-    public string[] _arrayText;
+    public List<string> _arrayText;
     // Start is called before the first frame update
     void Start()
     {

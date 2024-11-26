@@ -41,6 +41,9 @@ public class UIManagerGame : MonoBehaviour
     [SerializeField] private Animator _animatorLibro;
     [SerializeField] private GameObject contenidoLibro;
     Button passPagina;
+
+    [Header("Dialogos")]
+    [SerializeField] private GameObject texto1;
     //public void LevelActive()
     //{
     //    _tutorialUI.SetActive(false);
@@ -68,6 +71,7 @@ public class UIManagerGame : MonoBehaviour
         {
             _animatorLibro = libro.GetComponent<Animator>();
             passPagina = contenidoLibro.GetComponentInChildren<Button>();
+            //texto1.GetComponent<ActivateMessages>().ActivateText();
         }
     }
     public void setBackgrounds(int nNext, int nActual, string name)
