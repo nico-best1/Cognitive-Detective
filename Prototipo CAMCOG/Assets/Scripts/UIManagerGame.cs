@@ -64,8 +64,11 @@ public class UIManagerGame : MonoBehaviour
         }
 
         imageLoader = FindObjectOfType<ImageLoader>();
-        _animatorLibro = libro.GetComponent<Animator>();
-        passPagina = contenidoLibro.GetComponentInChildren<Button>();
+        if (GameManager.Instance.isGame)
+        {
+            _animatorLibro = libro.GetComponent<Animator>();
+            passPagina = contenidoLibro.GetComponentInChildren<Button>();
+        }
     }
     public void setBackgrounds(int nNext, int nActual, string name)
     {

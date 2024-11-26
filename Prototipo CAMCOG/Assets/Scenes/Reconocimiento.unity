@@ -695,6 +695,8 @@ MonoBehaviour:
   imageUI2: {fileID: 0}
   imageUI3: {fileID: 0}
   numSubcarpetas: 0
+  roomAct: 0
+  roomNext: 0
 --- !u!114 &1325119403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -711,7 +713,11 @@ MonoBehaviour:
   _tutorialUI: {fileID: 0}
   _roomsUI: []
   _rooms: []
+  _excepcions: []
   inputField: {fileID: 2116537826}
+  libro: {fileID: 0}
+  _animatorLibro: {fileID: 0}
+  contenidoLibro: {fileID: 0}
 --- !u!1 &1734601549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,6 +1292,14 @@ PrefabInstance:
     - target: {fileID: 6269093026502040001, guid: 4a2a4f58caa8f9d47bd31a19568ecaeb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9089870784201395821, guid: 4a2a4f58caa8f9d47bd31a19568ecaeb, type: 3}
+      propertyPath: UI
+      value: 
+      objectReference: {fileID: 1325119403}
+    - target: {fileID: 9089870784201395821, guid: 4a2a4f58caa8f9d47bd31a19568ecaeb, type: 3}
+      propertyPath: numPruebas
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
