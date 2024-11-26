@@ -14,8 +14,8 @@ public class UIManagerGame : MonoBehaviour
     [SerializeField] private List<GameObject> _rooms;
     [SerializeField] private List<GameObject> _excepcions;
     
-    private int auxNext = 0;
-    private int auxAct = 0;
+    //private int auxNext = 0;
+    //private int auxAct = 0;
     private string auxname;
 
     #region Reconocimiento
@@ -42,8 +42,9 @@ public class UIManagerGame : MonoBehaviour
     [SerializeField] private GameObject contenidoLibro;
     Button passPagina;
 
-    [Header("Dialogos")]
-    [SerializeField] private GameObject texto1;
+    //[Header("Dialogos")]
+    //[SerializeField] private GameObject texto1;
+    //[SerializeField] private DialogueControl dialogue;
     //public void LevelActive()
     //{
     //    _tutorialUI.SetActive(false);
@@ -69,18 +70,21 @@ public class UIManagerGame : MonoBehaviour
         imageLoader = FindObjectOfType<ImageLoader>();
         if (GameManager.Instance.isGame)
         {
-            _animatorLibro = libro.GetComponent<Animator>();
+            if (libro != null) { 
+                _animatorLibro = libro.GetComponent<Animator>();
             passPagina = contenidoLibro.GetComponentInChildren<Button>();
+            }
+            
             //texto1.GetComponent<ActivateMessages>().ActivateText();
         }
     }
     public void setBackgrounds(int nNext, int nActual, string name)
     {
         startTime = Time.time;
-        auxAct = nActual;
-        auxNext = nNext;
+        GameManager.Instance.roomAct = nActual;
+        GameManager.Instance.roomNext = nNext;
         auxname = name;
-
+        
         _roomsUI[nActual].SetActive(false);
         _roomsUI[nNext].SetActive(true);
         if (_rooms[nActual] != null)
@@ -88,7 +92,7 @@ public class UIManagerGame : MonoBehaviour
         
         if (_rooms[nNext] != null)
             _rooms[nNext].SetActive(true);
-
+        
         if(nNext == 2)
         {
             if (SceneManager.GetActiveScene().buildIndex == 0)
@@ -98,8 +102,8 @@ public class UIManagerGame : MonoBehaviour
             }
             else if (SceneManager.GetActiveScene().buildIndex == 1)
             {
-                imageLoader.roomAct = nActual;
-                imageLoader.roomNext = nNext;
+                //imageLoader.roomAct = nActual;
+                //imageLoader.roomNext = nNext;
                 imageLoader.LoadNextImageMemoria();
                 
 
@@ -143,7 +147,7 @@ public class UIManagerGame : MonoBehaviour
             if(!GameManager.Instance.isGame)
                 imageLoader.LoadNextImageReconocimiento("");
             else
-                setBackgrounds(auxAct, auxNext, auxname);
+                setBackgrounds(GameManager.Instance.roomAct, GameManager.Instance.roomNext, auxname);
         }
         else
         {

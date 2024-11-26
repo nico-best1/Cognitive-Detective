@@ -32,8 +32,8 @@ public class ImageLoader : MonoBehaviour
     public int numSubcarpetas;
     #endregion
 
-    public int roomAct;
-    public int roomNext;
+    //public int roomAct;
+    //public int roomNext;
 
     void Start()
     {
@@ -158,7 +158,7 @@ public class ImageLoader : MonoBehaviour
             //Debug.Log("Salir");
             //Application.Quit();
             GameManager.Instance.prueba2 = true;
-            GameManager.Instance.setBackground(roomAct, roomNext, "");
+            GameManager.Instance.setBackground(GameManager.Instance.roomAct, GameManager.Instance.roomNext, "");
             
         }
         else

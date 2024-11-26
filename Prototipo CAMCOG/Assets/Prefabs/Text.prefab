@@ -76,6 +76,7 @@ MonoBehaviour:
   _textMeshPro: {fileID: 4797843550299538831}
   _timeCaracter: 0.05
   _button: {fileID: 1459155449848200611}
+  texto1: {fileID: 0}
 --- !u!114 &1459155449848200611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,8 +169,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -3.899994}
+  m_SizeDelta: {x: -1, y: -8.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4696665549080065056
 CanvasRenderer:

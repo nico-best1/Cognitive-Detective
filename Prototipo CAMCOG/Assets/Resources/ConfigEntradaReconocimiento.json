@@ -1,10 +1,20 @@
 {
-    "images": [
-        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-        "Images/termometro",
-        "Images/zapato",
-        "Images/maleta",
-        "Images/lampara",
-        "Images/portatil"
+    "entries": [
+        {
+            "key": "images",
+            "value": [
+                "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "Images/termometro",
+                "Images/zapato"
+            ]
+        },
+        {
+            "key": "images1",
+            "value": [
+                "pedro",
+                "Images/lampara",
+                "Images/maleta"
+            ]
+        }
     ]
 }

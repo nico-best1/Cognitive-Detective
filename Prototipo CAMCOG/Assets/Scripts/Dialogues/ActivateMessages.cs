@@ -22,6 +22,7 @@ public class ActivateMessages : MonoBehaviour
     //}
     public void ActivateText()
     {
+        Debug.Log("activado");
         _dialogueControl.MessageActive(_dialogueControl.selectText(numText));
     }
     public void DesactivateText()

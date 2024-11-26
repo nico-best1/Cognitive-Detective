@@ -13,13 +13,26 @@ public class DialogueControl : MonoBehaviour
     private Animator _animator;
     private GameObject _player;
     [SerializeField] private Button _button;
-
+    [SerializeField] private GameObject texto1;
     [System.Serializable]
     public class ImageData
     {
         public List<string> images;
     }
     private List<Textos> imagePaths;
+    [System.Serializable]
+    public class GenericJsonData
+    {
+        public List<JsonEntry> entries;
+    }
+
+    [System.Serializable]
+    public class JsonEntry
+    {
+        public string key;
+        public List<string> value;
+    }
+
     public void MessageActive(Textos ObjectText)
     {
         //animacion cartel
@@ -30,6 +43,7 @@ public class DialogueControl : MonoBehaviour
     }
     public Textos selectText(int i)
     {
+        Debug.Log(imagePaths);
         return imagePaths[i];
     }
     public void TextActive()
@@ -78,19 +92,46 @@ public class DialogueControl : MonoBehaviour
     {
         _animator.SetTrigger("Empezar");
     }
-    void LoadJson()
+    //public void LoadJson()
+    //{
+    //    TextAsset jsonFile = Resources.Load<TextAsset>("ConfigEntradaReconocimiento");
+    //    imagePaths = new List<Textos>();
+    //    Debug.Log(jsonFile);
+    //    if (jsonFile != null)
+    //    {
+    //        //for (int i = 0; i < jsonFile.text.Length; i++)
+    //        //{
+    //            ImageData jsonData = JsonUtility.FromJson<ImageData>(jsonFile.text);
+    //            Textos text = new Textos();
+    //            text._arrayText = jsonData.images;
+    //            for (int i = 0; i < text._arrayText.Count; i++)
+    //            {
+    //                Debug.Log(text._arrayText[i]);
+    //            }
+    //            imagePaths.Add(text);
+
+    //        //}
+    //    }
+    //    else
+    //    {
+    //        Debug.LogError("No se pudo encontrar el archivo JSON.");
+    //    }
+    //}
+    public void LoadJson()
     {
         TextAsset jsonFile = Resources.Load<TextAsset>("ConfigEntradaReconocimiento");
         imagePaths = new List<Textos>();
         if (jsonFile != null)
         {
-            ImageData jsonData = JsonUtility.FromJson<ImageData>(jsonFile.text);
-            Textos text = new Textos();
-            text._arrayText = jsonData.images;
-            imagePaths.Add(text);
-            for (int i = 0; i < imagePaths.Count; i++)
+            GenericJsonData jsonData = JsonUtility.FromJson<GenericJsonData>(jsonFile.text);
+
+            foreach (var entry in jsonData.entries)
             {
-                Debug.Log(imagePaths[i] + " " + i); 
+                Debug.Log($"Key: {entry.key}, Values: {string.Join(", ", entry.value)}");
+
+                // Agregar a imagePaths
+                Textos text = new Textos { _arrayText = entry.value };
+                imagePaths.Add(text);
             }
         }
         else
@@ -98,14 +139,17 @@ public class DialogueControl : MonoBehaviour
             Debug.LogError("No se pudo encontrar el archivo JSON.");
         }
     }
+
     // Start is called before the first frame update
     void Start()
     {
         LoadJson();
         _animator = GetComponent<Animator>();
         _colaDialogos = new Queue<string>();
-        //_player = GameManager.Instance.SetPlayer();
-    }
+        texto1.GetComponent<ActivateMessages>().ActivateText();
+    
+    //_player = GameManager.Instance.SetPlayer();
+}
 
     // Update is called once per frame
     void Update()

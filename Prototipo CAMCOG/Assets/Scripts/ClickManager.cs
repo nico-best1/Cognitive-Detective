@@ -11,6 +11,10 @@ public class ClickManager : MonoBehaviour
         Debug.Log("entra");
         GameManager.Instance.setBackground(obj.nNext, obj.nActual, obj.name);
     }
+    public void ClickToText(GameObject obj)
+    {
+        obj.GetComponent<ActivateMessages>().ActivateText();
+    }
     public void GoToAlmacenPruebas()
     {
         GameManager.Instance.ChangeScene(1);

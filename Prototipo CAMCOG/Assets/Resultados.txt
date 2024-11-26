@@ -1,4 +1,7 @@
 Resultados:
-Respuesta 1:  gfvfg, Tiempo total: 8,576437 segundos, Tiempo de escritura: 0,9190564 segundos.
-Respuesta 2: juyjm, Tiempo total: 0 segundos, Tiempo de escritura: -9,242567 segundos.
+Respuesta 1: , Tiempo total: 1,980014 segundos, Tiempo de escritura: 2,382355 segundos.
+Respuesta 2: , Tiempo total: 1,48207 segundos, Tiempo de escritura: 6,193606 segundos.
+Respuesta 3: , Tiempo total: 1,649653 segundos, Tiempo de escritura: 9,39189 segundos.
+Respuesta 4: , Tiempo total: 1,222287 segundos, Tiempo de escritura: 14,10664 segundos.
+Respuesta 5: , Tiempo total: 1,418097 segundos, Tiempo de escritura: 16,84686 segundos.
 

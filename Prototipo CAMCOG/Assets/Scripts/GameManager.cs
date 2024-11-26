@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     public int numPruebas = 0;
     public int pruebasConseguidas = 0;
     public bool prueba2 = false;
+    public int roomAct;
+    public int roomNext;
     private void Awake()
     {
         if (_instance == null) _instance = this;
