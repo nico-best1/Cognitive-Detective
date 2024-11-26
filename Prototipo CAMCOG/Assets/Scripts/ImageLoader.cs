@@ -45,14 +45,14 @@ public class ImageLoader : MonoBehaviour
         if (!GameManager.Instance.isGame)
         {
             Debug.Log(SceneManager.GetActiveScene().buildIndex);
-            if (SceneManager.GetActiveScene().buildIndex == 0)
+            if (SceneManager.GetActiveScene().buildIndex == 1)
             {
                 
                 Debug.Log("entra");
                 carpetaDeImages = "Images/Prueba1";
                 ObtenerRutasImagenesReconocimiento(carpetaDeImages);
             }
-            else if (SceneManager.GetActiveScene().buildIndex == 1)
+            else if (SceneManager.GetActiveScene().buildIndex == 2)
             {
                 carpetaDeImages = "Images/Prueba2";
                 ObtenerRutasImagenesMemoria(carpetaDeImages);
@@ -122,7 +122,7 @@ public class ImageLoader : MonoBehaviour
         if (GameManager.Instance.pruebasConseguidas == imagePaths.Count)
         {
             if(!GameManager.Instance.isGame)
-                GameManager.Instance.ChangeScene(1);
+                GameManager.Instance.ChangeScene(2);
         }
         else { 
            
