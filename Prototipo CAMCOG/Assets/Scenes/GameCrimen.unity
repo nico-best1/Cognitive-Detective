@@ -369,8 +369,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.032649994, y: -0.2647, z: 0}
-    m_Extent: {x: 0.83515, y: 0.667, z: 0}
+    m_Center: {x: -0.038050026, y: -0.25895, z: 0}
+    m_Extent: {x: 0.83134997, y: 0.66705, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -565,8 +565,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.2503, y: 0.18564999, z: 0}
-    m_Extent: {x: 0.6972, y: 1.87435, z: 0}
+    m_Center: {x: -0.2545, y: 0.20135003, z: 0}
+    m_Extent: {x: 0.70070004, y: 1.8743501, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1596,8 +1596,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.030750006, y: 0.04525006, z: 0}
-    m_Extent: {x: 1.01325, y: 2.5381498, z: 0}
+    m_Center: {x: -0.030499995, y: 0.050600052, z: 0}
+    m_Extent: {x: 1.0206001, y: 2.5281, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1771,6 +1771,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1770760600}
     m_Modifications:
+    - target: {fileID: 1459155449848200609, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
+      propertyPath: texto1
+      value: 
+      objectReference: {fileID: 1887526559}
     - target: {fileID: 2501307857867359254, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
       propertyPath: m_Name
       value: Text
@@ -2029,8 +2033,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.17454997, y: 0.24555004, z: 0}
-    m_Extent: {x: 0.84025, y: 1.92305, z: 0}
+    m_Center: {x: -0.17054999, y: 0.24304998, z: 0}
+    m_Extent: {x: 0.83865, y: 1.91825, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3200,7 +3204,6 @@ MonoBehaviour:
   libro: {fileID: 0}
   _animatorLibro: {fileID: 0}
   contenidoLibro: {fileID: 0}
-  texto1: {fileID: 1887526559}
 --- !u!114 &1770760602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3512,7 +3515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b227d5835c9b10d4b8d73fd07dad8a80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogueControl: {fileID: 0}
+  _dialogueControl: {fileID: 1016229384}
   _message: {fileID: 0}
   numText: 1
 --- !u!1 &1887526559 stripped
@@ -3570,6 +3573,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2995077741653459542, guid: 2012c7db7960be344a2202d023293bc9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3547323126915411803, guid: 2012c7db7960be344a2202d023293bc9, type: 3}
+      propertyPath: numText
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3547323126915411803, guid: 2012c7db7960be344a2202d023293bc9, type: 3}
