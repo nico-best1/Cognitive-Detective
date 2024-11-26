@@ -1,7 +1,4 @@
 Resultados:
-Respuesta 1: zapa, Tiempo total: 3,749281 segundos, Tiempo de escritura: 2,024392 segundos.
-Respuesta 2: copa, Tiempo total: 3,001134 segundos, Tiempo de escritura: 0,6685438 segundos.
-Respuesta 3: cuchillo, Tiempo total: 2,564569 segundos, Tiempo de escritura: 1,499158 segundos.
-Respuesta 4:  , Tiempo total: 1,90416 segundos, Tiempo de escritura: 0,6050911 segundos.
-Respuesta 5: , Tiempo total: 1,967997 segundos, Tiempo de escritura: 3,734653 segundos.
+Respuesta 1:  gfvfg, Tiempo total: 8,576437 segundos, Tiempo de escritura: 0,9190564 segundos.
+Respuesta 2: juyjm, Tiempo total: 0 segundos, Tiempo de escritura: -9,242567 segundos.
 
