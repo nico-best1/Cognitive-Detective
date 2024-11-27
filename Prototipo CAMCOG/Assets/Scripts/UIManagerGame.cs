@@ -41,6 +41,7 @@ public class UIManagerGame : MonoBehaviour
     [SerializeField] private Animator _animatorLibro;
     [SerializeField] private GameObject contenidoLibro;
     Button passPagina;
+    int paginasLibro = 5;
 
     //[Header("Dialogos")]
     //[SerializeField] private GameObject texto1;
@@ -72,7 +73,7 @@ public class UIManagerGame : MonoBehaviour
         {
             if (libro != null) { 
                 _animatorLibro = libro.GetComponent<Animator>();
-            passPagina = contenidoLibro.GetComponentInChildren<Button>();
+                passPagina = contenidoLibro.GetComponentInChildren<Button>();
             }
             
             //texto1.GetComponent<ActivateMessages>().ActivateText();
@@ -109,6 +110,10 @@ public class UIManagerGame : MonoBehaviour
 
             }
 
+        }
+        if (nNext == 3)
+        {
+            imageLoader.LoadNextImageLibroSospechosos(name);
         }
         if (GameManager.Instance.prueba2)
         {
@@ -208,15 +213,20 @@ public class UIManagerGame : MonoBehaviour
 
     public void PasarPagina()
     {
-        Debug.Log(_animatorLibro);
-        contenidoLibro.SetActive(false);
-        _animatorLibro.SetBool("pass",true);
+        if (paginasLibro > 1)
+        {
+            Debug.Log(_animatorLibro);
+            contenidoLibro.SetActive(false);
+            _animatorLibro.SetBool("pass", true);
+            paginasLibro--;
+        }
 
     }
     public void OnAnimationEnd()
     {
         _animatorLibro.SetBool("pass", false);
         contenidoLibro.SetActive(true);
+        imageLoader.LoadNextImageLibroSospechosos("");
         Debug.Log(passPagina);
         passPagina.interactable = true;
         Debug.Log("La animación del libro terminó. Parámetro 'pass' establecido en false.");

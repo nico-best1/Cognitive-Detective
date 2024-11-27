@@ -32,6 +32,12 @@ public class ImageLoader : MonoBehaviour
     public int numSubcarpetas;
     #endregion
 
+    #region LibroSospechosos
+    private List<ImagesLeer> imagePathsLibroSospechosos;
+    public Image imageUILibroSospechsos;
+    private int currentIndexLibroSospechsos = 0;
+    #endregion
+
     //public int roomAct;
     //public int roomNext;
 
@@ -66,6 +72,7 @@ public class ImageLoader : MonoBehaviour
             {
                 carpetaDeImages = "Images/Prompt2";
                 ObtenerRutasImagenesMemoria(carpetaDeImages);
+                ObtenerRutasImagenesLibroSospechosos("Images/Prompt3Libro");
             }
 
         }
@@ -86,12 +93,27 @@ public class ImageLoader : MonoBehaviour
     //        Debug.LogError("No se pudo encontrar el archivo JSON.");
     //    }
     //}
+
     int getIndexImagesPaths(string imageName)
     {
         int i = 0;
         while(i < imagePaths.Count)
         {
             if(imagePaths[i].name == imageName)
+            {
+                return i;
+            }
+            i++;
+        }
+
+        return -1;
+    }
+    int getIndexImagesPathsLibroSospechsos(string imageName)
+    {
+        int i = 0;
+        while (i < imagePathsLibroSospechosos.Count)
+        {
+            if (imagePathsLibroSospechosos[i].name == imageName)
             {
                 return i;
             }
@@ -210,7 +232,34 @@ public class ImageLoader : MonoBehaviour
         }
 
     }
-    
+
+    public void LoadNextImageLibroSospechosos(string name)
+    {
+        Debug.Log("Ha entrado en loadnextimagelibrosospechosos");
+        if (imagePathsLibroSospechosos != null && imagePathsLibroSospechosos.Count > 0)
+        {
+            //currentIndexLibroSospechsos = getIndexImagesPathsLibroSospechsos(name);
+            Debug.Log(currentIndexLibroSospechsos);
+            if (currentIndexLibroSospechsos > -1)
+            {
+                Debug.Log("Ha entrado en  if");
+                string imagePath = imagePathsLibroSospechosos[currentIndexLibroSospechsos].ruta;
+                    Debug.Log("Cargando imagen: " + imagePath); 
+                    Sprite sprite = Resources.Load<Sprite>(imagePath);
+                    Debug.Log(sprite);
+                    if (sprite != null)
+                    {
+                        imageUILibroSospechsos.sprite = sprite;
+                    }
+                    else
+                    {
+                        Debug.LogError("No se pudo cargar la imagen: " + imagePath);
+                    }
+                    currentIndexLibroSospechsos++;
+                }
+            }
+    }
+
     void ObtenerRutasImagenesReconocimiento(string directorio)
     {
         imagePaths = new List<ImagesLeer>();
@@ -224,8 +273,8 @@ public class ImageLoader : MonoBehaviour
             {
                 // Convertimos el nombre del archivo en una ruta relativa
                 ImagesLeer images = new ImagesLeer();
-                 images.ruta = directorio + "/" + imagen.name;
-                 images.name = imagen.name;
+                images.ruta = directorio + "/" + imagen.name;
+                images.name = imagen.name;
                 Debug.Log(images.name);
                 mostrados.Add(false);
                 imagePaths.Add(images);
@@ -236,7 +285,33 @@ public class ImageLoader : MonoBehaviour
             Debug.LogError("No se encontraron imágenes en el directorio especificado: " + directorio);
         }
         GameManager.Instance.numPruebas = imagePaths.Count;
-        Debug.Log("Pruebas: "+ GameManager.Instance.numPruebas);
+        Debug.Log("Pruebas: " + GameManager.Instance.numPruebas);
+    }
+
+
+    void ObtenerRutasImagenesLibroSospechosos(string directorio)
+    {
+        imagePathsLibroSospechosos = new List<ImagesLeer>();
+
+        // Cargar todas las imágenes dentro del directorio especificado en Resources
+        Sprite[] imagenes = Resources.LoadAll<Sprite>(directorio);
+
+        if (imagenes.Length > 0)
+        {
+            foreach (Sprite imagen in imagenes)
+            {
+                // Convertimos el nombre del archivo en una ruta relativa
+                ImagesLeer images = new ImagesLeer();
+                 images.ruta = directorio + "/" + imagen.name;
+                 images.name = imagen.name;
+                Debug.Log(images.name);
+                imagePathsLibroSospechosos.Add(images);
+            }
+        }
+        else
+        {
+            Debug.LogError("No se encontraron imágenes en el directorio especificado: " + directorio);
+        }
     }
 
     
