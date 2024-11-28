@@ -189,7 +189,7 @@ public class ImageLoader : MonoBehaviour
         }
     }
 
-    public void LoadNextImageMemoria()
+    public void LoadNextImageMemoria(int numBotones, ref List<GameObject> botones)
     {
         
         if (numImages == imagePathsMemoria.Count)
@@ -208,42 +208,44 @@ public class ImageLoader : MonoBehaviour
             Debug.Log(imagePathsMemoria[currentIndex].Count);
             if (imagePathsMemoria != null && imagePathsMemoria.Count > 0)
             {
-                Debug.Log("LoadNextImage2");
-                string imagePath = imagePathsMemoria[currentIndex][0];
-                string imagePath2 = imagePathsMemoria[currentIndex][1];
-                string imagePath3 = imagePathsMemoria[currentIndex][2];
-                Sprite sprite = Resources.Load<Sprite>(imagePath);
-                Sprite sprite2 = Resources.Load<Sprite>(imagePath2);
-                Sprite sprite3 = Resources.Load<Sprite>(imagePath3);
-                Debug.Log("LoadNextImage3");
-                if (sprite != null)
+                // Cargar el grupo de tres im?genes
+
+                List<Sprite> sprites = new List<Sprite>();
+                for (int i = 0; i < numBotones; i++)
                 {
-                    imageUI1.image.sprite = sprite;
-                    Debug.Log("image1");
-                }
-                else
-                {
-                    Debug.LogError("No se pudo cargar la imagen: " + imagePath);
-                }
-                if (sprite2 != null)
-                {
-                    imageUI2.image.sprite = sprite2;
-                    Debug.Log("image2");
-                }
-                else
-                {
-                    Debug.LogError("No se pudo cargar la imagen: " + imagePath2);
-                }
-                if (sprite3 != null)
-                {
-                    imageUI3.image.sprite = sprite3;
-                    Debug.Log("image3");
-                }
-                else
-                {
-                    Debug.LogError("No se pudo cargar la imagen: " + imagePath3);
+                    sprites.Add(Resources.Load<Sprite>(imagePathsMemoria[currentIndex][i]));
                 }
 
+                // Verificar que los sprites se hayan cargado correctamente
+                for (int i = 0; i < numBotones; i++)
+                {
+                    if (sprites[i] == null)
+                    {
+                        Debug.LogError("No se pudo cargar una o m?s im?genes en el grupo.");
+                        return;
+                    }
+                }
+
+                // Crear una lista de los botones
+
+                // Asignar los sprites a los botones de forma aleatoria
+                List<int> indices = new List<int>();
+
+                for (int i = 0; i < numBotones; i++)
+                {
+                    indices.Add(i);
+                }
+
+                for (int i = 0; i < numBotones; i++)
+                {
+                    
+                    int randomIndex = Random.Range(0, indices.Count);
+                    botones[i].GetComponent<Button>().image.sprite = sprites[indices[randomIndex]];
+                    //Debug.Log(botones[i].GetComponent<Button>().image.sprite);
+                    indices.RemoveAt(randomIndex);  // Remover el ?ndice para no repetirlo
+                }
+
+                // Avanzar al siguiente grupo de im?genes
                 numImages++;
             }
         }

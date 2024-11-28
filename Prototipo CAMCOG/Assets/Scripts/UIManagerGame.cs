@@ -4,6 +4,7 @@ using TMPro;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 public class UIManagerGame : MonoBehaviour
 {
@@ -33,8 +34,13 @@ public class UIManagerGame : MonoBehaviour
     #endregion
 
     #region Memoria
+    [Header("Memoria")]
     public static List<int> respuestasMem = new List<int>();
     public static List<float> tiemposMem = new List<float>();
+    private List<GameObject> botones;
+    public int numBotones;
+    public Image menu;
+    public GameObject buttonPrefab;
     #endregion
 
     [Header("Animacion")]
@@ -107,7 +113,8 @@ public class UIManagerGame : MonoBehaviour
             {
                 //imageLoader.roomAct = nActual;
                 //imageLoader.roomNext = nNext;
-                imageLoader.LoadNextImageMemoria();
+                CreateButtons();
+                imageLoader.LoadNextImageMemoria(numBotones, ref botones);
                 
 
             }
@@ -139,7 +146,25 @@ public class UIManagerGame : MonoBehaviour
         
     }
 
-    
+    public void CreateButtons()
+    {
+        botones = new List<GameObject>();
+        float buttonWidth = buttonPrefab.GetComponent<RectTransform>().rect.width * buttonPrefab.GetComponent<RectTransform>().localScale.x;
+
+        float y = buttonWidth / 2.0f;
+        float x = (menu.rectTransform.rect.width - buttonWidth) / (numBotones - 1);
+        int arrab = 1;
+
+        for (int i = 0; i < numBotones; i++)
+        {
+            GameObject aux = Instantiate(buttonPrefab, menu.transform);
+            aux.GetComponent<Button>().onClick.AddListener(() => SaveResultsToFile(i + 1));
+            aux.GetComponent<Transform>().SetLocalPositionAndRotation(new Vector3(((menu.rectTransform.rect.width - buttonWidth) / 2 - x * i), y * arrab, 0), Quaternion.identity);
+            //aux.GetComponent<Transform>().set
+            botones.Add(aux);
+            arrab *= -1;
+        }
+    }
     void OnInputChanged(string input)
     {
         if (!isWriting)
@@ -222,7 +247,7 @@ public class UIManagerGame : MonoBehaviour
             writer.WriteLine();
         }
 
-        imageLoader.LoadNextImageMemoria();
+        imageLoader.LoadNextImageMemoria(numBotones, ref botones);
     }
 
     public void PasarPagina()
