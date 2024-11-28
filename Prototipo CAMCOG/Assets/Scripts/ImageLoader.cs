@@ -79,12 +79,12 @@ public class ImageLoader : MonoBehaviour
         }
         else {
             Debug.Log(SceneManager.GetActiveScene().buildIndex);
-            if (SceneManager.GetActiveScene().buildIndex == 0)
+            if (SceneManager.GetActiveScene().buildIndex == 1)
             {
                 carpetaDeImages = "Images/Prompt";
                 ObtenerRutasImagenesReconocimiento(carpetaDeImages);
             }
-            else if (SceneManager.GetActiveScene().buildIndex == 1)
+            else if (SceneManager.GetActiveScene().buildIndex == 2)
             {
                 carpetaDeImages = "Images/Prompt2";
                 ObtenerRutasImagenesMemoria(carpetaDeImages);

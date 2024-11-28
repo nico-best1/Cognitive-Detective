@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public bool prueba3 = false;
     public int roomAct;
     public int roomNext;
+    public int opcionMenu;
     private void Awake()
     {
         if (_instance == null) _instance = this;
@@ -44,6 +45,10 @@ public class GameManager : MonoBehaviour
     {
         prueba3 = true;
     }
+    public void setOpcionMenu(int newopcionMenu)
+    {
+        opcionMenu = newopcionMenu;
+    }
     public void ChangeState(GameStates new_state)
     {
         _currentState = new_state;
@@ -58,6 +63,10 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("No tienes las pruebas suficientes");
         }
+    }
+    public void changeSceneMenu(int scene)
+    {
+        SceneManager.LoadScene(scene);
     }
 
     public void setBackground(int nNext, int nActual, string name)

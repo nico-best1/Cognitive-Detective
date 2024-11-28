@@ -104,12 +104,12 @@ public class UIManagerGame : MonoBehaviour
         
         if(nNext == 2)
         {
-            if (SceneManager.GetActiveScene().buildIndex == 0)
+            if (SceneManager.GetActiveScene().buildIndex == 1)
             {
                 imageLoader.LoadNextImageReconocimiento(name);
 
             }
-            else if (SceneManager.GetActiveScene().buildIndex == 1)
+            else if (SceneManager.GetActiveScene().buildIndex == 2)
             {
                 //imageLoader.roomAct = nActual;
                 //imageLoader.roomNext = nNext;
@@ -277,4 +277,5 @@ public class UIManagerGame : MonoBehaviour
         passPagina.interactable = true;
         Debug.Log("La animación del libro terminó. Parámetro 'pass' establecido en false.");
     }
+    
 }
