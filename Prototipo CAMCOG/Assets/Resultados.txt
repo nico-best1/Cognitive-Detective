@@ -1,7 +1,7 @@
 Resultados:
-Respuesta 1: , Tiempo total: 1,543242 segundos, Tiempo de escritura: 17,45241 segundos.
-Respuesta 2: , Tiempo total: 1,330904 segundos, Tiempo de escritura: 19,94041 segundos.
-Respuesta 3: , Tiempo total: 1,170248 segundos, Tiempo de escritura: 24,04796 segundos.
-Respuesta 4: , Tiempo total: 1,598475 segundos, Tiempo de escritura: 28,5661 segundos.
-Respuesta 5: , Tiempo total: 1,390226 segundos, Tiempo de escritura: 31,40797 segundos.
+Respuesta 1: zapato, Tiempo total: 3,371063 segundos, Tiempo de escritura: 1,724281 segundos.
+Respuesta 2: copa, Tiempo total: 3,011238 segundos, Tiempo de escritura: 1,085495 segundos.
+Respuesta 3: cu, Tiempo total: 1,999088 segundos, Tiempo de escritura: 0,7049942 segundos.
+Respuesta 4: cartera, Tiempo total: 2,783257 segundos, Tiempo de escritura: 1,257103 segundos.
+Respuesta 5: reloj, Tiempo total: 9,615555 segundos, Tiempo de escritura: 3,950569 segundos.
 

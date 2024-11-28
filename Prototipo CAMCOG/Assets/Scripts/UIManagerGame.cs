@@ -13,6 +13,7 @@ public class UIManagerGame : MonoBehaviour
     [SerializeField] private List<GameObject> _roomsUI;
     [SerializeField] private List<GameObject> _rooms;
     [SerializeField] private List<GameObject> _excepcions;
+    [SerializeField] private List<GameObject> _excepcions1;
     
     //private int auxNext = 0;
     //private int auxAct = 0;
@@ -40,7 +41,8 @@ public class UIManagerGame : MonoBehaviour
     [SerializeField] private GameObject libro;
     [SerializeField] private Animator _animatorLibro;
     [SerializeField] private GameObject contenidoLibro;
-    Button passPagina;
+    [SerializeField] private Button passPagina;
+    [SerializeField] private Button cerrarLibro;
     int paginasLibro = 5;
 
     //[Header("Dialogos")]
@@ -121,6 +123,14 @@ public class UIManagerGame : MonoBehaviour
                 _excepcions[i].SetActive(true);
             }
             GameManager.Instance.prueba2 = false;
+        }
+        if (GameManager.Instance.prueba3)
+        {
+            for (int i = 0; i < _excepcions1.Count; i++)
+            {
+                _excepcions1[i].SetActive(true);
+            }
+            GameManager.Instance.prueba3 = false;
         }
         
     }
@@ -219,6 +229,13 @@ public class UIManagerGame : MonoBehaviour
             contenidoLibro.SetActive(false);
             _animatorLibro.SetBool("pass", true);
             paginasLibro--;
+        }
+        if(paginasLibro == 1)
+        {
+            GameObject buttonGameObject = passPagina.gameObject;
+            buttonGameObject.SetActive(false);
+            GameObject buttonGameObject1 = cerrarLibro.gameObject;
+            buttonGameObject1.SetActive(true);
         }
 
     }

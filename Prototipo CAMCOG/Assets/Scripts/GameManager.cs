@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public int numPruebas = 0;
     public int pruebasConseguidas = 0;
     public bool prueba2 = false;
+    public bool prueba3 = false;
     public int roomAct;
     public int roomNext;
     private void Awake()
@@ -39,6 +40,10 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void prueba3start()
+    {
+        prueba3 = true;
+    }
     public void ChangeState(GameStates new_state)
     {
         _currentState = new_state;
