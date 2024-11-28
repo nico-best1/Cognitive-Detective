@@ -1,20 +1,31 @@
 {
-    "entries": [
-        {
-            "key": "images",
-            "value": [
-                "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-                "Images/termometro",
-                "Images/zapato"
-            ]
-        },
-        {
-            "key": "images1",
-            "value": [
-                "pedro",
-                "Images/lampara",
-                "Images/maleta"
-            ]
-        }
-    ]
+  "entries": [
+    {
+      "key": "images",
+      "value": [
+        "Diario del detective:",
+        "Me encuentro en la escena del crimen",
+        "Está todo revuelto y hay muchos objetos que podrán servirnos en la investigación"
+      ]
+    },
+
+    {
+      "key": "images1",
+      "value": [
+        "En esta habitación hay un par de objetos que merece la pena recoger para analizar",
+        "Voy a proceder a recogerlos y etiquetarlos para la investigación"
+      ]
+    },
+
+    {
+      "key": "images2",
+      "value": [
+        "Me acban de comunicar que alguien se ha colado en la comisaría",
+        "El intruso ha puesto unas pruebas falsas para despistarnos en nuestro almacen",
+        "Debería ir a reconocer los objetos que he recogido en la escena del crimen",
+        "Porque si no la investigación podría verse afectada",
+        "Si mal no recuerdo al almacen de pruebas se iba por la puerta de la izquierda"
+      ]
+    }
+  ]
 }

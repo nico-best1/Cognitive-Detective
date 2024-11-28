@@ -1264,8 +1264,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.43925, y: 2.50625, z: 0}
-    m_Extent: {x: 2.09835, y: 4.81075, z: 0}
+    m_Center: {x: 0.44305003, y: 2.4982, z: 0}
+    m_Extent: {x: 2.0973501, y: 4.8104, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6251,7 +6251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501307857867359254, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2541495012440056966, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -6465,6 +6465,10 @@ PrefabInstance:
     - target: {fileID: 2995077741653459542, guid: 2012c7db7960be344a2202d023293bc9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3547323126915411803, guid: 2012c7db7960be344a2202d023293bc9, type: 3}
+      propertyPath: numText
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3547323126915411803, guid: 2012c7db7960be344a2202d023293bc9, type: 3}
       propertyPath: _dialogueControl
@@ -6863,8 +6867,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.055000007, y: 0.28865004, z: 0}
-    m_Extent: {x: 1.1914, y: 2.23015, z: 0}
+    m_Center: {x: -0.05094999, y: 0.28239995, z: 0}
+    m_Extent: {x: 1.1912501, y: 2.2351, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
