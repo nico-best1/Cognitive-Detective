@@ -38,6 +38,22 @@ public class ImageLoader : MonoBehaviour
     private int currentIndexLibroSospechsos = 0;
     #endregion
 
+    #region PruebaMemoriaSospechosos
+    private List<string> imagePathsLPruebaSospechosos;
+    public Button sospechoso1;
+    public Button sospechoso2;
+    public Button sospechoso3;
+    public Button sospechoso4;
+    public Button sospechoso5;
+    public Button sospechoso6;
+    public Button sospechoso7;
+    public Button sospechoso8;
+    public Button sospechoso9;
+    public Button sospechoso10;
+    private int currentIndexPruebaSospechsos = 0;
+    private int numimagesSospechosos = 0;
+    #endregion
+
     //public int roomAct;
     //public int roomNext;
 
@@ -73,6 +89,7 @@ public class ImageLoader : MonoBehaviour
                 carpetaDeImages = "Images/Prompt2";
                 ObtenerRutasImagenesMemoria(carpetaDeImages);
                 ObtenerRutasImagenesLibroSospechosos("Images/Prompt3Libro");
+                ObtenerRutasImagenesPruebaSospechosos("Images/Prompt3Prueba");
             }
 
         }
@@ -233,6 +250,136 @@ public class ImageLoader : MonoBehaviour
 
     }
 
+    public void LoadNextImageMemoriaSospechosos()
+    {
+
+        if (numimagesSospechosos == imagePathsLPruebaSospechosos.Count)
+        {
+            GameManager.Instance.prueba2 = true;
+            GameManager.Instance.setBackground(GameManager.Instance.roomAct, GameManager.Instance.roomNext, "");
+        }
+        else
+        {
+
+            if (imagePathsLPruebaSospechosos != null && imagePathsLPruebaSospechosos.Count > 0)
+            {
+                string imagePath = imagePathsLPruebaSospechosos[0];
+                string imagePath2 = imagePathsLPruebaSospechosos[1];
+                string imagePath3 = imagePathsLPruebaSospechosos[2];
+                string imagePath4 = imagePathsLPruebaSospechosos[3];
+                string imagePath5 = imagePathsLPruebaSospechosos[4];
+                string imagePath6 = imagePathsLPruebaSospechosos[5];
+                string imagePath7 = imagePathsLPruebaSospechosos[6];
+                string imagePath8 = imagePathsLPruebaSospechosos[7];
+                string imagePath9 = imagePathsLPruebaSospechosos[8];
+                string imagePath10 = imagePathsLPruebaSospechosos[9];
+                Sprite sprite = Resources.Load<Sprite>(imagePath);
+                Sprite sprite2 = Resources.Load<Sprite>(imagePath2);
+                Sprite sprite3 = Resources.Load<Sprite>(imagePath3);
+                Sprite sprite4 = Resources.Load<Sprite>(imagePath4);
+                Sprite sprite5 = Resources.Load<Sprite>(imagePath5);
+                Sprite sprite6 = Resources.Load<Sprite>(imagePath6);
+                Sprite sprite7 = Resources.Load<Sprite>(imagePath7);
+                Sprite sprite8 = Resources.Load<Sprite>(imagePath8);
+                Sprite sprite9 = Resources.Load<Sprite>(imagePath9);
+                Sprite sprite10 = Resources.Load<Sprite>(imagePath10);
+                Debug.Log("LoadNextImage3");
+                if (sprite != null)
+                {
+                    sospechoso1.image.sprite = sprite;
+                    Debug.Log("image1");
+                }
+                else
+                {
+                    Debug.LogError("No se pudo cargar la imagen: " + imagePath);
+                }
+                if (sprite2 != null)
+                {
+                    sospechoso2.image.sprite = sprite2;
+                    Debug.Log("image2");
+                }
+                else
+                {
+                    Debug.LogError("No se pudo cargar la imagen: " + imagePath2);
+                }
+                if (sprite3 != null)
+                {
+                    sospechoso3.image.sprite = sprite3;
+                    Debug.Log("image3");
+                }
+                else
+                {
+                    Debug.LogError("No se pudo cargar la imagen: " + imagePath3);
+                }
+                if (sprite4 != null)
+                {
+                    sospechoso4.image.sprite = sprite4;
+                    Debug.Log("image4");
+                }
+                else
+                {
+                    Debug.LogError("No se pudo cargar la imagen: " + imagePath4);
+                }
+                if (sprite5 != null)
+                {
+                    sospechoso5.image.sprite = sprite5;
+                    Debug.Log("image5");
+                }
+                else
+                {
+                    Debug.LogError("No se pudo cargar la imagen: " + imagePath5);
+                }
+                if (sprite6 != null)
+                {
+                    sospechoso6.image.sprite = sprite6;
+                    Debug.Log("image6");
+                }
+                else
+                {
+                    Debug.LogError("No se pudo cargar la imagen: " + imagePath6);
+                }
+                if (sprite7 != null)
+                {
+                    sospechoso7.image.sprite = sprite7;
+                    Debug.Log("image7");
+                }
+                else
+                {
+                    Debug.LogError("No se pudo cargar la imagen: " + imagePath7);
+                }
+                if (sprite8 != null)
+                {
+                    sospechoso8.image.sprite = sprite8;
+                    Debug.Log("image8");
+                }
+                else
+                {
+                    Debug.LogError("No se pudo cargar la imagen: " + imagePath8);
+                }
+                if (sprite9 != null)
+                {
+                    sospechoso9.image.sprite = sprite9;
+                    Debug.Log("image9");
+                }
+                else
+                {
+                    Debug.LogError("No se pudo cargar la imagen: " + imagePath9);
+                }
+                if (sprite10 != null)
+                {
+                    sospechoso10.image.sprite = sprite10;
+                    Debug.Log("image10");
+                }
+                else
+                {
+                    Debug.LogError("No se pudo cargar la imagen: " + imagePath10);
+                }
+                numimagesSospechosos++;
+            }
+        }
+
+    }
+
     public void LoadNextImageLibroSospechosos(string name)
     {
         Debug.Log("Ha entrado en loadnextimagelibrosospechosos");
@@ -314,7 +461,30 @@ public class ImageLoader : MonoBehaviour
         }
     }
 
-    
+    void ObtenerRutasImagenesPruebaSospechosos(string directorio)
+    {
+        imagePathsLPruebaSospechosos = new List<string>();
+
+        // Cargar todas las imágenes dentro del directorio especificado en Resources
+        Sprite[] imagenes = Resources.LoadAll<Sprite>(directorio);
+
+        if (imagenes.Length > 0)
+        {
+            foreach (Sprite imagen in imagenes)
+            {
+                // Convertimos el nombre del archivo en una ruta relativa
+                string images;
+                images = directorio + "/" + imagen.name;
+                imagePathsLPruebaSospechosos.Add(images);
+            }
+        }
+        else
+        {
+            Debug.LogError("No se encontraron imágenes en el directorio especificado: " + directorio);
+        }
+    }
+
+
     void ObtenerRutasImagenesMemoria(string directorio)
     {
         imagePathsMemoria = new List<List<string>>();

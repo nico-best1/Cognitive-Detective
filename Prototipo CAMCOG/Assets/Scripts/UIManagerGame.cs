@@ -117,6 +117,10 @@ public class UIManagerGame : MonoBehaviour
         {
             imageLoader.LoadNextImageLibroSospechosos(name);
         }
+        if (nNext == 5)
+        {
+            imageLoader.LoadNextImageMemoriaSospechosos();
+        }
         if (GameManager.Instance.prueba2)
         {
             for (int i = 0; i < _excepcions.Count; i++) {
