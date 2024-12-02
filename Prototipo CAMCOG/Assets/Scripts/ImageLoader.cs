@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.UI; // Para trabajar con la UI
 using System.IO;
 using UnityEngine.SceneManagement;
-using System.Numerics;
-using UnityEditor.Build;      // Para leer archivos
+using System.Numerics;  
 
 public class ImageLoader : MonoBehaviour
 {

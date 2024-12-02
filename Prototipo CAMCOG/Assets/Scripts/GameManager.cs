@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public int roomAct;
     public int roomNext;
     public int opcionMenu;
+    private AudioSource _audioSource;
     private void Awake()
     {
         if (_instance == null) _instance = this;
@@ -33,6 +34,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         _currentState = GameStates.TUTORIAL;
+        _audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -72,6 +74,14 @@ public class GameManager : MonoBehaviour
     public void setBackground(int nNext, int nActual, string name)
     {
         UI.setBackgrounds(nNext, nActual, name);
+    }
+
+    public void PlaySound(AudioClip clip)
+    {
+        if (clip != null && !_audioSource.isPlaying)
+        {
+            _audioSource.PlayOneShot(clip);
+        }
     }
 
     public void CloseApp()

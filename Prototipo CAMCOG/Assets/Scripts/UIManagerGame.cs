@@ -258,6 +258,11 @@ public class UIManagerGame : MonoBehaviour
             contenidoLibro.SetActive(false);
             _animatorLibro.SetBool("pass", true);
             paginasLibro--;
+            AudioClip audioClip = Resources.Load<AudioClip>("Sounds/Effects/FlipBookPages");
+            if (audioClip != null)
+            {
+                GameManager.Instance.PlaySound(audioClip);
+            }
         }
         if(paginasLibro == 1)
         {
@@ -277,5 +282,13 @@ public class UIManagerGame : MonoBehaviour
         passPagina.interactable = true;
         Debug.Log("La animación del libro terminó. Parámetro 'pass' establecido en false.");
     }
-    
+
+    public void PlayCloseBookSound()
+    {
+        AudioClip audioClip = Resources.Load<AudioClip>("Sounds/Effects/CloseBook");
+        if (audioClip != null)
+        {
+            GameManager.Instance.PlaySound(audioClip);
+        }
+    }
 }
