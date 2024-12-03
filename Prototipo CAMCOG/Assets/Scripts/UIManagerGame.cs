@@ -49,7 +49,7 @@ public class UIManagerGame : MonoBehaviour
     [SerializeField] private GameObject contenidoLibro;
     [SerializeField] private Button passPagina;
     [SerializeField] private Button cerrarLibro;
-    int paginasLibro = 5;
+    int paginasLibro = 13;
 
     //[Header("Dialogos")]
     //[SerializeField] private GameObject texto1;
