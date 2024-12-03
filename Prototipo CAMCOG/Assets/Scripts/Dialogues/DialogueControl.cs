@@ -92,6 +92,10 @@ public class DialogueControl : MonoBehaviour
     {
         _animator.SetTrigger("Empezar");
     }
+    public void PassScene()
+    {
+        GameManager.Instance.ChangeScene(1);
+    }
     //public void LoadJson()
     //{
     //    TextAsset jsonFile = Resources.Load<TextAsset>("ConfigEntradaReconocimiento");

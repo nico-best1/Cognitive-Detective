@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class botonComponent : MonoBehaviour
 {
+    [SerializeField] int nextBack;
+    [SerializeField] int actBack;
     public void OnAnimationEnd()
     {
         if (GameManager.Instance != null)
@@ -12,7 +14,7 @@ public class botonComponent : MonoBehaviour
             switch (GameManager.Instance.opcionMenu)
             {
                 case 0:
-                    GameManager.Instance.changeSceneMenu(1);
+                    GameManager.Instance.setBackground(nextBack, actBack, "");
                     break;
                 case 1:
                     GameManager.Instance.changeSceneMenu(1);
