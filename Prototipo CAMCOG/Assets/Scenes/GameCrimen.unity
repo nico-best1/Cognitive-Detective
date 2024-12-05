@@ -369,8 +369,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.03215, y: -0.26365, z: 0}
-    m_Extent: {x: 0.82264996, y: 0.66265, z: 0}
+    m_Center: {x: -0.029599994, y: -0.2608, z: 0}
+    m_Extent: {x: 0.8297, y: 0.6711, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -565,8 +565,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.2515, y: 0.19230002, z: 0}
-    m_Extent: {x: 0.70489997, y: 1.8776, z: 0}
+    m_Center: {x: -0.25199997, y: 0.19085008, z: 0}
+    m_Extent: {x: 0.7052, y: 1.8780501, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -725,6 +725,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 372117016}
   m_CullTransparentMesh: 1
+--- !u!114 &491082770 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4797843550299538831, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
+  m_PrefabInstance: {fileID: 1016229381}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &685883588
 GameObject:
   m_ObjectHideFlags: 0
@@ -1596,8 +1607,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.039599985, y: 0.04550004, z: 0}
-    m_Extent: {x: 1.0189999, y: 2.5342, z: 0}
+    m_Center: {x: -0.02185002, y: 0.04794991, z: 0}
+    m_Extent: {x: 1.0172501, y: 2.53645, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1775,6 +1786,14 @@ PrefabInstance:
       propertyPath: texto1
       value: 
       objectReference: {fileID: 1887526559}
+    - target: {fileID: 1459155449848200609, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
+      propertyPath: _textFields.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459155449848200609, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
+      propertyPath: _textFields.Array.data[0]
+      value: 
+      objectReference: {fileID: 491082770}
     - target: {fileID: 2501307857867359254, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
       propertyPath: m_Name
       value: Text
@@ -2033,8 +2052,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.1715, y: 0.24144995, z: 0}
-    m_Extent: {x: 0.83650005, y: 1.9238499, z: 0}
+    m_Center: {x: -0.16889998, y: 0.24505001, z: 0}
+    m_Extent: {x: 0.84889996, y: 1.9191501, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3306,6 +3325,9 @@ MonoBehaviour:
   _excepcions: []
   _excepcions1: []
   inputField: {fileID: 2126222891}
+  numBotones: 0
+  menu: {fileID: 0}
+  buttonPrefab: {fileID: 0}
   libro: {fileID: 0}
   _animatorLibro: {fileID: 0}
   contenidoLibro: {fileID: 0}
@@ -3329,16 +3351,9 @@ MonoBehaviour:
   imageUI3: {fileID: 0}
   numSubcarpetas: 0
   imageUILibroSospechsos: {fileID: 0}
-  sospechoso1: {fileID: 0}
-  sospechoso2: {fileID: 0}
-  sospechoso3: {fileID: 0}
-  sospechoso4: {fileID: 0}
-  sospechoso5: {fileID: 0}
-  sospechoso6: {fileID: 0}
-  sospechoso7: {fileID: 0}
-  sospechoso8: {fileID: 0}
-  sospechoso9: {fileID: 0}
-  sospechoso10: {fileID: 0}
+  sospechoso: {fileID: 0}
+  SI: {fileID: 0}
+  NO: {fileID: 0}
 --- !u!1 &1801279197
 GameObject:
   m_ObjectHideFlags: 0
@@ -3695,7 +3710,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3547323126915411803, guid: 2012c7db7960be344a2202d023293bc9, type: 3}
       propertyPath: numText
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3547323126915411803, guid: 2012c7db7960be344a2202d023293bc9, type: 3}
       propertyPath: _message

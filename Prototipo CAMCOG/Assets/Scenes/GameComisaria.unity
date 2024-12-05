@@ -382,6 +382,17 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &236892199 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4797843550299538831, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
+  m_PrefabInstance: {fileID: 940612874949393330}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &240852819
 GameObject:
   m_ObjectHideFlags: 0
@@ -6044,6 +6055,14 @@ PrefabInstance:
       propertyPath: texto1
       value: 
       objectReference: {fileID: 1518496435}
+    - target: {fileID: 1459155449848200609, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
+      propertyPath: _textFields.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459155449848200609, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
+      propertyPath: _textFields.Array.data[0]
+      value: 
+      objectReference: {fileID: 236892199}
     - target: {fileID: 2501307857867359254, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
       propertyPath: m_Name
       value: Text
@@ -6763,8 +6782,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.053250015, y: 0.2881, z: 0}
-    m_Extent: {x: 1.19385, y: 2.237, z: 0}
+    m_Center: {x: -0.050449967, y: 0.29105002, z: 0}
+    m_Extent: {x: 1.19575, y: 2.23475, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

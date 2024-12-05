@@ -2,9 +2,9 @@
   "entries": [
     {
       "key": "images",
-      "value": [
-        "Diario del detective: \nMe encuentro en la escena del crimen. Está todo revuelto y hay muchos objetos que podrán servirnos en la investigación"
-      ]
+        "value": [
+            "Diario del detective: \nMe encuentro en la escena del crimen. Está todo revuelto y hay muchos objetos que podrán servirnos en la investigación. En esta habitación hay un par de objetos que merece la pena recoger para analizar. Voy a proceder a recogerlos y etiquetarlos para la aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ]
     },
 
     {
@@ -18,7 +18,7 @@
     {
       "key": "images2",
       "value": [
-        "Me acban de comunicar que alguien se ha colado en la comisaría",
+        "Me acaban de comunicar que alguien se ha colado en la comisaría",
         "El intruso ha puesto unas pruebas falsas para despistarnos en nuestro almacen",
         "Debería ir a reconocer los objetos que he recogido en la escena del crimen",
         "Porque si no la investigación podría verse afectada",
