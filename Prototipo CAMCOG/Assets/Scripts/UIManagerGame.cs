@@ -49,8 +49,9 @@ public class UIManagerGame : MonoBehaviour
     [SerializeField] private GameObject contenidoLibro;
     [SerializeField] private Button passPagina;
     [SerializeField] private Button cerrarLibro;
-    int paginasLibro = 13;
+    int paginasLibro = 5;
 
+    public static List<string> respuestasMemoriaCaras = new List<string>();
     //[Header("Dialogos")]
     //[SerializeField] private GameObject texto1;
     //[SerializeField] private DialogueControl dialogue;
@@ -248,6 +249,25 @@ public class UIManagerGame : MonoBehaviour
         }
 
         imageLoader.LoadNextImageMemoria(numBotones, ref botones);
+    }
+
+    public void SaveResultsToFile(string r)
+    {
+        respuestasMemoriaCaras.Add(r);
+
+        string filePath = Application.dataPath + "/ResultadosMemoriaCaras.txt";
+
+        using (StreamWriter writer = new StreamWriter(filePath, false))
+        {
+            writer.WriteLine("Resultados:");
+            for (int i = 0; i < respuestasMemoriaCaras.Count; i++)
+            {
+                writer.WriteLine("Respuesta " + (i + 1) + ": " + respuestasMemoriaCaras[i] + ".");
+            }
+            writer.WriteLine();
+        }
+
+        imageLoader.LoadNextImageMemoriaSospechosos();
     }
 
     public void PasarPagina()

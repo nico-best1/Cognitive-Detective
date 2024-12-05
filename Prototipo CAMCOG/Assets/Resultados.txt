@@ -1,7 +1,8 @@
 Resultados:
-Respuesta 1: g, Tiempo total: 1,450954 segundos, Tiempo de escritura: 0,1626663 segundos.
-Respuesta 2: g, Tiempo total: 1,452208 segundos, Tiempo de escritura: 0,2351933 segundos.
-Respuesta 3: g, Tiempo total: 2,053196 segundos, Tiempo de escritura: 0,5398521 segundos.
-Respuesta 4: g, Tiempo total: 1,710102 segundos, Tiempo de escritura: 0,5365906 segundos.
-Respuesta 5: h, Tiempo total: 1,925659 segundos, Tiempo de escritura: 0,6132965 segundos.
+Respuesta 1: , Tiempo total: 3,371712 segundos, Tiempo de escritura: 46,56178 segundos.
+Respuesta 2: , Tiempo total: 1,415932 segundos, Tiempo de escritura: 59,71864 segundos.
+Respuesta 3: , Tiempo total: 0,6574402 segundos, Tiempo de escritura: 60,92084 segundos.
+Respuesta 4: , Tiempo total: 0,7991257 segundos, Tiempo de escritura: 65,43275 segundos.
+Respuesta 5: , Tiempo total: 0,6037445 segundos, Tiempo de escritura: 66,89828 segundos.
+Respuesta 6: , Tiempo total: 1,383148 segundos, Tiempo de escritura: 88,16598 segundos.
 
