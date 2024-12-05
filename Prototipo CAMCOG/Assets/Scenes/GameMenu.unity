@@ -1623,6 +1623,18 @@ MonoBehaviour:
           m_StringArgument: Destroytitulo
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2082794072}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: desaparicion
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1336246084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2229,6 +2241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 259d92177e9d7b5408d52df189b8f983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextBack: 0
+  actBack: 0
 --- !u!1 &1722086798
 GameObject:
   m_ObjectHideFlags: 0
@@ -2854,6 +2868,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 259d92177e9d7b5408d52df189b8f983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextBack: 1
+  actBack: 0
 --- !u!95 &2082794072
 Animator:
   serializedVersion: 5
