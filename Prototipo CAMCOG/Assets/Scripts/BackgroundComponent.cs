@@ -7,6 +7,7 @@ public class BackgroundComponent : MonoBehaviour
     private Animator Animator;
     [SerializeField] int nextBack;
     [SerializeField] int actBack;
+    [SerializeField] int nextScene;
     public void OnAnimationEnd()
     {
         if (GameManager.Instance != null)
@@ -22,6 +23,9 @@ public class BackgroundComponent : MonoBehaviour
                 case 2:
                     Debug.Log("Salir Juego");
                     GameManager.Instance.CloseApp();
+                    break;
+                case 3:
+                    GameManager.Instance.changeSceneMenu(nextScene);
                     break;
             }
 

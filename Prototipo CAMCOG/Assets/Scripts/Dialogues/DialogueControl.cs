@@ -11,10 +11,14 @@ public class DialogueControl : MonoBehaviour
     [SerializeField] private List<TextMeshProUGUI> _textFields; // Lista de TextMeshProUGUI
     [SerializeField] private float _timeCaracter;
     private Animator _animator;
+    private Animator _animatorParent;
     private GameObject _player;
+    [SerializeField] private GameObject background;
+
     [SerializeField] private Button _button;
     [SerializeField] private GameObject texto1;
     private int _currentTextFieldIndex = 0; // Índice del TextMeshPro actual
+    [SerializeField] bool canPassScene = false;
 
     [System.Serializable]
     public class ImageData
@@ -77,41 +81,72 @@ public class DialogueControl : MonoBehaviour
 
     IEnumerator ShowCharacters(string showText)
     {
+        // Inicializamos el campo actual
         _textFields[_currentTextFieldIndex].text = "";
         Debug.Log(showText);
-        int char_index = 0;
-        string auxText = showText;
-        // Asegurarse de que haya un campo disponible
-        while (_currentTextFieldIndex < _textFields.Count && char_index < auxText.Length)
+
+        string[] words = showText.Split(' '); // Dividir el texto en palabras
+        string currentLine = "";
+
+        foreach (string word in words)
         {
-            var currentField = _textFields[_currentTextFieldIndex];
             _button.interactable = false;
-
-            foreach (char caracter in showText.ToCharArray())
+            // Intentamos añadir la palabra actual a la línea
+            string testLine = currentLine + (currentLine == "" ? "" : " ") + word;
+            // Letra por letra en la palabra actual
+            foreach (char letter in word)
             {
-
-                if (IsTextFieldFull(currentField))
-                {
-                    _currentTextFieldIndex++;
-                    if(char_index < showText.Length)
-                        showText = showText.Substring(char_index);
-                    break; // Pasa al siguiente TextMeshProUGUI
-                }
-                currentField.text += caracter;
-                char_index++;
-                yield return new WaitForSeconds(_timeCaracter);
+                _textFields[_currentTextFieldIndex].text += letter;
+                yield return new WaitForSeconds(_timeCaracter); // Efecto tecleado
             }
-            _button.interactable = true;
+            // Probamos si el campo actual puede contener la nueva línea
+            _textFields[_currentTextFieldIndex].text = testLine;
+            _textFields[_currentTextFieldIndex].ForceMeshUpdate();
+
+            if (IsTextFieldFullHeight(_textFields[_currentTextFieldIndex]))
+            {
+                // Si no cabe, confirmamos la línea anterior como el texto final del campo actual
+                _textFields[_currentTextFieldIndex].text = currentLine;
+
+                // Avanzamos al siguiente campo
+                _currentTextFieldIndex++;
+                if (_currentTextFieldIndex >= _textFields.Count)
+                {
+                    Debug.LogWarning("No hay más campos disponibles para mostrar texto.");
+                    yield break; // Salimos si no hay más campos
+                }
+
+                // Reiniciamos el campo nuevo y asignamos la palabra actual como nueva línea
+                _textFields[_currentTextFieldIndex].text = "";
+                currentLine = word; // Solo la palabra actual se transfiere
+            }
+            else
+            {
+                // Si cabe, actualizamos la línea actual
+                currentLine = testLine;
+            }
+
+            
+
+            // Añadimos el espacio después de la palabra
+            _textFields[_currentTextFieldIndex].text += " ";
+            yield return new WaitForSeconds(_timeCaracter);
         }
 
-        if (_currentTextFieldIndex >= _textFields.Count)
+        // Al final, aseguramos que el último campo tenga la línea restante
+        if (_currentTextFieldIndex < _textFields.Count)
         {
-            Debug.LogWarning("No hay más campos disponibles para mostrar texto.");
-            _button.interactable = true;
+            _textFields[_currentTextFieldIndex].text = currentLine.TrimEnd();
         }
+
+        // Habilitamos el botón al finalizar
+        _button.interactable = true;
     }
 
-    private bool IsTextFieldFull(TextMeshProUGUI textField)
+
+
+
+    private bool IsTextFieldFullHeight(TextMeshProUGUI textField)
     {
         // Verificar si la altura requerida por el texto excede la altura del campo
         return textField.preferredHeight > textField.rectTransform.rect.height;
@@ -138,7 +173,9 @@ public class DialogueControl : MonoBehaviour
 
     public void PassScene()
     {
-        GameManager.Instance.ChangeScene(1);
+        if (canPassScene)
+            
+            _animatorParent.Play("desaparicion");
     }
 
     public void LoadJson()
@@ -168,6 +205,8 @@ public class DialogueControl : MonoBehaviour
     {
         LoadJson();
         _animator = GetComponent<Animator>();
+        if(background != null)
+            _animatorParent = background.GetComponent<Animator>();
         _colaDialogos = new Queue<string>();
         texto1.GetComponent<ActivateMessages>().ActivateText();
     }
