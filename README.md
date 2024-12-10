@@ -17,7 +17,7 @@ Estas pruebas han sido diseñadas para proporcionar una experiencia interactiva 
 
 ## Capturas de Pantalla
 
-*(Incluir imágenes aquí para mostrar las distintas secciones y pruebas del juego. Subir las imágenes al repositorio y enlazarlas.)*
+![Descripción de la imagen](./Assets/Resources/Images/Rooms/room1.jpg)
 
 ## Licencia
 
