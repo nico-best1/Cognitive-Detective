@@ -52,6 +52,13 @@ public class UIManagerGame : MonoBehaviour
     int paginasLibro = 5;
 
     public static List<string> respuestasMemoriaCaras = new List<string>();
+
+    public Toggle hombre;
+    public Toggle mujer;
+    public Toggle mayor;
+    public Toggle menor;
+    public static List<string> respuestasLibroSexo = new List<string>();
+    public static List<string> respuestasLibroEdad = new List<string>();
     //[Header("Dialogos")]
     //[SerializeField] private GameObject texto1;
     //[SerializeField] private DialogueControl dialogue;
@@ -268,6 +275,46 @@ public class UIManagerGame : MonoBehaviour
         }
 
         imageLoader.LoadNextImageMemoriaSospechosos();
+    }
+
+    public void SaveResultsToFileLibro()
+    {
+        Debug.Log("guardar libro");
+        if (hombre.isOn)
+        {
+            respuestasLibroSexo.Add("hombre");
+        }
+        else if(mujer.isOn)
+        {
+            respuestasLibroSexo.Add("mujer");
+        }
+        else
+        {
+            respuestasLibroSexo.Add("ninguno");
+        }
+        if (mayor.isOn)
+        {
+            respuestasLibroEdad.Add("+40");
+        }
+        else if(menor.isOn)
+        {
+            respuestasLibroEdad.Add("-40");
+        }
+        else
+        {
+            respuestasLibroEdad.Add("ninguno");
+        }
+        string filePath = Application.dataPath + "/ResultadosLibro.txt";
+
+        using (StreamWriter writer = new StreamWriter(filePath, false))
+        {
+            writer.WriteLine("Resultados:");
+            for (int i = 0; i < respuestasLibroSexo.Count; i++)
+            {
+                writer.WriteLine("Respuesta " + (i + 1) + ": " + respuestasLibroSexo[i] + ", " + respuestasLibroEdad[i]);
+            }
+            writer.WriteLine();
+        }
     }
 
     public void PasarPagina()

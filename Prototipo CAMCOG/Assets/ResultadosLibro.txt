@@ -1,0 +1,7 @@
+Resultados:
+Respuesta 1: hombre, +40
+Respuesta 2: mujer, -40
+Respuesta 3: hombre, -40
+Respuesta 4: mujer, +40
+Respuesta 5: hombre, +40
+
