@@ -1,4 +1,4 @@
-# Cognitive Test Adaptation 
+# Cognitive Detective 
 
 Este proyecto es una adaptación del examen cognitivo de **CAMCOG**, un instrumento estandarizado que se utiliza para medir el grado de demencia y evaluar el nivel de deterioro cognitivo.
 
