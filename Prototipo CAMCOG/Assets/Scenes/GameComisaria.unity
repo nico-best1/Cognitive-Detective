@@ -567,6 +567,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1770760601}
         m_TargetAssemblyTypeName: UIManagerGame, Assembly-CSharp
+        m_MethodName: SaveResultsToFileLibro
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1770760601}
+        m_TargetAssemblyTypeName: UIManagerGame, Assembly-CSharp
         m_MethodName: PasarPagina
         m_Mode: 1
         m_Arguments:
@@ -629,18 +641,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.UI.Toggle, UnityEngine.UI
         m_MethodName: set_isOn
         m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1770760601}
-        m_TargetAssemblyTypeName: UIManagerGame, Assembly-CSharp
-        m_MethodName: SaveResultsToFileLibro
-        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2242,6 +2242,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1770760601}
+        m_TargetAssemblyTypeName: UIManagerGame, Assembly-CSharp
+        m_MethodName: SaveResultsToFileLibro
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1002429299}
         m_TargetAssemblyTypeName: ClickManager, Assembly-CSharp
         m_MethodName: ClickReaction
@@ -6838,8 +6850,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.055449963, y: 0.29009998, z: 0}
-    m_Extent: {x: 1.19065, y: 2.2308998, z: 0}
+    m_Center: {x: -0.046049953, y: 0.28515005, z: 0}
+    m_Extent: {x: 1.18865, y: 2.23595, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
