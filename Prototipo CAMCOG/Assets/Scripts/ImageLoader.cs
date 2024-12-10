@@ -83,7 +83,6 @@ public class ImageLoader : MonoBehaviour
                 ObtenerRutasImagenesLibroSospechosos("Images/Prompt3Libro");
                 ObtenerRutasImagenesPruebaSospechosos("Images/Prompt3Prueba");
             }
-
         }
         
     }
