@@ -17,7 +17,7 @@ Estas pruebas han sido diseñadas para proporcionar una experiencia interactiva 
 
 ## Capturas de Pantalla
 
-![Descripción de la imagen](PrototipoCAMCOG/Assets/Resources/Images/Rooms/room1.jpg)
+![Una de las habitaciones donde transcurre el juego](Prototipo CAMCOG/Assets/Resources/Images/Rooms/room1.jpg)
 
 ## Licencia
 
