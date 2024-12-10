@@ -4,7 +4,7 @@ Este proyecto es una adaptación del examen cognitivo de **CAMCOG**, un instrume
 
 ## Descripción del Juego
 
-Este proyecto es un videojuego point and click en el que el jugador encarna a un detective que tendrá que resolver un caso de asesinato. Para resolver el crimen deberá ir superando las pruebas del test cognitivo que componen los diferentes minijuegos del título. Durante todo momento se van guardando los datos de tiempos y decisiones que toma el usuario para que después de jugar se puedan usar esos datos para ayudar a realizar un diagnóstico sobre el posible deterioro cognitivo de la persona que ha jugado.
+Este proyecto es un videojuego point and click en el que el jugador encarna a un detective que tendrá que resolver un caso de asesinato. Para resolver el crimen deberá ir superando las pruebas del test cognitivo que componen los diferentes minijuegos del título.
 
 ## Objetivo del Juego
 
@@ -18,6 +18,7 @@ El juego incluye diversas pruebas del test CAMCOG que evalúan los siguientes as
 - **Percepción**
 
 Estas pruebas han sido diseñadas para proporcionar una experiencia interactiva mientras se mantienen los objetivos principales del examen original.
+Durante todo momento se van guardando los datos de tiempos y decisiones que toma el usuario para que después de jugar se puedan usar esos datos para ayudar a realizar un diagnóstico sobre el posible deterioro cognitivo de la persona que ha jugado.
 
 ## Colaboradores
 
