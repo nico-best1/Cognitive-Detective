@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public enum GameStates { START, TUTORIAL, LEVEL } //estado pause por contemplar
     private static GameManager _instance;
     public UIManagerGame UI;
+    public GameObject textAdvertencia;
     public static GameManager Instance { get { return _instance; } }
 
     private GameStates _currentState;
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
     public int pruebasConseguidas = 0;
     public bool prueba2 = false;
     public bool prueba3 = false;
+    public bool prueba4 = false;
     public int roomAct;
     public int roomNext;
     public int opcionMenu;
@@ -63,6 +65,7 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(scene);
         else
         {
+
             Debug.Log("No tienes las pruebas suficientes");
         }
     }
@@ -87,5 +90,9 @@ public class GameManager : MonoBehaviour
     public void CloseApp()
     {
         Application.Quit();
+    }
+    public void activeAdvertencia()
+    {
+        textAdvertencia.GetComponent<ActivateMessages>().ActivateText();
     }
 }

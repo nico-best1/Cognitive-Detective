@@ -370,8 +370,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.038899988, y: -0.2608, z: 0}
-    m_Extent: {x: 0.8234, y: 0.6644, z: 0}
+    m_Center: {x: -0.036850005, y: -0.26410002, z: 0}
+    m_Extent: {x: 0.82635, y: 0.6705, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -461,6 +461,53 @@ MonoBehaviour:
   luz: {fileID: 174605585}
   intensidadMaxima: 1
   tiempoEntreParpadeos: 0.75
+--- !u!1 &211114488
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 211114489}
+  - component: {fileID: 211114490}
+  m_Layer: 0
+  m_Name: Texto4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &211114489
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211114488}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 870867143}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &211114490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211114488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b227d5835c9b10d4b8d73fd07dad8a80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialogueControl: {fileID: 1016229384}
+  _message: {fileID: 0}
+  numText: 12
 --- !u!1 &319288413
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,8 +628,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.2515, y: 0.19339997, z: 0}
-    m_Extent: {x: 0.6971, y: 1.8731, z: 0}
+    m_Center: {x: -0.2558, y: 0.19199997, z: 0}
+    m_Extent: {x: 0.69949996, y: 1.8715, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1635,8 +1682,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.037149966, y: 0.047500014, z: 0}
-    m_Extent: {x: 1.0185499, y: 2.5224, z: 0}
+    m_Center: {x: -0.025000036, y: 0.04554999, z: 0}
+    m_Extent: {x: 1.0213001, y: 2.52815, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2084,8 +2131,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.17085001, y: 0.24589998, z: 0}
-    m_Extent: {x: 0.84735, y: 1.9286001, z: 0}
+    m_Center: {x: -0.17229998, y: 0.24999994, z: 0}
+    m_Extent: {x: 0.8463, y: 1.9312999, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2636,6 +2683,10 @@ PrefabInstance:
       propertyPath: opcionMenu
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 9089870784201395821, guid: 4a2a4f58caa8f9d47bd31a19568ecaeb, type: 3}
+      propertyPath: textAdvertencia
+      value: 
+      objectReference: {fileID: 211114488}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3197,6 +3248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1735168780}
   - component: {fileID: 1735168781}
+  - component: {fileID: 1735168782}
   m_Layer: 0
   m_Name: Room1
   m_TagString: Untagged
@@ -3273,6 +3325,23 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &1735168782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735168779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8bd063f78936a64db589b78565cf6ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  luces:
+  - {fileID: 975852542}
+  - {fileID: 356617433}
+  timeToHelp: 35
+  auxTime: 0
 --- !u!1 &1770760596
 GameObject:
   m_ObjectHideFlags: 0
@@ -3816,6 +3885,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2995077741653459542, guid: 2012c7db7960be344a2202d023293bc9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1277848017}
+    - targetCorrespondingSourceObject: {fileID: 2995077741653459542, guid: 2012c7db7960be344a2202d023293bc9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 211114489}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2012c7db7960be344a2202d023293bc9, type: 3}
 --- !u!1 &1960981255

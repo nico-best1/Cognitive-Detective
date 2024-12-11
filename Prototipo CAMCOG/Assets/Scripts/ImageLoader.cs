@@ -248,7 +248,7 @@ public class ImageLoader : MonoBehaviour
 
         if (numimagesSospechosos == imagePathsLPruebaSospechosos.Count)
         {
-            Debug.Log("FIN");
+            GameManager.Instance.prueba4 = true;
         }
         else
         {

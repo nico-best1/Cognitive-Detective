@@ -47,5 +47,17 @@ public class BackgroundComponent : MonoBehaviour
     {
         if(GameManager.Instance.numPruebas == GameManager.Instance.pruebasConseguidas)
             Animator.SetBool("desaparecer", true);
+        else
+        {
+            GameManager.Instance.activeAdvertencia();
+        }
     }
+    public void activeFinal()
+    {
+        if (GameManager.Instance.prueba4)
+        {
+            Animator.SetBool("desaparecer", true);
+        }
+    }
+    
 }

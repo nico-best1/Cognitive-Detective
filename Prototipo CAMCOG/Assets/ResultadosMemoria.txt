@@ -1,7 +1,7 @@
 Resultados:
-Respuesta 1: 5, Tiempo total: 0,791832 segundos.
-Respuesta 2: 5, Tiempo total: 0,967514 segundos.
-Respuesta 3: 5, Tiempo total: 1,111961 segundos.
-Respuesta 4: 5, Tiempo total: 1,256775 segundos.
-Respuesta 5: 5, Tiempo total: 1,415314 segundos.
+Respuesta 1: 5, Tiempo total: 0,9095612 segundos.
+Respuesta 2: 5, Tiempo total: 1,12973 segundos.
+Respuesta 3: 5, Tiempo total: 1,3582 segundos.
+Respuesta 4: 5, Tiempo total: 1,562714 segundos.
+Respuesta 5: 5, Tiempo total: 1,842422 segundos.
 

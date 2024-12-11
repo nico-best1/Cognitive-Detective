@@ -3,7 +3,7 @@
     {
       "key": "images",
       "value": [
-        "Diario del detective: \n Sábado, 30 de Octubre, 17:30 \n Me acaban de informar de que ha habido un asesinato en un apartamento del centro de la ciudad, en estos momentos me dirijo a la escena del crimen a toda velocidad en un coche policial, las sirenas y las luces del mismo nos abren paso entre la multitud de vehículos que hay en la calle. \n Mi largo historial de casos resueltos ha hecho que la policía recurra a mí una vez más como su primera opción para encargarme del caso. \n No sé que me va a deparar este nuevo crimen, pero lo que sí sé es cómo voy a proceder. Seguiré mi método para resolver casos, que no me ha fallado nunca, y que realmente no tiene ningún misterio. Recogeré las pruebas pertinentes que haya en el apartamento y después analizaré a los sospechosos. Para esta labor, en cuanto llegue, preguntaré a los vecinos para que me den descripciones de la gente que haya estado en el apartamento recientemente y así poder apuntarlas en mi diario. El motor del coche se ha detenido, ya hemos llegado..."
+        "Diario del detective: \n Sábado, 30 de Octubre, 17:30 \nMe acaban de informar de que ha habido un asesinato en un apartamento del centro de la ciudad, en estos momentos me dirijo a la escena del crimen a toda velocidad en un coche policial, las sirenas y las luces del mismo nos abren paso entre la multitud de vehículos que hay en la calle. \n Mi largo historial de casos resueltos ha hecho que la policía recurra a mí una vez más como su primera opción para encargarme del caso. \n No sé que me va a deparar este nuevo crimen, pero lo que sí sé es cómo voy a proceder. Seguiré mi método para resolver casos, que no me ha fallado nunca, y que realmente no tiene ningún misterio. Recogeré las pruebas pertinentes que haya en el apartamento y después analizaré a los sospechosos. Para esta labor, en cuanto llegue, preguntaré a los vecinos para que me den descripciones de la gente que haya estado en el apartamento recientemente y así poder apuntarlas en mi diario. El motor del coche se ha detenido, ya hemos llegado..."
       ]
     },
 
@@ -81,6 +81,18 @@
       "value": [
         "Aquí hay más pruebas"
       ]
+    },
+    {
+        "key": "images11",
+        "value": [
+            "Diario del detective: \n Sábado, 30 de Octubre, 17:30 \n Me acaban de informar de que ha habido un asesinato en un apartamento del centro de la ciudad, en estos momentos me dirijo a la escena del crimen a toda velocidad en un coche policial, las sirenas y las luces del mismo nos abren paso entre la multitud de vehículos que hay en la calle. \n Mi largo historial de casos resueltos ha hecho que la policía recurra a mí una vez más como su primera opción para encargarme del caso. \n No sé que me va a deparar este nuevo crimen, pero lo que sí sé es cómo voy a proceder. Seguiré mi método para resolver casos, que no me ha fallado nunca, y que realmente no tiene ningún misterio. Recogeré las pruebas pertinentes que haya en el apartamento y después analizaré a los sospechosos. Para esta labor, en cuanto llegue, preguntaré a los vecinos para que me den descripciones de la gente que haya estado en el apartamento recientemente y así poder apuntarlas en mi diario. El motor del coche se ha detenido, ya hemos llegado..."
+        ]
+    },
+    {
+        "key": "images12",
+        "value": [
+            "No ha recogido todas las pruebas, sigue investigando"
+        ]
     }
   ]
 }
