@@ -2841,6 +2841,7 @@ GameObject:
   - component: {fileID: 969501753}
   - component: {fileID: 969501752}
   - component: {fileID: 969501754}
+  - component: {fileID: 969501755}
   m_Layer: 5
   m_Name: BackgroundComisaria
   m_TagString: Untagged
@@ -2930,6 +2931,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &969501755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969501750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 259d92177e9d7b5408d52df189b8f983, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextBack: 2
+  actBack: 0
+  nextScene: 1
 --- !u!4 &998709098 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2995077741653459542, guid: 2012c7db7960be344a2202d023293bc9, type: 3}
@@ -7324,8 +7340,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.054750025, y: 0.29284996, z: 0}
-    m_Extent: {x: 1.19105, y: 2.23555, z: 0}
+    m_Center: {x: -0.050249994, y: 0.28715003, z: 0}
+    m_Extent: {x: 1.19155, y: 2.2304502, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
