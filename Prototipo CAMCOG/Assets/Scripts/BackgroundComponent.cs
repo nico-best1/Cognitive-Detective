@@ -25,7 +25,7 @@ public class BackgroundComponent : MonoBehaviour
                     GameManager.Instance.CloseApp();
                     break;
                 case 3:
-                    GameManager.Instance.changeSceneMenu(nextScene);
+                    GameManager.Instance.ChangeScene(nextScene);
                     break;
             }
 
@@ -42,5 +42,10 @@ public class BackgroundComponent : MonoBehaviour
     public void ActiveIdle()
     {
         Animator.SetBool("active",true);
+    }
+    public void activeDesaparicion()
+    {
+        if(GameManager.Instance.numPruebas == GameManager.Instance.pruebasConseguidas)
+            Animator.SetBool("desaparecer", true);
     }
 }

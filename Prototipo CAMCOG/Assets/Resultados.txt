@@ -1,8 +1,7 @@
 Resultados:
-Respuesta 1: , Tiempo total: 3,371712 segundos, Tiempo de escritura: 46,56178 segundos.
-Respuesta 2: , Tiempo total: 1,415932 segundos, Tiempo de escritura: 59,71864 segundos.
-Respuesta 3: , Tiempo total: 0,6574402 segundos, Tiempo de escritura: 60,92084 segundos.
-Respuesta 4: , Tiempo total: 0,7991257 segundos, Tiempo de escritura: 65,43275 segundos.
-Respuesta 5: , Tiempo total: 0,6037445 segundos, Tiempo de escritura: 66,89828 segundos.
-Respuesta 6: , Tiempo total: 1,383148 segundos, Tiempo de escritura: 88,16598 segundos.
+Respuesta 1: , Tiempo total: 2,39336 segundos, Tiempo de escritura: 40,28347 segundos.
+Respuesta 2: , Tiempo total: 1,21785 segundos, Tiempo de escritura: 54,67933 segundos.
+Respuesta 3: , Tiempo total: 0,820076 segundos, Tiempo de escritura: 56,3008 segundos.
+Respuesta 4: , Tiempo total: 1,149963 segundos, Tiempo de escritura: 59,73304 segundos.
+Respuesta 5: , Tiempo total: 0,6856842 segundos, Tiempo de escritura: 61,21288 segundos.
 
