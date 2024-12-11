@@ -551,6 +551,10 @@ PrefabInstance:
       value: -3.9000244
       objectReference: {fileID: 0}
     - target: {fileID: 4797843550299538831, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4797843550299538831, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
       propertyPath: m_fontSize
       value: 30
       objectReference: {fileID: 0}
@@ -649,6 +653,10 @@ PrefabInstance:
     - target: {fileID: 5917202251543710127, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724902143542343065, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
+      propertyPath: m_Name
+      value: Image1
       objectReference: {fileID: 0}
     - target: {fileID: 6841810541203095492, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2381,7 +2389,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1624325934
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2645,6 +2653,10 @@ MonoBehaviour:
   contenidoLibro: {fileID: 0}
   passPagina: {fileID: 0}
   cerrarLibro: {fileID: 0}
+  hombre: {fileID: 0}
+  mujer: {fileID: 0}
+  mayor: {fileID: 0}
+  menor: {fileID: 0}
 --- !u!114 &1770760602
 MonoBehaviour:
   m_ObjectHideFlags: 0

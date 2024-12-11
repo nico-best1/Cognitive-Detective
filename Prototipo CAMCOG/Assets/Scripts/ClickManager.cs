@@ -17,7 +17,7 @@ public class ClickManager : MonoBehaviour
     }
     public void GoToAlmacenPruebas()
     {
-        GameManager.Instance.ChangeScene(1);
+        GameManager.Instance.ChangeScene(2);
     }
     public void destroyObject(GameObject obj)
     {

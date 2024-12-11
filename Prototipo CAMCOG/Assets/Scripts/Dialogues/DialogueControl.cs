@@ -71,7 +71,7 @@ public class DialogueControl : MonoBehaviour
         if (_colaDialogos.Count == 0)
         {
             CloseMessage();
-            ClearAllTextFields();
+           
             return;
         }
 
@@ -159,16 +159,27 @@ public class DialogueControl : MonoBehaviour
             field.text = "";
         }
     }
-
     public void CloseMessage()
     {
-        _animator.SetBool("Activado", false);
+        if (_textFields.Count > 1) {
+            _animator.SetBool("cerrar", true);
+        }
+        else
+        {
+            _animator.SetBool("Activado", false);
+            _colaDialogos.Clear();
+            ClearAllTextFields();
+        }
+            
+    }
+    public void clearDialogos()
+    {
         _colaDialogos.Clear();
     }
-
     public void ResetAnim()
     {
         _animator.SetTrigger("Empezar");
+        _animator.SetBool("Activado", false);
     }
 
     public void PassScene()
