@@ -2,16 +2,18 @@
   "entries": [
     {
       "key": "images",
-        "value": [
-            "Diario del detective: \nMe encuentro en la escena del crimen. Está todo revuelto y hay muchos objetos que podrán servirnos en la investigación. En esta habitación hay un par de objetos que merece la pena recoger para analizar. Voy a proceder a recogerlos y etiquetarlos para la investigación. Me acaban de comunicar que alguien se ha colado en la comisaría. El intruso ha puesto unas pruebas falsas para despistarnos en nuestro almacen. Debería ir a reconocer los objetos que he recogido en la escena del crimen. Porque si no la investigación podría verse afectada. Si mal no recuerdo al almacen de pruebas se iba por la puerta de la izquierda."
-        ]
+      "value": [
+        "Diario del detective: \n Sábado, 30 de Octubre, 17:30 \n Me acaban de informar de que ha habido un asesinato en un apartamento del centro de la ciudad, en estos momentos me dirijo a la escena del crimen a toda velocidad en un coche policial, las sirenas y las luces del mismo nos abren paso entre la multitud de vehículos que hay en la calle. \n Mi largo historial de casos resueltos ha hecho que la policía recurra a mí una vez más como su primera opción para encargarme del caso. \n No sé que me va a deparar este nuevo crimen, pero lo que sí sé es cómo voy a proceder. Seguiré mi método para resolver casos, que no me ha fallado nunca, y que realmente no tiene ningún misterio. Recogeré las pruebas pertinentes que haya en el apartamento y después analizaré a los sospechosos. Para esta labor, en cuanto llegue, preguntaré a los vecinos para que me den descripciones de la gente que haya estado en el apartamento recientemente y así poder apuntarlas en mi diario. El motor del coche se ha detenido, ya hemos llegado..."
+      ]
     },
 
     {
       "key": "images1",
       "value": [
-        "En esta habitación hay un par de objetos que merece la pena recoger para analizar",
-        "Voy a proceder a recogerlos y etiquetarlos para la investigación"
+        "Me encuentro en la escena del crimen",
+        "Está todo revuelto y hay muchos objetos que podrán servirnos en la investigación.",
+        "Debería empezar a recoger pruebas para etiquetarlas con sus nombres",
+        "Empecemos por este que está aquí en el suelo"
       ]
     },
 
@@ -65,6 +67,19 @@
       "key": "images8",
       "value": [
         "Bueno, veamos quiénes estaban en mi libro de sospechosos"
+      ]
+    },
+    {
+      "key": "images9",
+      "value": [
+        "En esta habitación hay un par de objetos que merece la pena recoger para analizar",
+        "Voy a proceder a recogerlos y etiquetarlos para la investigación"
+      ]
+    },
+    {
+      "key": "images10",
+      "value": [
+        "Aquí hay más pruebas"
       ]
     }
   ]

@@ -1589,6 +1589,7 @@ GameObject:
   - component: {fileID: 492358492}
   - component: {fileID: 492358491}
   - component: {fileID: 492358490}
+  - component: {fileID: 492358493}
   m_Layer: 0
   m_Name: MesaLight
   m_TagString: Untagged
@@ -1729,6 +1730,21 @@ MonoBehaviour:
   nNext: 2
   nActual: 1
   name: 
+--- !u!114 &492358493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492358488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b09f2d39f13ec394088bd4141dab8c4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  luz: {fileID: 492358490}
+  intensidadMaxima: 1
+  tiempoEntreParpadeos: 0.75
 --- !u!1 &530284680
 GameObject:
   m_ObjectHideFlags: 0
@@ -3930,6 +3946,7 @@ GameObject:
   - component: {fileID: 1138460463}
   - component: {fileID: 1138460462}
   - component: {fileID: 1138460461}
+  - component: {fileID: 1138460464}
   m_Layer: 0
   m_Name: PuertaDespachoLight
   m_TagString: Untagged
@@ -4074,6 +4091,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1138460464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138460459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b09f2d39f13ec394088bd4141dab8c4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  luz: {fileID: 1138460462}
+  intensidadMaxima: 1
+  tiempoEntreParpadeos: 0.75
 --- !u!1 &1161774809
 GameObject:
   m_ObjectHideFlags: 0
@@ -7340,8 +7372,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.050249994, y: 0.28715003, z: 0}
-    m_Extent: {x: 1.19155, y: 2.2304502, z: 0}
+    m_Center: {x: -0.05495, y: 0.28724992, z: 0}
+    m_Extent: {x: 1.18925, y: 2.2242498, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7372,6 +7404,7 @@ GameObject:
   - component: {fileID: 3355158860381046945}
   - component: {fileID: 7574701900080991923}
   - component: {fileID: 4496795389738377962}
+  - component: {fileID: 7688809750312147501}
   m_Layer: 0
   m_Name: PuertsAlmacenLight
   m_TagString: Untagged
@@ -7379,6 +7412,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7688809750312147501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7688809750312147500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b09f2d39f13ec394088bd4141dab8c4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  luz: {fileID: 7574701900080991923}
+  intensidadMaxima: 1
+  tiempoEntreParpadeos: 0.75
 --- !u!114 &8840306670646202144
 MonoBehaviour:
   m_ObjectHideFlags: 0
