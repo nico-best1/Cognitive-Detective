@@ -24,6 +24,48 @@
         "Porque si no la investigación podría verse afectada",
         "Si mal no recuerdo al almacen de pruebas se iba por la puerta de la izquierda"
       ]
+    },
+    {
+      "key": "images3",
+      "value": [
+        "Voy a acercarme a la mesa donde están las pruebas",
+        "Me queda mucho trabajo por delante, parece que pasaré aquí la noche",
+        "Vamos a identificar las pruebas"
+      ]
+    },
+    {
+      "key": "images4",
+      "value": [
+        "Creo que me han dejado un libro con los sospechosos encima de la mesa",
+        "Debería echarle un ojo para analizarlos"
+      ]
+    },
+    {
+      "key": "images5",
+      "value": [
+        "Creo que me han dejado un libro con los sospechosos encima de la mesa",
+        "Debería echarle un ojo para analizarlos",
+        "Ahí está el libro, vamos a verlo"
+      ]
+    },
+    {
+      "key": "images6",
+      "value": [
+        "Me han enviado las caras de varias personas vistas cerca de la escena del crimen",
+        "Voy a ir a mi despacho a identificar a los que están en mi libro"
+      ]
+    },
+    {
+      "key": "images7",
+      "value": [
+        "Las fotos están en mi ordenador, voy a abrirlas"
+      ]
+    },
+    {
+      "key": "images8",
+      "value": [
+        "Bueno, veamos quiénes estaban en mi libro de sospechosos"
+      ]
     }
   ]
 }
