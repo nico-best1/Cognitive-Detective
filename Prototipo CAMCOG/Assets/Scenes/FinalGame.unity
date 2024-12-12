@@ -394,7 +394,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1459155449848200611, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1459155449848200611, guid: b15339cf21d01664396ad6705f6cf92d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1231,7 +1231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBack: 0
   actBack: 0
-  nextScene: 1
+  nextScene: 0
 --- !u!1 &1722086798
 GameObject:
   m_ObjectHideFlags: 0
