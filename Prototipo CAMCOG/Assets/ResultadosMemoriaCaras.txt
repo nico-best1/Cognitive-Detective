@@ -1,9 +1,9 @@
 Resultados:
-Respuesta 1: NO.
+Respuesta 1: SI.
 Respuesta 2: NO.
-Respuesta 3: NO.
+Respuesta 3: SI.
 Respuesta 4: NO.
-Respuesta 5: NO.
+Respuesta 5: SI.
 Respuesta 6: NO.
 Respuesta 7: NO.
 Respuesta 8: NO.
