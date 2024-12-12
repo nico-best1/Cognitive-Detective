@@ -23,25 +23,25 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/7.unity
     guid: ba62743bece142647ae4a10f50a18475
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MenuInicioTest.unity
     guid: 31d2521ebd9831447b55d8f11be53658
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Reconocimiento.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Memoria.unity
     guid: f699d136cc816394d8c71411837117c9
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameMenu.unity
     guid: d5b85c7daecd7544a9ddf4d03c810644
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameCrimen.unity
     guid: ffc20f26808f3724c8b24042acdd5275
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameComisaria.unity
     guid: 11f0a2e702133614088ed33a10a27bfd
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/FinalGame.unity
     guid: 0476138beb2036f489b091bebd5d2e55
   m_configObjects: {}

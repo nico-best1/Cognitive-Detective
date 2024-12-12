@@ -44,6 +44,7 @@ public class ImageLoader : MonoBehaviour
     public Button NO;
     private int currentIndexPruebaSospechsos = 0;
     private int numimagesSospechosos = 0;
+    private List<bool> mostradosSospechocos;
     #endregion
 
     //public int roomAct;
@@ -52,6 +53,7 @@ public class ImageLoader : MonoBehaviour
     void Start()
     {
         mostrados = new List<bool>();
+        mostradosSospechocos = new List<bool>();
         if (!GameManager.Instance.isGame)
         {
             Debug.Log(SceneManager.GetActiveScene().buildIndex);
@@ -102,7 +104,7 @@ public class ImageLoader : MonoBehaviour
     //    }
     //}
 
-    int getIndexImagesPaths(string imageName)
+    int getIndexImagesPaths(string imageName )
     {
         int i = 0;
         while(i < imagePaths.Count)
@@ -130,7 +132,7 @@ public class ImageLoader : MonoBehaviour
 
         return -1;
     }
-    int getRandomIndex()
+    int getRandomIndex(List<bool> mostrados)
     {
         int rand = Random.Range(0, mostrados.Count);
         if (!mostrados[rand])
@@ -140,7 +142,7 @@ public class ImageLoader : MonoBehaviour
         }
         else
         {
-           return getRandomIndex();
+           return getRandomIndex(mostrados);
         }
     }
     public void LoadNextImageReconocimiento(string name)
@@ -158,7 +160,7 @@ public class ImageLoader : MonoBehaviour
                     currentIndex = getIndexImagesPaths(name);
                 else
                 {
-                    currentIndex = getRandomIndex();   
+                    currentIndex = getRandomIndex(mostrados);   
                 }
                 if (currentIndex > -1)
                 {
@@ -193,7 +195,7 @@ public class ImageLoader : MonoBehaviour
         }
         else
         {
-            currentIndex = getRandomIndex();
+            currentIndex = getRandomIndex(mostrados);
             Debug.Log("LoadNextImage");
             Debug.Log(imagePathsMemoria.Count);
             Debug.Log(imagePathsMemoria[currentIndex].Count);
@@ -252,10 +254,10 @@ public class ImageLoader : MonoBehaviour
         }
         else
         {
-
+            currentIndex = getRandomIndex(mostradosSospechocos);
             if (imagePathsLPruebaSospechosos != null && imagePathsLPruebaSospechosos.Count > 0)
             {
-                string imagePath = imagePathsLPruebaSospechosos[numimagesSospechosos];
+                string imagePath = imagePathsLPruebaSospechosos[currentIndex];
                 Sprite sprite = Resources.Load<Sprite>(imagePath);
 
                 if (sprite != null)
@@ -370,6 +372,7 @@ public class ImageLoader : MonoBehaviour
                 string images;
                 images = directorio + "/" + imagen.name;
                 imagePathsLPruebaSospechosos.Add(images);
+                mostradosSospechocos.Add(false);
             }
         }
         else
