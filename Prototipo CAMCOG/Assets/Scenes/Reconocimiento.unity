@@ -695,8 +695,10 @@ MonoBehaviour:
   imageUI2: {fileID: 0}
   imageUI3: {fileID: 0}
   numSubcarpetas: 0
-  roomAct: 0
-  roomNext: 0
+  imageUILibroSospechsos: {fileID: 0}
+  sospechoso: {fileID: 0}
+  SI: {fileID: 0}
+  NO: {fileID: 0}
 --- !u!114 &1325119403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -714,10 +716,20 @@ MonoBehaviour:
   _roomsUI: []
   _rooms: []
   _excepcions: []
+  _excepcions1: []
   inputField: {fileID: 2116537826}
+  numBotones: 0
+  menu: {fileID: 0}
+  buttonPrefab: {fileID: 0}
   libro: {fileID: 0}
   _animatorLibro: {fileID: 0}
   contenidoLibro: {fileID: 0}
+  passPagina: {fileID: 0}
+  cerrarLibro: {fileID: 0}
+  hombre: {fileID: 0}
+  mujer: {fileID: 0}
+  mayor: {fileID: 0}
+  menor: {fileID: 0}
 --- !u!1 &1734601549
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,7 +885,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: Nombra el objeto
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
