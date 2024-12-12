@@ -1,8 +1,0 @@
-Resultados:
-Respuesta 1: , Tiempo total: 2,703295 segundos, Tiempo de escritura: 2,703295 segundos.
-Respuesta 2: , Tiempo total: 3,319963 segundos, Tiempo de escritura: 3,319963 segundos.
-Respuesta 3: , Tiempo total: 4,003379 segundos, Tiempo de escritura: 4,003379 segundos.
-Respuesta 4: , Tiempo total: 4,753253 segundos, Tiempo de escritura: 4,753253 segundos.
-Respuesta 5: , Tiempo total: 5,486606 segundos, Tiempo de escritura: 5,486606 segundos.
-Respuesta 6: , Tiempo total: 6,203245 segundos, Tiempo de escritura: 6,203245 segundos.
-
