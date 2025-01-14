@@ -1,7 +1,3 @@
 Resultados:
-Respuesta 1: zapato, Tiempo total: 2,922947 segundos, Tiempo de escritura: 1,453545 segundos.
-Respuesta 2: , Tiempo total: 1,466164 segundos, Tiempo de escritura: 39,23886 segundos.
-Respuesta 3: , Tiempo total: 1,189903 segundos, Tiempo de escritura: 41,5951 segundos.
-Respuesta 4: , Tiempo total: 1,417107 segundos, Tiempo de escritura: 52,77609 segundos.
-Respuesta 5: , Tiempo total: 1,278831 segundos, Tiempo de escritura: 55,62889 segundos.
+Respuesta 1: Zapato, Tiempo total: 12,8584 segundos, Tiempo de escritura: 7,756666 segundos.
 
