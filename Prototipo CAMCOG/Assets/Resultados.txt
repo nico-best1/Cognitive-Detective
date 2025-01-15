@@ -1,7 +1,7 @@
 Resultados:
-Respuesta 1: Zapato, Tiempo total: 13,09466 segundos, Tiempo de escritura: 7,99152 segundos.
-Respuesta 2: Copa, Tiempo total: 2,351379 segundos, Tiempo de escritura: 0,8001099 segundos.
-Respuesta 3: , Tiempo total: 1,04789 segundos, Tiempo de escritura: 3,195808 segundos.
-Respuesta 4: , Tiempo total: 1,147705 segundos, Tiempo de escritura: 10,37064 segundos.
-Respuesta 5: , Tiempo total: 1,121895 segundos, Tiempo de escritura: 12,88203 segundos.
+Respuesta 1: Zapato, Tiempo total: 10,83329 segundos, Tiempo de escritura: 5,728079 segundos.
+Respuesta 2: , Tiempo total: 1,168606 segundos, Tiempo de escritura: 18,72066 segundos.
+Respuesta 3: , Tiempo total: 1,037487 segundos, Tiempo de escritura: 20,86254 segundos.
+Respuesta 4: , Tiempo total: 1,01701 segundos, Tiempo de escritura: 27,0339 segundos.
+Respuesta 5: , Tiempo total: 1,068214 segundos, Tiempo de escritura: 29,27332 segundos.
 

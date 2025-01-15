@@ -91,7 +91,11 @@ public class UIManagerGame : MonoBehaviour
                 _animatorLibro = libro.GetComponent<Animator>();
                 passPagina = contenidoLibro.GetComponentInChildren<Button>();
             }
-            
+            if (SceneManager.GetActiveScene().buildIndex == 1)
+            {
+                GameManager.Instance.puntosLimite = GameManager.Instance.puntosLimite + (paginasLibro / 2);
+                Debug.Log("Puntos Limite1: " + GameManager.Instance.puntosLimite);
+            }
             //texto1.GetComponent<ActivateMessages>().ActivateText();
         }
     }
@@ -166,7 +170,8 @@ public class UIManagerGame : MonoBehaviour
         for (int i = 0; i < numBotones; i++)
         {
             GameObject aux = Instantiate(buttonPrefab, menu.transform);
-            aux.GetComponent<Button>().onClick.AddListener(() => SaveResultsToFile(i + 1));
+            int buttonNumber = i + 1;
+            aux.GetComponent<Button>().onClick.AddListener(() => SaveResultsToFile(buttonNumber));
             aux.GetComponent<Transform>().SetLocalPositionAndRotation(new Vector3(((menu.rectTransform.rect.width - buttonWidth) / 2 - x * i), y * arrab, 0), Quaternion.identity);
             //aux.GetComponent<Transform>().set
             botones.Add(aux);
@@ -254,7 +259,7 @@ public class UIManagerGame : MonoBehaviour
             }
             writer.WriteLine();
         }
-
+        imageLoader.acierto(r);
         imageLoader.LoadNextImageMemoria(numBotones, ref botones);
     }
 
@@ -273,7 +278,7 @@ public class UIManagerGame : MonoBehaviour
             }
             writer.WriteLine();
         }
-
+        imageLoader.aciertoCara();
         imageLoader.LoadNextImageMemoriaSospechosos();
     }
 

@@ -7,7 +7,8 @@ public class BackgroundComponent : MonoBehaviour
     private Animator Animator;
     [SerializeField] int nextBack;
     [SerializeField] int actBack;
-    [SerializeField] int nextScene;
+    [SerializeField] List<int> nextScene;
+    
     public void OnAnimationEnd()
     {
         if (GameManager.Instance != null)
@@ -25,7 +26,17 @@ public class BackgroundComponent : MonoBehaviour
                     GameManager.Instance.CloseApp();
                     break;
                 case 3:
-                    GameManager.Instance.ChangeScene(nextScene);
+                    if(nextScene.Count > 1)
+                    {
+                        if(GameManager.Instance.puntos >= GameManager.Instance.puntosLimite)
+                        {
+                            GameManager.Instance.ChangeScene(nextScene[1]);
+                        }
+                        else
+                            GameManager.Instance.ChangeScene(nextScene[0]);
+                    }
+                    else
+                        GameManager.Instance.ChangeScene(nextScene[0]);
                     break;
             }
 

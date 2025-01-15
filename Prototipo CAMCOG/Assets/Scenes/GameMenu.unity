@@ -2524,7 +2524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBack: 0
   actBack: 0
-  nextScene: 1
+  nextScene: 01000000
 --- !u!1 &1722086798
 GameObject:
   m_ObjectHideFlags: 0
@@ -3149,7 +3149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBack: 1
   actBack: 0
-  nextScene: 0
+  nextScene: 
 --- !u!95 &2082794072
 Animator:
   serializedVersion: 5

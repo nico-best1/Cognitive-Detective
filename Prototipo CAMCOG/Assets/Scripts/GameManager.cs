@@ -27,6 +27,9 @@ public class GameManager : MonoBehaviour
     public int roomNext;
     public int opcionMenu;
     private AudioSource _audioSource;
+
+    public int puntos;
+    public int puntosLimite;
     private void Awake()
     {
         if (_instance == null) _instance = this;
@@ -37,6 +40,9 @@ public class GameManager : MonoBehaviour
     {
         _currentState = GameStates.TUTORIAL;
         _audioSource = GetComponent<AudioSource>();
+        puntos = GameData.puntos;
+        puntosLimite = GameData.puntosLimite;
+        Debug.Log("PuntosLimiteInicial: " + GameData.puntosLimite);
     }
 
     // Update is called once per frame
@@ -60,9 +66,15 @@ public class GameManager : MonoBehaviour
 
     public void ChangeScene(int scene)
     {
-        
-        if(pruebasConseguidas == numPruebas)
+
+        if (pruebasConseguidas == numPruebas)
+        {
+            GameData.puntos = puntos;
+            GameData.puntosLimite = puntosLimite;
+            
             SceneManager.LoadScene(scene);
+        }
+
         else
         {
 

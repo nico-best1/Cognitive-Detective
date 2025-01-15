@@ -47,6 +47,12 @@ public class ImageLoader : MonoBehaviour
     private List<bool> mostradosSospechocos;
     #endregion
 
+    #region Puntos
+    private List<string> spritesBuenos = new List<string>();
+    private string spriteCorrecto;
+    private List<string> carasBuenas = new List<string>();
+    private string caraActual;
+    #endregion
     //public int roomAct;
     //public int roomNext;
 
@@ -207,6 +213,10 @@ public class ImageLoader : MonoBehaviour
                 for (int i = 0; i < numBotones; i++)
                 {
                     sprites.Add(Resources.Load<Sprite>(imagePathsMemoria[currentIndex][i]));
+                    if(i == 0)
+                    {
+                        spriteCorrecto = sprites[0].name;
+                    }
                 }
 
                 // Verificar que los sprites se hayan cargado correctamente
@@ -234,6 +244,8 @@ public class ImageLoader : MonoBehaviour
                     
                     int randomIndex = Random.Range(0, indices.Count);
                     botones[i].GetComponent<Button>().image.sprite = sprites[indices[randomIndex]];
+                    spritesBuenos.Add(sprites[indices[randomIndex]].name);
+                    Debug.Log(randomIndex + "ListaNombreSprites: "+sprites[indices[randomIndex]].name);
                     //Debug.Log(botones[i].GetComponent<Button>().image.sprite);
                     indices.RemoveAt(randomIndex);  // Remover el ?ndice para no repetirlo
                 }
@@ -263,6 +275,7 @@ public class ImageLoader : MonoBehaviour
                 if (sprite != null)
                 {
                     sospechoso.sprite = sprite;
+                    caraActual = sprite.name;
                     Debug.Log("imageSospechoso");
                 }
                 else
@@ -293,6 +306,7 @@ public class ImageLoader : MonoBehaviour
                     if (sprite != null)
                     {
                         imageUILibroSospechsos.sprite = sprite;
+                        carasBuenas.Add(sprite.name);
                     }
                     else
                     {
@@ -329,6 +343,8 @@ public class ImageLoader : MonoBehaviour
         }
         GameManager.Instance.numPruebas = imagePaths.Count;
         Debug.Log("Pruebas: " + GameManager.Instance.numPruebas);
+        GameManager.Instance.puntosLimite = GameManager.Instance.puntosLimite + (imagePaths.Count / 2);
+        Debug.Log("Puntos Limite: " + GameManager.Instance.puntosLimite);
     }
 
 
@@ -409,6 +425,34 @@ public class ImageLoader : MonoBehaviour
             }
         }
     }
-
+    public void acierto(int boton)
+    {
+        for (int i = 0;i < spritesBuenos.Count; i++)
+        {
+            Debug.Log(i + spritesBuenos[i]);
+        }
+        Debug.Log("Boton: " + (boton -1) );
+        Debug.Log(spriteCorrecto);
+        if (spritesBuenos[boton -1] == spriteCorrecto)
+        {
+            GameManager.Instance.puntos++;
+        }
+        spritesBuenos.Clear();
+    }
+    public void aciertoCara()
+    {
+        for (int i = 0; i < spritesBuenos.Count; i++)
+        {
+            Debug.Log(i + carasBuenas[i]);
+        }
+        Debug.Log(caraActual);
+        for (int j = 0;j < carasBuenas.Count; j++) {
+            if (carasBuenas[j] == caraActual)
+            {
+                GameManager.Instance.puntos++;
+                break;
+            }
+        }
+    }
 }
 
