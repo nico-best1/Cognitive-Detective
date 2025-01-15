@@ -1,12 +1,12 @@
 Resultados:
-Respuesta 1: NO.
+Respuesta 1: SI.
 Respuesta 2: SI.
-Respuesta 3: SI.
+Respuesta 3: NO.
 Respuesta 4: NO.
-Respuesta 5: NO.
-Respuesta 6: SI.
+Respuesta 5: SI.
+Respuesta 6: NO.
 Respuesta 7: NO.
 Respuesta 8: NO.
 Respuesta 9: SI.
-Respuesta 10: SI.
+Respuesta 10: NO.
 
