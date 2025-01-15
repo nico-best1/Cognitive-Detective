@@ -107,4 +107,9 @@ public class GameManager : MonoBehaviour
     {
         textAdvertencia.GetComponent<ActivateMessages>().ActivateText();
     }
+    public void resetPoints()
+    {
+        puntos = 0;
+        puntosLimite = 0;
+    }
 }
