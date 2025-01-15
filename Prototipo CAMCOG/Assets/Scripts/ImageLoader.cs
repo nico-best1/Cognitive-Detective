@@ -343,8 +343,7 @@ public class ImageLoader : MonoBehaviour
         }
         GameManager.Instance.numPruebas = imagePaths.Count;
         Debug.Log("Pruebas: " + GameManager.Instance.numPruebas);
-        GameManager.Instance.puntosLimite = GameManager.Instance.puntosLimite + (imagePaths.Count / 2);
-        Debug.Log("Puntos Limite: " + GameManager.Instance.puntosLimite);
+        
     }
 
 
@@ -424,6 +423,8 @@ public class ImageLoader : MonoBehaviour
                 Debug.LogError("No se encontraron imágenes en el subdirectorio: " + subdirectorio);
             }
         }
+        GameManager.Instance.puntosLimite = GameManager.Instance.puntosLimite + (numSubcarpetas / 2);
+        Debug.Log("Puntos Limite: " + GameManager.Instance.puntosLimite);
     }
     public void acierto(int boton)
     {

@@ -91,14 +91,18 @@ public class UIManagerGame : MonoBehaviour
                 _animatorLibro = libro.GetComponent<Animator>();
                 passPagina = contenidoLibro.GetComponentInChildren<Button>();
             }
-            if (SceneManager.GetActiveScene().buildIndex == 1)
+            if (SceneManager.GetActiveScene().buildIndex == 2)
             {
                 GameManager.Instance.puntosLimite = GameManager.Instance.puntosLimite + (paginasLibro / 2);
                 Debug.Log("Puntos Limite1: " + GameManager.Instance.puntosLimite);
             }
             //texto1.GetComponent<ActivateMessages>().ActivateText();
         }
+
     }
+    void Update()
+    {
+        }
     public void setBackgrounds(int nNext, int nActual, string name)
     {
         startTime = Time.time;

@@ -40,10 +40,9 @@ public class GameManager : MonoBehaviour
     {
         _currentState = GameStates.TUTORIAL;
         _audioSource = GetComponent<AudioSource>();
-        puntos = GameData.puntos;
-        puntosLimite = GameData.puntosLimite;
-        Debug.Log("PuntosLimiteInicial: " + GameData.puntosLimite);
+
     }
+
 
     // Update is called once per frame
     void Update()
@@ -69,8 +68,7 @@ public class GameManager : MonoBehaviour
 
         if (pruebasConseguidas == numPruebas)
         {
-            GameData.puntos = puntos;
-            GameData.puntosLimite = puntosLimite;
+
             
             SceneManager.LoadScene(scene);
         }

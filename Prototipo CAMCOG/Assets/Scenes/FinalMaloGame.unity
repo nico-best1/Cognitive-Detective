@@ -1453,6 +1453,7 @@ MonoBehaviour:
   mujer: {fileID: 0}
   mayor: {fileID: 0}
   menor: {fileID: 0}
+  text: {fileID: 0}
 --- !u!114 &1770760602
 MonoBehaviour:
   m_ObjectHideFlags: 0
