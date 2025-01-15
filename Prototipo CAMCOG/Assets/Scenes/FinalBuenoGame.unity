@@ -1259,7 +1259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBack: 0
   actBack: 0
-  nextScene: 0
+  nextScene: 00000000
 --- !u!1 &1722086798
 GameObject:
   m_ObjectHideFlags: 0
