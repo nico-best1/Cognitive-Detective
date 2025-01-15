@@ -1,7 +1,7 @@
 Resultados:
-Respuesta 1: hombre, -40
-Respuesta 2: hombre, -40
-Respuesta 3: hombre, -40
-Respuesta 4: hombre, +40
-Respuesta 5: mujer, -40
+Respuesta 1: ninguno, ninguno
+Respuesta 2: ninguno, ninguno
+Respuesta 3: ninguno, ninguno
+Respuesta 4: ninguno, ninguno
+Respuesta 5: ninguno, ninguno
 

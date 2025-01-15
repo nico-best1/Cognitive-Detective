@@ -278,7 +278,8 @@ public class UIManagerGame : MonoBehaviour
             }
             writer.WriteLine();
         }
-        imageLoader.aciertoCara();
+        if(r == "SI")
+            imageLoader.aciertoCara();
         imageLoader.LoadNextImageMemoriaSospechosos();
     }
 
